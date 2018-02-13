@@ -130,6 +130,7 @@
     type: table
     fields:
     - first_page.pageTitle
+    - first_page.pageAuthor
     - ga_sessions.session_count
     - totals.page_views_session
     - totals.pageviews_total

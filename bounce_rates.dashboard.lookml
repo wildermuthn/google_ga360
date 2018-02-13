@@ -820,6 +820,7 @@
     type: table
     fields:
     - hits_page.pageTitle
+    - hits_page.pageAuthor
     - ga_sessions.session_count
     - totals.bounces_total
     - totals.bounce_rate

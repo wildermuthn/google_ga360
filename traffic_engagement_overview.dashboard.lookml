@@ -894,6 +894,7 @@
     - totals.transactions_count
     - totals.transactionRevenue_total
     - first_page.pageTitle
+    - first_page.pageAuthor
     sorts:
     - ga_sessions.session_count desc
     limit: 15

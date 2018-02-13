@@ -491,7 +491,7 @@ view: hits_base {
 
 
   set: detail {
-    fields: [ga_sessions.id, ga_sessions.visitnumber, ga_sessions.session_count, hits_page.pagePath, hits.pageTitle]
+    fields: [ga_sessions.id, ga_sessions.visitnumber, ga_sessions.session_count, hits_page.pagePath, hits.pageTitle, hits_page.pageAuthor]
   }
 }
 
@@ -511,6 +511,13 @@ view: hits_page_base {
   }
   dimension: hostName {label: "Host Name"}
   dimension: pageTitle {label: "Page Title"}
+  dimension: pageAuthor {
+    label: "Page Author"
+    sql: case when regexp_contains(${pageTitle}, ".*\\| By ")
+          then regexp_replace(${pageTitle}, ".*\\| By ", "")
+          else 'No Author Listed'
+          end;;
+  }
   dimension: searchKeyword {label: "Search Keyword"}
   dimension: searchCategory{label: "Search Category"}
 }
