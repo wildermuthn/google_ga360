@@ -67,19 +67,19 @@ view: ga_sessions_base {
   measure: unique_visitors {
     type: count_distinct
     sql: ${fullVisitorId} ;;
-    drill_fields: [fullVisitorId, visitnumber, session_count, totals.hits, totals.page_views, totals.timeonsite]
+    drill_fields: [fullVisitorId, visitnumber, session_count, totals.hits_total, totals.pageviews_total, totals.timeonsite_total]
   }
 
   measure: average_sessions_ver_visitor {
     type: number
     sql: 1.0 * (${session_count}/NULLIF(${unique_visitors},0))  ;;
     value_format_name: decimal_2
-    drill_fields: [fullVisitorId, visitnumber, session_count, totals.hits, totals.page_views, totals.timeonsite]
+    drill_fields: [fullVisitorId, visitnumber, session_count, totals.hits_total, totals.pageviews_total, totals.timeonsite_total]
   }
 
   measure: total_visitors {
     type: count
-    drill_fields: [fullVisitorId, visitnumber, session_count, totals.hits, totals.page_views, totals.timeonsite]
+    drill_fields: [fullVisitorId, visitnumber, session_count, totals.hits_total, totals.pageviews_total, totals.timeonsite_total]
   }
 
   measure: first_time_visitors {
@@ -186,6 +186,7 @@ view: totals_base {
     label: "Page Views"
     type: sum
     sql: ${TABLE}.pageviews ;;
+    drill_fields: [ga_sessions.fullVisitorId, ga_sessions.visitnumber, ga_sessions.session_count, hits_total, pageviews_total, timeonsite_total]
   }
   measure: timeonsite_total {
     label: "Time On Site"
@@ -219,6 +220,7 @@ view: totals_base {
     type:  number
     sql: 1.0 * ${bounces_total} / NULLIF(${ga_sessions.session_count},0) ;;
     value_format_name: percent_2
+    drill_fields: [ga_sessions.fullVisitorId, ga_sessions.visitnumber, ga_sessions.session_count, hits_total, pageviews_total, timeonsite_total]
   }
   measure: transactions_count {
     type: sum
@@ -277,12 +279,12 @@ view: trafficSource_base {
   measure: source_count {
     type: count_distinct
     sql: ${source} ;;
-    drill_fields: [source, totals.hits, totals.pageviews]
+    drill_fields: [source, totals.hits_total, totals.pageviews_total]
   }
   measure: keyword_count {
     type: count_distinct
     sql: ${keyword} ;;
-    drill_fields: [keyword, totals.hits, totals.pageviews]
+    drill_fields: [keyword, totals.hits_total, totals.pageviews_total]
   }
   # Subrecords
 #   dimension: adwordsClickInfo {}

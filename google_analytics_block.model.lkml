@@ -18,11 +18,11 @@ explore: ga_sessions_base {
     sql: LEFT JOIN UNNEST([${ga_sessions.trafficSource}]) as trafficSource ;;
     relationship: one_to_one
   }
-  # join: adwordsClickInfo {
-  #   view_label: "Session: Traffic Source : Adwords"
-  #   sql: LEFT JOIN UNNEST([${trafficSource.adwordsClickInfo}]) as  adwordsClickInfo;;
-  #   relationship: one_to_one
-  # }
+#   join: adwordsClickInfo {
+#     view_label: "Session: Traffic Source : Adwords"
+#     sql: LEFT JOIN UNNEST([${trafficSource.adwordsClickInfo}]) as  adwordsClickInfo;;
+#     relationship: one_to_one
+#   }
 
   # join: DoubleClickClickInfo {
   #   view_label: "Session: Traffic Source : DoubleClick"
@@ -135,4 +135,13 @@ explore: ga_sessions_block {
 
 explore: ga_sessions {
   extends: [ga_sessions_block]
+}
+
+explore: fb_page_tpt_use {
+  view_label: "Facebook Data"
+  join: daily_fb_post_facts {
+    view_label: "Facebook Data"
+    relationship: one_to_one
+    sql_on: ${fb_page_tpt_use.date_date} = ${daily_fb_post_facts.date_date} ;;
+  }
 }

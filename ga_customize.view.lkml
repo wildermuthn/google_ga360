@@ -97,11 +97,11 @@ view: hits_item {
 # -- Advertising Fields
 
 view: adwordsClickInfo {
-  #extends: [adwordsClickInfo_base]
+  extends: [adwordsClickInfo_base]
 }
 
 view: hits_publisher {
-  #extends: [hits_publisher_base]   # Comment out this line to remove fields
+  extends: [hits_publisher_base]   # Comment out this line to remove fields
 }
 
 #  We only want some of the interaction fields.
