@@ -138,6 +138,7 @@ explore: ga_sessions {
 }
 
 explore: fb_page_tpt_use {
+  label: "Facebook Data"
   view_label: "Facebook Data"
   join: daily_fb_post_facts {
     view_label: "Facebook Data"

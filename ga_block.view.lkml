@@ -126,16 +126,16 @@ view: ga_sessions_base {
       ;;
   }
 
-  # measure: bounces_total_a {
-  #   view_label: "Session: Pd-Over-Pd Metrics"
-  #   hidden: yes
-  #   type: sum
-  #   sql: ${TABLE}.bounces ;;
-  #   filters: {
-  #     field: group_a
-  #     value: "yes"
-  #   }
-  # }
+  measure: bounces_total_a {
+    view_label: "Session: Pd-Over-Pd Metrics"
+    hidden: yes
+    type: sum
+    sql: ${totals.bounces} ;;
+    filters: {
+      field: group_a
+      value: "yes"
+    }
+  }
 
   measure: session_count_a {
     view_label: "Session: Pd-Over-Pd Metrics"
@@ -147,13 +147,24 @@ view: ga_sessions_base {
     }
   }
 
-  # measure: bounce_rate_a {
-  #   view_label: "Session: Pd-Over-Pd Metrics"
-  #   type:  number
-  #   sql: 1.0 * ${bounces_total_a} / NULLIF(${session_count_a},0) ;;
-  #   value_format_name: percent_2
-  #   drill_fields: [fullVisitorId, visitnumber, session_count, totals.hits_total, totals.pageviews_total, totals.timeonsite_total]
-  # }
+  measure: bounce_rate_a {
+    view_label: "Session: Pd-Over-Pd Metrics"
+    type:  number
+    sql: 1.0 * ${bounces_total_a} / NULLIF(${session_count_a},0) ;;
+    value_format_name: percent_2
+    drill_fields: [fullVisitorId, visitnumber, session_count, totals.hits_total, totals.pageviews_total, totals.timeonsite_total]
+  }
+
+  measure: total_page_views_a {
+    view_label: "Session: Pd-Over-Pd Metrics"
+    type: sum
+    sql: ${totals.pageviews} ;;
+    drill_fields: [fullVisitorId, visitnumber, session_count, totals.hits_total, totals.pageviews_total, totals.timeonsite_total]
+    filters: {
+      field: group_a
+      value: "yes"
+    }
+  }
 
   measure: total_unique_visitors_a {
     view_label: "Session: Pd-Over-Pd Metrics"
@@ -181,16 +192,16 @@ view: ga_sessions_base {
       ;;
   }
 
-  # measure: bounces_total_b {
-  #   view_label: "Session: Pd-Over-Pd Metrics"
-  #   hidden: yes
-  #   type: sum
-  #   sql: ${TABLE}.bounces ;;
-  #   filters: {
-  #     field: group_b
-  #     value: "yes"
-  #   }
-  # }
+  measure: bounces_total_b {
+    view_label: "Session: Pd-Over-Pd Metrics"
+    hidden: yes
+    type: sum
+    sql: ${totals.bounces} ;;
+    filters: {
+      field: group_b
+      value: "yes"
+    }
+  }
 
   measure: session_count_b {
     view_label: "Session: Pd-Over-Pd Metrics"
@@ -202,13 +213,25 @@ view: ga_sessions_base {
     }
   }
 
-  # measure: bounce_rate_b {
-  #   view_label: "Session: Pd-Over-Pd Metrics"
-  #   type:  number
-  #   sql: 1.0 * ${bounces_total_b} / NULLIF(${session_count_b},0) ;;
-  #   value_format_name: percent_2
-  #   drill_fields: [fullVisitorId, visitnumber, session_count, totals.hits_total, totals.pageviews_total, totals.timeonsite_total]
-  # }
+  measure: bounce_rate_b {
+    view_label: "Session: Pd-Over-Pd Metrics"
+    type:  number
+    sql: 1.0 * ${bounces_total_b} / NULLIF(${session_count_b},0) ;;
+    value_format_name: percent_2
+    drill_fields: [fullVisitorId, visitnumber, session_count, totals.hits_total, totals.pageviews_total, totals.timeonsite_total]
+  }
+
+  measure: total_page_views_b {
+    view_label: "Session: Pd-Over-Pd Metrics"
+    type: sum
+    sql: ${totals.pageviews} ;;
+    drill_fields: [fullVisitorId, visitnumber, session_count, totals.hits_total, totals.pageviews_total, totals.timeonsite_total]
+    filters: {
+      field: group_b
+      value: "yes"
+    }
+  }
+
 
   measure: total_unique_visitors_b {
     view_label: "Session: Pd-Over-Pd Metrics"
@@ -301,6 +324,10 @@ view: totals_base {
     sql: 1.0 * ${hits_total} / NULLIF(${ga_sessions.session_count},0) ;;
     value_format_name: decimal_2
   }
+  dimension: pageviews {
+    hidden: yes
+    sql: ${TABLE}.pageviews ;;
+  }
   measure: pageviews_total {
     label: "Page Views"
     type: sum
@@ -330,6 +357,10 @@ view: totals_base {
     type: number
     sql: 1.0 * ${pageviews_total} / NULLIF(${ga_sessions.session_count},0) ;;
     value_format_name: decimal_2
+  }
+  dimension: bounces {
+    hidden: yes
+    sql: ${TABLE}.bounces ;;
   }
   measure: bounces_total {
     type: sum
