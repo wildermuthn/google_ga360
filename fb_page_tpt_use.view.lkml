@@ -37,6 +37,7 @@ view: fb_page_tpt_use {
     type: time
     timeframes: [
       raw,
+      time,
       date,
       week,
       month,
@@ -110,6 +111,111 @@ view: fb_page_tpt_use {
   measure: count {
     type: count
     drill_fields: [detail*]
+  }
+
+## filter determining time range for all "A" measures
+  filter: date_a {
+    view_label: "Pd-Over-Pd Metrics"
+    type: date
+  }
+
+## flag for "A" measures to only include appropriate time range
+  dimension: group_a {
+    view_label: "Pd-Over-Pd Metrics"
+    hidden: yes
+    type: yesno
+    sql: {% condition date_a %} cast(${date_raw} as timestamp) {% endcondition %}
+      ;;
+  }
+
+  measure: total_video_views_a {
+    view_label: "Pd-Over-Pd Metrics"
+    type: sum
+    sql: ${daily_total_video_views} ;;
+    drill_fields: [detail*]
+    filters: {
+      field: group_a
+      value: "yes"
+    }
+  }
+
+  measure: total_engagement_a {
+    view_label: "Pd-Over-Pd Metrics"
+    type: sum
+    sql: ${daily_total_clicked_views} ;;
+    drill_fields: [detail*]
+    filters: {
+      field: group_a
+      value: "yes"
+    }
+  }
+
+  measure: total_reach_a {
+    view_label: "Pd-Over-Pd Metrics"
+    type: sum
+    sql: ${daily_total_reach} ;;
+    drill_fields: [detail*]
+    filters: {
+      field: group_a
+      value: "yes"
+    }
+  }
+
+## filter determining time range for all "B" measures
+  filter: date_b {
+    view_label: "Pd-Over-Pd Metrics"
+    type: date
+  }
+
+## flag for "B" measures to only include appropriate time range
+  dimension: group_b {
+    view_label: "Pd-Over-Pd Metrics"
+    hidden: yes
+    type: yesno
+    sql: {% condition date_b %} cast(${date_raw} as timestamp) {% endcondition %}
+      ;;
+  }
+
+  measure: total_video_views_b {
+    view_label: "Pd-Over-Pd Metrics"
+    type: sum
+    sql: ${daily_total_video_views} ;;
+    drill_fields: [detail*]
+    filters: {
+      field: group_b
+      value: "yes"
+    }
+  }
+
+  measure: total_engagement_b {
+    view_label: "Pd-Over-Pd Metrics"
+    type: sum
+    sql: ${daily_total_clicked_views} ;;
+    drill_fields: [detail*]
+    filters: {
+      field: group_b
+      value: "yes"
+    }
+  }
+
+  measure: total_reach_b {
+    view_label: "Pd-Over-Pd Metrics"
+    type: sum
+    sql: ${daily_total_reach} ;;
+    drill_fields: [detail*]
+    filters: {
+      field: group_b
+      value: "yes"
+    }
+  }
+
+## filter on comparison queries to avoid querying unnecessarily large date ranges.
+  dimension: is_in_date_a_or_b {
+    view_label: "Pd-Over-Pd Metrics"
+    type: yesno
+    sql: {% condition date_a %} cast(${date_raw} as timestamp) {% endcondition %}
+          OR {% condition date_b %} cast(${date_raw} as timestamp) {% endcondition %}
+           ;;
   }
 
   set: detail {

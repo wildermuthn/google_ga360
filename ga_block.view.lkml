@@ -44,7 +44,7 @@ view: ga_sessions_base {
 
   ## referencing partition_date for demo purposes only. Switch this dimension to reference visitStartSeconds
   dimension_group: visitStart {
-    timeframes: [date,day_of_week,fiscal_quarter,week,month,year,month_name,month_num,week_of_year]
+    timeframes: [raw,date,day_of_week,fiscal_quarter,week,month,year,month_name,month_num,week_of_year]
     label: "Visit Start"
     type: time
     sql: (TIMESTAMP(${visitStartSeconds})) ;;
@@ -110,6 +110,125 @@ view: ga_sessions_base {
   dimension: customDimensions {hidden:yes}
   dimension: hits {hidden:yes}
   dimension: hits_eventInfo {hidden:yes}
+
+## filter determining time range for all "A" measures
+  filter: date_a {
+    view_label: "Session: Pd-Over-Pd Metrics"
+    type: date
+  }
+
+## flag for "A" measures to only include appropriate time range
+  dimension: group_a {
+    view_label: "Session: Pd-Over-Pd Metrics"
+    hidden: yes
+    type: yesno
+    sql: {% condition date_a %} cast(${visitStart_raw} as timestamp) {% endcondition %}
+      ;;
+  }
+
+  # measure: bounces_total_a {
+  #   view_label: "Session: Pd-Over-Pd Metrics"
+  #   hidden: yes
+  #   type: sum
+  #   sql: ${TABLE}.bounces ;;
+  #   filters: {
+  #     field: group_a
+  #     value: "yes"
+  #   }
+  # }
+
+  measure: session_count_a {
+    view_label: "Session: Pd-Over-Pd Metrics"
+    hidden: yes
+    type: count
+    filters: {
+      field: group_a
+      value: "yes"
+    }
+  }
+
+  # measure: bounce_rate_a {
+  #   view_label: "Session: Pd-Over-Pd Metrics"
+  #   type:  number
+  #   sql: 1.0 * ${bounces_total_a} / NULLIF(${session_count_a},0) ;;
+  #   value_format_name: percent_2
+  #   drill_fields: [fullVisitorId, visitnumber, session_count, totals.hits_total, totals.pageviews_total, totals.timeonsite_total]
+  # }
+
+  measure: total_unique_visitors_a {
+    view_label: "Session: Pd-Over-Pd Metrics"
+    type: count_distinct
+    sql: ${fullVisitorId} ;;
+    drill_fields: [fullVisitorId, visitnumber, session_count, totals.hits_total, totals.pageviews_total, totals.timeonsite_total]
+    filters: {
+      field: group_a
+      value: "yes"
+    }
+  }
+
+## filter determining time range for all "B" measures
+  filter: date_b {
+    view_label: "Session: Pd-Over-Pd Metrics"
+    type: date
+  }
+
+## flag for "B" measures to only include appropriate time range
+  dimension: group_b {
+    view_label: "Session: Pd-Over-Pd Metrics"
+    hidden: yes
+    type: yesno
+    sql: {% condition date_b %} cast(${visitStart_raw} as timestamp) {% endcondition %}
+      ;;
+  }
+
+  # measure: bounces_total_b {
+  #   view_label: "Session: Pd-Over-Pd Metrics"
+  #   hidden: yes
+  #   type: sum
+  #   sql: ${TABLE}.bounces ;;
+  #   filters: {
+  #     field: group_b
+  #     value: "yes"
+  #   }
+  # }
+
+  measure: session_count_b {
+    view_label: "Session: Pd-Over-Pd Metrics"
+    hidden: yes
+    type: count
+    filters: {
+      field: group_b
+      value: "yes"
+    }
+  }
+
+  # measure: bounce_rate_b {
+  #   view_label: "Session: Pd-Over-Pd Metrics"
+  #   type:  number
+  #   sql: 1.0 * ${bounces_total_b} / NULLIF(${session_count_b},0) ;;
+  #   value_format_name: percent_2
+  #   drill_fields: [fullVisitorId, visitnumber, session_count, totals.hits_total, totals.pageviews_total, totals.timeonsite_total]
+  # }
+
+  measure: total_unique_visitors_b {
+    view_label: "Session: Pd-Over-Pd Metrics"
+    type: count_distinct
+    sql: ${fullVisitorId} ;;
+    drill_fields: [fullVisitorId, visitnumber, session_count, totals.hits_total, totals.pageviews_total, totals.timeonsite_total]
+    filters: {
+      field: group_b
+      value: "yes"
+    }
+  }
+
+## filter on comparison queries to avoid querying unnecessarily large date ranges.
+  dimension: is_in_time_a_or_b {
+    view_label: "Session: Pd-Over-Pd Metrics"
+    type: yesno
+    sql: {% condition date_a %} cast(${visitStart_raw} as timestamp) {% endcondition %}
+          OR {% condition date_b %} cast(${visitStart_raw} as timestamp) {% endcondition %}
+           ;;
+  }
 
 }
 
@@ -407,6 +526,23 @@ view: hits_page_base {
           then regexp_replace(${pageTitle}, ".*\\| By ", "")
           else 'No Author Listed'
           end;;
+    link: {
+      label: "Player Dashboard"
+      url: "http://theplayerstribune.looker.com/dashboards/5?Author={{ value }}&Date={{ _filters['ga_sessions.visitStart_date'] | url_encode }}"
+      icon_url: "http://www.looker.com/favicon.ico"
+    }
+  }
+  dimension: pageAuthor_image {
+    hidden: yes
+    sql: regexp_replace(lower(${pageAuthor}), " ", "");;
+  }
+  dimension: image_file {
+    hidden: no
+    sql: (concat('https://media.theplayerstribune.com/uploads/',${pageAuthor_image},'-apostropheavatar.jpg')) ;;
+  }
+  dimension: author_image {
+    sql: ${image_file} ;;
+    html: <img src="{{ value }}" width="220" height="220"/>;;
   }
   dimension: searchKeyword {label: "Search Keyword"}
   dimension: searchCategory{label: "Search Category"}
