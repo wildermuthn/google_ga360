@@ -291,8 +291,38 @@ view: fb_post_tpt {
     sql: ${TABLE}.Type ;;
   }
 
+# ------- Measures ------- #
   measure: count {
     type: count
     drill_fields: []
+  }
+
+  measure: total_post_clicks {
+    label: "Total Post Clicks (All Types)"
+    description: "Adds together numbers for all types of post clicks"
+    type: sum
+    sql: ${lifetime_post_consumers_by_type___link_clicks} + ${lifetime_post_consumptions_by_type___link_clicks}
+          + ${lifetime_post_consumers_by_type___other_clicks} + ${lifetime_post_consumptions_by_type___other_clicks}
+        ;;
+  }
+
+  measure: total_post_views {
+    label: "Total Post Views (All Types)"
+    description: "Adds together numbers for all types of view counts"
+    type: sum
+    sql: ${lifetime_organic_views_to_95__25} + ${lifetime_organic_views_to_95_}
+          + ${lifetime_paid_views_to_95__27} + ${lifetime_paid_views_to_95_}
+          + ${lifetime_organic_video_views_29} + ${lifetime_organic_video_views}
+          + ${lifetime_paid_video_views_31} + ${lifetime_paid_video_views}
+          + ${lifetime_post_consumers_by_type___photo_view} + ${lifetime_post_consumptions_by_type___photo_view}
+        ;;
+#    value_format_name: decimal_2
+  }
+
+  measure: total_organic_views {
+    label: "Total Organic Views"
+    description: "Adds together numbers for views to 95-25 and views to 95"
+    type: sum
+    sql: ${lifetime_organic_views_to_95__25} + ${lifetime_organic_views_to_95_} ;;
   }
 }

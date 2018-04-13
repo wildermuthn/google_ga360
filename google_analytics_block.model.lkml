@@ -146,3 +146,8 @@ explore: fb_page_tpt_use {
     sql_on: ${fb_page_tpt_use.date_date} = ${daily_fb_post_facts.date_date} ;;
   }
 }
+
+explore: fb_post_tpt {
+  label: "Facebook Posts"
+  view_label: "Facebook Post"
+}
