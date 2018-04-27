@@ -1,6 +1,10 @@
-view: fb_page_tpt_use {
+# Changed derived_table sql to fb_page_tpt3 on 4/20/2018 to look at fresher data.
+# This was called fb_page_tpt_use, but we renamed on 4/27 for potential archiving.
+# Now using daily_fb_page for FB metrics.
+
+view: fb_page_tpt3 {
   derived_table: {
-    sql: select * from `91617021`.fb_page_tpt where date is not null ;;
+    sql: select * from `91617021`.fb_page_tpt3 where date is not null ;;
   }
 
   dimension: daily_total_clicked_views {

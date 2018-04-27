@@ -1,17 +1,21 @@
-# Default FB page table; as of 4/20/2018, doesn't seem to be used for Weekly Report dashboard.
-# Refer to fb_page_tpt_use view for Weekly Report metrics.
+# View for new table imported to BQ on 4/20/2018 to see fresher data in Weekly Report dashboard.
 
-view: fb_page_tpt {
-  sql_table_name: `91617021`.fb_page_tpt
+view: fb_page_tpt2 {
+  sql_table_name: `91617021`.fb_page_tpt2
     ;;
 
   dimension: _28_days_auto_played_30_second_views {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Auto_Played_30_Second_Views ;;
   }
 
+  dimension: _28_days_city__people_talking_about_this___ahmedabad__gujarat__india {
+    type: number
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Ahmedabad__Gujarat__India ;;
+  }
+
   dimension: _28_days_city__people_talking_about_this___atlanta__ga {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___Atlanta__GA ;;
   }
 
@@ -20,9 +24,9 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___Austin__TX ;;
   }
 
-  dimension: _28_days_city__people_talking_about_this___baghdad__baghdad_governorate__iraq {
+  dimension: _28_days_city__people_talking_about_this___bacolod_city__western_visayas__philippines {
     type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Baghdad__Baghdad_Governorate__Iraq ;;
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Bacolod_CIty__Western_Visayas__Philippines ;;
   }
 
   dimension: _28_days_city__people_talking_about_this___baltimore__md {
@@ -30,19 +34,14 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___Baltimore__MD ;;
   }
 
+  dimension: _28_days_city__people_talking_about_this___bangalore__karnataka__india {
+    type: number
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Bangalore__Karnataka__India ;;
+  }
+
   dimension: _28_days_city__people_talking_about_this___bangkok__thailand {
     type: number
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___Bangkok__Thailand ;;
-  }
-
-  dimension: _28_days_city__people_talking_about_this___barcelona__catalu__a__spain {
-    type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Barcelona__Catalu__a__Spain ;;
-  }
-
-  dimension: _28_days_city__people_talking_about_this___birmingham__al {
-    type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Birmingham__AL ;;
   }
 
   dimension: _28_days_city__people_talking_about_this___boston__ma {
@@ -50,14 +49,29 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___Boston__MA ;;
   }
 
-  dimension: _28_days_city__people_talking_about_this___brisbane__qld__australia {
-    type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Brisbane__QLD__Australia ;;
-  }
-
   dimension: _28_days_city__people_talking_about_this___buffalo__ny {
     type: number
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___Buffalo__NY ;;
+  }
+
+  dimension: _28_days_city__people_talking_about_this___cagayan_de_oro__northern_mindanao__philippines {
+    type: number
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Cagayan_de_Oro__Northern_Mindanao__Philippines ;;
+  }
+
+  dimension: _28_days_city__people_talking_about_this___calgary__ab__canada {
+    type: number
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Calgary__AB__Canada ;;
+  }
+
+  dimension: _28_days_city__people_talking_about_this___caloocan__metro_manila__philippines {
+    type: number
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Caloocan__Metro_Manila__Philippines ;;
+  }
+
+  dimension: _28_days_city__people_talking_about_this___casablanca__grand_casablanca__morocco {
+    type: number
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Casablanca__Grand_Casablanca__Morocco ;;
   }
 
   dimension: _28_days_city__people_talking_about_this___cebu_city__central_visayas__philippines {
@@ -70,9 +84,24 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___Charlotte__NC ;;
   }
 
+  dimension: _28_days_city__people_talking_about_this___chattanooga__tn {
+    type: number
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Chattanooga__TN ;;
+  }
+
+  dimension: _28_days_city__people_talking_about_this___chennai__tamil_nadu__india {
+    type: number
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Chennai__Tamil_Nadu__India ;;
+  }
+
   dimension: _28_days_city__people_talking_about_this___chicago__il {
     type: number
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___Chicago__IL ;;
+  }
+
+  dimension: _28_days_city__people_talking_about_this___chittagong__chittagong_division__bangladesh {
+    type: number
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Chittagong__Chittagong_Division__Bangladesh ;;
   }
 
   dimension: _28_days_city__people_talking_about_this___cleveland__oh {
@@ -90,6 +119,11 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___Dallas__TX ;;
   }
 
+  dimension: _28_days_city__people_talking_about_this___davao_city__davao_region__philippines {
+    type: number
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Davao_City__Davao_Region__Philippines ;;
+  }
+
   dimension: _28_days_city__people_talking_about_this___denver__co {
     type: number
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___Denver__CO ;;
@@ -105,9 +139,29 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___Dhaka__Dhaka_Division__Bangladesh ;;
   }
 
+  dimension: _28_days_city__people_talking_about_this___gauhati__assam__india {
+    type: number
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Gauhati__Assam__India ;;
+  }
+
   dimension: _28_days_city__people_talking_about_this___houston__tx {
     type: number
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___Houston__TX ;;
+  }
+
+  dimension: _28_days_city__people_talking_about_this___hyderabad__telangana__india {
+    type: number
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Hyderabad__Telangana__India ;;
+  }
+
+  dimension: _28_days_city__people_talking_about_this___iloilo_city__western_visayas__philippines {
+    type: number
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Iloilo_City__Western_Visayas__Philippines ;;
+  }
+
+  dimension: _28_days_city__people_talking_about_this___imphal__manipur__india {
+    type: number
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Imphal__Manipur__India ;;
   }
 
   dimension: _28_days_city__people_talking_about_this___indianapolis__in {
@@ -115,29 +169,34 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___Indianapolis__IN ;;
   }
 
-  dimension: _28_days_city__people_talking_about_this___jacksonville__fl {
+  dimension: _28_days_city__people_talking_about_this___jaipur__rajasthan__india {
     type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Jacksonville__FL ;;
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Jaipur__Rajasthan__India ;;
   }
 
-  dimension: _28_days_city__people_talking_about_this___kansas_city__mo {
+  dimension: _28_days_city__people_talking_about_this___knoxville__tn {
     type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Kansas_City__MO ;;
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Knoxville__TN ;;
+  }
+
+  dimension: _28_days_city__people_talking_about_this___kolkata__west_bengal__india {
+    type: number
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Kolkata__West_Bengal__India ;;
+  }
+
+  dimension: _28_days_city__people_talking_about_this___kuala_lumpur__malaysia {
+    type: number
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Kuala_Lumpur__Malaysia ;;
+  }
+
+  dimension: _28_days_city__people_talking_about_this___las_pi__as__calabarzon__philippines {
+    type: number
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Las_Pi__as__Calabarzon__Philippines ;;
   }
 
   dimension: _28_days_city__people_talking_about_this___las_vegas__nv {
     type: number
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___Las_Vegas__NV ;;
-  }
-
-  dimension: _28_days_city__people_talking_about_this___lima__lima_region__peru {
-    type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Lima__Lima_Region__Peru ;;
-  }
-
-  dimension: _28_days_city__people_talking_about_this___london__england__united_kingdom {
-    type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___London__England__United_Kingdom ;;
   }
 
   dimension: _28_days_city__people_talking_about_this___los_angeles__ca {
@@ -150,19 +209,24 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___Louisville__KY ;;
   }
 
-  dimension: _28_days_city__people_talking_about_this___madison__wi {
+  dimension: _28_days_city__people_talking_about_this___lucknow__uttar_pradesh__india {
     type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Madison__WI ;;
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Lucknow__Uttar_Pradesh__India ;;
   }
 
-  dimension: _28_days_city__people_talking_about_this___madrid__comunidad_de_madrid__spain {
+  dimension: _28_days_city__people_talking_about_this___makati__metro_manila__philippines {
     type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Madrid__Comunidad_de_Madrid__Spain ;;
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Makati__Metro_Manila__Philippines ;;
   }
 
   dimension: _28_days_city__people_talking_about_this___manila__metro_manila__philippines {
     type: number
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___Manila__Metro_Manila__Philippines ;;
+  }
+
+  dimension: _28_days_city__people_talking_about_this___maryville__tn {
+    type: number
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Maryville__TN ;;
   }
 
   dimension: _28_days_city__people_talking_about_this___melbourne__vic__australia {
@@ -180,16 +244,6 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___Mexico_City__Distrito_Federal__Mexico ;;
   }
 
-  dimension: _28_days_city__people_talking_about_this___miami__fl {
-    type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Miami__FL ;;
-  }
-
-  dimension: _28_days_city__people_talking_about_this___milan__lombardia__italy {
-    type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Milan__Lombardia__Italy ;;
-  }
-
   dimension: _28_days_city__people_talking_about_this___milwaukee__wi {
     type: number
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___Milwaukee__WI ;;
@@ -200,14 +254,24 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___Minneapolis__MN ;;
   }
 
+  dimension: _28_days_city__people_talking_about_this___montreal__qc__canada {
+    type: number
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Montreal__QC__Canada ;;
+  }
+
+  dimension: _28_days_city__people_talking_about_this___mumbai__maharashtra__india {
+    type: number
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Mumbai__Maharashtra__India ;;
+  }
+
   dimension: _28_days_city__people_talking_about_this___nashville__tn {
     type: number
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___Nashville__TN ;;
   }
 
-  dimension: _28_days_city__people_talking_about_this___new_orleans__la {
+  dimension: _28_days_city__people_talking_about_this___new_delhi__delhi__india {
     type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___New_Orleans__LA ;;
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___New_Delhi__Delhi__India ;;
   }
 
   dimension: _28_days_city__people_talking_about_this___new_york__ny {
@@ -215,9 +279,9 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___New_York__NY ;;
   }
 
-  dimension: _28_days_city__people_talking_about_this___oklahoma_city__ok {
+  dimension: _28_days_city__people_talking_about_this___omaha__ne {
     type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Oklahoma_City__OK ;;
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Omaha__NE ;;
   }
 
   dimension: _28_days_city__people_talking_about_this___orlando__fl {
@@ -225,9 +289,19 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___Orlando__FL ;;
   }
 
-  dimension: _28_days_city__people_talking_about_this___paris____le_de_france__france {
+  dimension: _28_days_city__people_talking_about_this___pangasinan__ilocos_region__philippines {
     type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Paris____le_de_France__France ;;
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Pangasinan__Ilocos_Region__Philippines ;;
+  }
+
+  dimension: _28_days_city__people_talking_about_this___para__aque__metro_manila__philippines {
+    type: number
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Para__aque__Metro_Manila__Philippines ;;
+  }
+
+  dimension: _28_days_city__people_talking_about_this___pasig__metro_manila__philippines {
+    type: number
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Pasig__Metro_Manila__Philippines ;;
   }
 
   dimension: _28_days_city__people_talking_about_this___philadelphia__pa {
@@ -245,44 +319,14 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___Pittsburgh__PA ;;
   }
 
-  dimension: _28_days_city__people_talking_about_this___portland__or {
+  dimension: _28_days_city__people_talking_about_this___pune__maharashtra__india {
     type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Portland__OR ;;
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Pune__Maharashtra__India ;;
   }
 
   dimension: _28_days_city__people_talking_about_this___quezon_city__metro_manila__philippines {
     type: number
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___Quezon_City__Metro_Manila__Philippines ;;
-  }
-
-  dimension: _28_days_city__people_talking_about_this___raleigh__nc {
-    type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Raleigh__NC ;;
-  }
-
-  dimension: _28_days_city__people_talking_about_this___richmond__va {
-    type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Richmond__VA ;;
-  }
-
-  dimension: _28_days_city__people_talking_about_this___riga__kurzeme_region__latvia {
-    type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Riga__Kurzeme_Region__Latvia ;;
-  }
-
-  dimension: _28_days_city__people_talking_about_this___rochester__ny {
-    type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Rochester__NY ;;
-  }
-
-  dimension: _28_days_city__people_talking_about_this___s__o_paulo__sp__brazil {
-    type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___S__o_Paulo__SP__Brazil ;;
-  }
-
-  dimension: _28_days_city__people_talking_about_this___sacramento__ca {
-    type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Sacramento__CA ;;
   }
 
   dimension: _28_days_city__people_talking_about_this___san_antonio__tx {
@@ -295,14 +339,9 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___San_Diego__CA ;;
   }
 
-  dimension: _28_days_city__people_talking_about_this___san_francisco__ca {
+  dimension: _28_days_city__people_talking_about_this___santo_domingo__santo_domingo_province__dominican_republic {
     type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___San_Francisco__CA ;;
-  }
-
-  dimension: _28_days_city__people_talking_about_this___san_jose__ca {
-    type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___San_Jose__CA ;;
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Santo_Domingo__Santo_Domingo_Province__Dominican_Republic ;;
   }
 
   dimension: _28_days_city__people_talking_about_this___seattle__wa {
@@ -310,9 +349,9 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___Seattle__WA ;;
   }
 
-  dimension: _28_days_city__people_talking_about_this___spokane__wa {
+  dimension: _28_days_city__people_talking_about_this___srinagar__jammu_and_kashmir__india {
     type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Spokane__WA ;;
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Srinagar__Jammu_and_Kashmir__India ;;
   }
 
   dimension: _28_days_city__people_talking_about_this___st__louis__mo {
@@ -320,9 +359,9 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___St__Louis__MO ;;
   }
 
-  dimension: _28_days_city__people_talking_about_this___suffolk_county__ny {
+  dimension: _28_days_city__people_talking_about_this___surat__gujarat__india {
     type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Suffolk_County__NY ;;
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Surat__Gujarat__India ;;
   }
 
   dimension: _28_days_city__people_talking_about_this___sydney__nsw__australia {
@@ -330,9 +369,9 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___Sydney__NSW__Australia ;;
   }
 
-  dimension: _28_days_city__people_talking_about_this___tacoma__wa {
+  dimension: _28_days_city__people_talking_about_this___taguig__metro_manila__philippines {
     type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Tacoma__WA ;;
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Taguig__Metro_Manila__Philippines ;;
   }
 
   dimension: _28_days_city__people_talking_about_this___tampa__fl {
@@ -345,28 +384,18 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___Toronto__ON__Canada ;;
   }
 
-  dimension: _28_days_city__people_talking_about_this___tuscaloosa__al {
-    type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Tuscaloosa__AL ;;
-  }
-
   dimension: _28_days_city__people_talking_about_this___washington__dc {
     type: number
     sql: ${TABLE}._28_Days_City__People_Talking_About_This___Washington__DC ;;
   }
 
-  dimension: _28_days_city__people_talking_about_this___wilmington__de {
+  dimension: _28_days_city__people_talking_about_this___zamboanga_city__zamboanga_peninsula__philippines {
     type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Wilmington__DE ;;
-  }
-
-  dimension: _28_days_city__people_talking_about_this___winnipeg__mb__canada {
-    type: number
-    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Winnipeg__MB__Canada ;;
+    sql: ${TABLE}._28_Days_City__People_Talking_About_This___Zamboanga_City__Zamboanga_Peninsula__Philippines ;;
   }
 
   dimension: _28_days_country__people_talking_about_this___ae {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Country__People_Talking_About_This___AE ;;
   }
 
@@ -395,6 +424,11 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_Country__People_Talking_About_This___BE ;;
   }
 
+  dimension: _28_days_country__people_talking_about_this___bg {
+    type: number
+    sql: ${TABLE}._28_Days_Country__People_Talking_About_This___BG ;;
+  }
+
   dimension: _28_days_country__people_talking_about_this___br {
     type: number
     sql: ${TABLE}._28_Days_Country__People_Talking_About_This___BR ;;
@@ -410,19 +444,9 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_Country__People_Talking_About_This___CH ;;
   }
 
-  dimension: _28_days_country__people_talking_about_this___cl {
-    type: number
-    sql: ${TABLE}._28_Days_Country__People_Talking_About_This___CL ;;
-  }
-
   dimension: _28_days_country__people_talking_about_this___co {
     type: number
     sql: ${TABLE}._28_Days_Country__People_Talking_About_This___CO ;;
-  }
-
-  dimension: _28_days_country__people_talking_about_this___cr {
-    type: number
-    sql: ${TABLE}._28_Days_Country__People_Talking_About_This___CR ;;
   }
 
   dimension: _28_days_country__people_talking_about_this___cz {
@@ -435,11 +459,6 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_Country__People_Talking_About_This___DE ;;
   }
 
-  dimension: _28_days_country__people_talking_about_this___dk {
-    type: number
-    sql: ${TABLE}._28_Days_Country__People_Talking_About_This___DK ;;
-  }
-
   dimension: _28_days_country__people_talking_about_this___do {
     type: number
     sql: ${TABLE}._28_Days_Country__People_Talking_About_This___DO ;;
@@ -448,11 +467,6 @@ view: fb_page_tpt {
   dimension: _28_days_country__people_talking_about_this___dz {
     type: number
     sql: ${TABLE}._28_Days_Country__People_Talking_About_This___DZ ;;
-  }
-
-  dimension: _28_days_country__people_talking_about_this___ec {
-    type: number
-    sql: ${TABLE}._28_Days_Country__People_Talking_About_This___EC ;;
   }
 
   dimension: _28_days_country__people_talking_about_this___eg {
@@ -480,9 +494,9 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_Country__People_Talking_About_This___GB ;;
   }
 
-  dimension: _28_days_country__people_talking_about_this___gh {
+  dimension: _28_days_country__people_talking_about_this___ge {
     type: number
-    sql: ${TABLE}._28_Days_Country__People_Talking_About_This___GH ;;
+    sql: ${TABLE}._28_Days_Country__People_Talking_About_This___GE ;;
   }
 
   dimension: _28_days_country__people_talking_about_this___gr {
@@ -490,19 +504,14 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_Country__People_Talking_About_This___GR ;;
   }
 
-  dimension: _28_days_country__people_talking_about_this___gt {
-    type: number
-    sql: ${TABLE}._28_Days_Country__People_Talking_About_This___GT ;;
-  }
-
   dimension: _28_days_country__people_talking_about_this___hk {
     type: number
     sql: ${TABLE}._28_Days_Country__People_Talking_About_This___HK ;;
   }
 
-  dimension: _28_days_country__people_talking_about_this___hn {
+  dimension: _28_days_country__people_talking_about_this___hr {
     type: number
-    sql: ${TABLE}._28_Days_Country__People_Talking_About_This___HN ;;
+    sql: ${TABLE}._28_Days_Country__People_Talking_About_This___HR ;;
   }
 
   dimension: _28_days_country__people_talking_about_this___hu {
@@ -513,6 +522,11 @@ view: fb_page_tpt {
   dimension: _28_days_country__people_talking_about_this___id {
     type: number
     sql: ${TABLE}._28_Days_Country__People_Talking_About_This___ID ;;
+  }
+
+  dimension: _28_days_country__people_talking_about_this___ie {
+    type: number
+    sql: ${TABLE}._28_Days_Country__People_Talking_About_This___IE ;;
   }
 
   dimension: _28_days_country__people_talking_about_this___il {
@@ -535,29 +549,24 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_Country__People_Talking_About_This___IT ;;
   }
 
-  dimension: _28_days_country__people_talking_about_this___jo {
-    type: number
-    sql: ${TABLE}._28_Days_Country__People_Talking_About_This___JO ;;
-  }
-
   dimension: _28_days_country__people_talking_about_this___jp {
     type: number
     sql: ${TABLE}._28_Days_Country__People_Talking_About_This___JP ;;
   }
 
-  dimension: _28_days_country__people_talking_about_this___lb {
+  dimension: _28_days_country__people_talking_about_this___kr {
     type: number
-    sql: ${TABLE}._28_Days_Country__People_Talking_About_This___LB ;;
-  }
-
-  dimension: _28_days_country__people_talking_about_this___lv {
-    type: number
-    sql: ${TABLE}._28_Days_Country__People_Talking_About_This___LV ;;
+    sql: ${TABLE}._28_Days_Country__People_Talking_About_This___KR ;;
   }
 
   dimension: _28_days_country__people_talking_about_this___ma {
     type: number
     sql: ${TABLE}._28_Days_Country__People_Talking_About_This___MA ;;
+  }
+
+  dimension: _28_days_country__people_talking_about_this___mn {
+    type: number
+    sql: ${TABLE}._28_Days_Country__People_Talking_About_This___MN ;;
   }
 
   dimension: _28_days_country__people_talking_about_this___mx {
@@ -585,9 +594,9 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_Country__People_Talking_About_This___NL ;;
   }
 
-  dimension: _28_days_country__people_talking_about_this___np {
+  dimension: _28_days_country__people_talking_about_this___no {
     type: number
-    sql: ${TABLE}._28_Days_Country__People_Talking_About_This___NP ;;
+    sql: ${TABLE}._28_Days_Country__People_Talking_About_This___NO ;;
   }
 
   dimension: _28_days_country__people_talking_about_this___nz {
@@ -630,14 +639,24 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_Country__People_Talking_About_This___RO ;;
   }
 
+  dimension: _28_days_country__people_talking_about_this___ru {
+    type: number
+    sql: ${TABLE}._28_Days_Country__People_Talking_About_This___RU ;;
+  }
+
+  dimension: _28_days_country__people_talking_about_this___sa {
+    type: number
+    sql: ${TABLE}._28_Days_Country__People_Talking_About_This___SA ;;
+  }
+
   dimension: _28_days_country__people_talking_about_this___se {
     type: number
     sql: ${TABLE}._28_Days_Country__People_Talking_About_This___SE ;;
   }
 
-  dimension: _28_days_country__people_talking_about_this___sv {
+  dimension: _28_days_country__people_talking_about_this___sg {
     type: number
-    sql: ${TABLE}._28_Days_Country__People_Talking_About_This___SV ;;
+    sql: ${TABLE}._28_Days_Country__People_Talking_About_This___SG ;;
   }
 
   dimension: _28_days_country__people_talking_about_this___sy {
@@ -650,14 +669,14 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_Country__People_Talking_About_This___TH ;;
   }
 
-  dimension: _28_days_country__people_talking_about_this___tr {
-    type: number
-    sql: ${TABLE}._28_Days_Country__People_Talking_About_This___TR ;;
-  }
-
   dimension: _28_days_country__people_talking_about_this___tw {
     type: number
     sql: ${TABLE}._28_Days_Country__People_Talking_About_This___TW ;;
+  }
+
+  dimension: _28_days_country__people_talking_about_this___tz {
+    type: number
+    sql: ${TABLE}._28_Days_Country__People_Talking_About_This___TZ ;;
   }
 
   dimension: _28_days_country__people_talking_about_this___us {
@@ -665,14 +684,14 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_Country__People_Talking_About_This___US ;;
   }
 
+  dimension: _28_days_country__people_talking_about_this___ve {
+    type: number
+    sql: ${TABLE}._28_Days_Country__People_Talking_About_This___VE ;;
+  }
+
   dimension: _28_days_country__people_talking_about_this___vn {
     type: number
     sql: ${TABLE}._28_Days_Country__People_Talking_About_This___VN ;;
-  }
-
-  dimension: _28_days_country__people_talking_about_this___xk {
-    type: number
-    sql: ${TABLE}._28_Days_Country__People_Talking_About_This___XK ;;
   }
 
   dimension: _28_days_country__people_talking_about_this___za {
@@ -681,7 +700,7 @@ view: fb_page_tpt {
   }
 
   dimension: _28_days_demographics__people_talking_about_this___f_13_17 {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Demographics__People_Talking_About_This___F_13_17 ;;
   }
 
@@ -786,13 +805,8 @@ view: fb_page_tpt {
   }
 
   dimension: _28_days_language__people_talking_about_this___ar_ar {
-    type: string
-    sql: ${TABLE}._28_Days_Language__People_Talking_About_This___ar_AR ;;
-  }
-
-  dimension: _28_days_language__people_talking_about_this___az_az {
     type: number
-    sql: ${TABLE}._28_Days_Language__People_Talking_About_This___az_AZ ;;
+    sql: ${TABLE}._28_Days_Language__People_Talking_About_This___ar_AR ;;
   }
 
   dimension: _28_days_language__people_talking_about_this___bg_bg {
@@ -800,14 +814,9 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_Language__People_Talking_About_This___bg_BG ;;
   }
 
-  dimension: _28_days_language__people_talking_about_this___bs_ba {
+  dimension: _28_days_language__people_talking_about_this___bn_in {
     type: number
-    sql: ${TABLE}._28_Days_Language__People_Talking_About_This___bs_BA ;;
-  }
-
-  dimension: _28_days_language__people_talking_about_this___ca_es {
-    type: number
-    sql: ${TABLE}._28_Days_Language__People_Talking_About_This___ca_ES ;;
+    sql: ${TABLE}._28_Days_Language__People_Talking_About_This___bn_IN ;;
   }
 
   dimension: _28_days_language__people_talking_about_this___cs_cz {
@@ -855,16 +864,6 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_Language__People_Talking_About_This___es_LA ;;
   }
 
-  dimension: _28_days_language__people_talking_about_this___et_ee {
-    type: number
-    sql: ${TABLE}._28_Days_Language__People_Talking_About_This___et_EE ;;
-  }
-
-  dimension: _28_days_language__people_talking_about_this___fa_ir {
-    type: number
-    sql: ${TABLE}._28_Days_Language__People_Talking_About_This___fa_IR ;;
-  }
-
   dimension: _28_days_language__people_talking_about_this___fi_fi {
     type: number
     sql: ${TABLE}._28_Days_Language__People_Talking_About_This___fi_FI ;;
@@ -880,9 +879,19 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_Language__People_Talking_About_This___fr_FR ;;
   }
 
+  dimension: _28_days_language__people_talking_about_this___gu_in {
+    type: number
+    sql: ${TABLE}._28_Days_Language__People_Talking_About_This___gu_IN ;;
+  }
+
   dimension: _28_days_language__people_talking_about_this___he_il {
     type: number
     sql: ${TABLE}._28_Days_Language__People_Talking_About_This___he_IL ;;
+  }
+
+  dimension: _28_days_language__people_talking_about_this___hi_in {
+    type: number
+    sql: ${TABLE}._28_Days_Language__People_Talking_About_This___hi_IN ;;
   }
 
   dimension: _28_days_language__people_talking_about_this___hr_hr {
@@ -915,6 +924,11 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_Language__People_Talking_About_This___ka_GE ;;
   }
 
+  dimension: _28_days_language__people_talking_about_this___kn_in {
+    type: number
+    sql: ${TABLE}._28_Days_Language__People_Talking_About_This___kn_IN ;;
+  }
+
   dimension: _28_days_language__people_talking_about_this___ko_kr {
     type: number
     sql: ${TABLE}._28_Days_Language__People_Talking_About_This___ko_KR ;;
@@ -925,14 +939,19 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_Language__People_Talking_About_This___lt_LT ;;
   }
 
-  dimension: _28_days_language__people_talking_about_this___lv_lv {
+  dimension: _28_days_language__people_talking_about_this___ml_in {
     type: number
-    sql: ${TABLE}._28_Days_Language__People_Talking_About_This___lv_LV ;;
+    sql: ${TABLE}._28_Days_Language__People_Talking_About_This___ml_IN ;;
   }
 
-  dimension: _28_days_language__people_talking_about_this___mk_mk {
+  dimension: _28_days_language__people_talking_about_this___mn_mn {
     type: number
-    sql: ${TABLE}._28_Days_Language__People_Talking_About_This___mk_MK ;;
+    sql: ${TABLE}._28_Days_Language__People_Talking_About_This___mn_MN ;;
+  }
+
+  dimension: _28_days_language__people_talking_about_this___mr_in {
+    type: number
+    sql: ${TABLE}._28_Days_Language__People_Talking_About_This___mr_IN ;;
   }
 
   dimension: _28_days_language__people_talking_about_this___ms_my {
@@ -945,14 +964,14 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_Language__People_Talking_About_This___nb_NO ;;
   }
 
-  dimension: _28_days_language__people_talking_about_this___nl_be {
-    type: number
-    sql: ${TABLE}._28_Days_Language__People_Talking_About_This___nl_BE ;;
-  }
-
   dimension: _28_days_language__people_talking_about_this___nl_nl {
     type: number
     sql: ${TABLE}._28_Days_Language__People_Talking_About_This___nl_NL ;;
+  }
+
+  dimension: _28_days_language__people_talking_about_this___pa_in {
+    type: number
+    sql: ${TABLE}._28_Days_Language__People_Talking_About_This___pa_IN ;;
   }
 
   dimension: _28_days_language__people_talking_about_this___pl_pl {
@@ -990,11 +1009,6 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_Language__People_Talking_About_This___sl_SI ;;
   }
 
-  dimension: _28_days_language__people_talking_about_this___sq_al {
-    type: number
-    sql: ${TABLE}._28_Days_Language__People_Talking_About_This___sq_AL ;;
-  }
-
   dimension: _28_days_language__people_talking_about_this___sr_rs {
     type: number
     sql: ${TABLE}._28_Days_Language__People_Talking_About_This___sr_RS ;;
@@ -1003,6 +1017,16 @@ view: fb_page_tpt {
   dimension: _28_days_language__people_talking_about_this___sv_se {
     type: number
     sql: ${TABLE}._28_Days_Language__People_Talking_About_This___sv_SE ;;
+  }
+
+  dimension: _28_days_language__people_talking_about_this___sw_ke {
+    type: number
+    sql: ${TABLE}._28_Days_Language__People_Talking_About_This___sw_KE ;;
+  }
+
+  dimension: _28_days_language__people_talking_about_this___ta_in {
+    type: number
+    sql: ${TABLE}._28_Days_Language__People_Talking_About_This___ta_IN ;;
   }
 
   dimension: _28_days_language__people_talking_about_this___th_th {
@@ -1041,12 +1065,12 @@ view: fb_page_tpt {
   }
 
   dimension: _28_days_negative_feedback {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Negative_Feedback ;;
   }
 
   dimension: _28_days_negative_feedback_by_type___hide_all_clicks {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Negative_feedback_by_type___hide_all_clicks ;;
   }
 
@@ -1071,12 +1095,12 @@ view: fb_page_tpt {
   }
 
   dimension: _28_days_negative_feedback_from_users {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Negative_Feedback_From_Users ;;
   }
 
   dimension: _28_days_negative_feedback_from_users___hide_all_clicks {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Negative_Feedback_From_Users___hide_all_clicks ;;
   }
 
@@ -1101,32 +1125,32 @@ view: fb_page_tpt {
   }
 
   dimension: _28_days_organic_impressions {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Organic_impressions ;;
   }
 
   dimension: _28_days_organic_impressions_of_your_posts {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Organic_impressions_of_your_posts ;;
   }
 
   dimension: _28_days_organic_reach {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Organic_Reach ;;
   }
 
   dimension: _28_days_organic_reach_of_page_posts {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Organic_Reach_of_Page_posts ;;
   }
 
   dimension: _28_days_page_consumptions {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Page_Consumptions ;;
   }
 
   dimension: _28_days_page_consumptions_by_type___button_clicks {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Page_Consumptions_By_Type___button_clicks ;;
   }
 
@@ -1151,12 +1175,12 @@ view: fb_page_tpt {
   }
 
   dimension: _28_days_page_engaged_users {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Page_Engaged_Users ;;
   }
 
   dimension: _28_days_page_posts_frequency_distribution___1 {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Page_Posts_Frequency_Distribution___1 ;;
   }
 
@@ -1196,7 +1220,7 @@ view: fb_page_tpt {
   }
 
   dimension: _28_days_page_stories_by_story_type___checkin {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Page_Stories_By_Story_Type___checkin ;;
   }
 
@@ -1241,38 +1265,38 @@ view: fb_page_tpt {
   }
 
   dimension: _28_days_paid_30_second_views {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Paid_30_Second_Views ;;
   }
 
   dimension: _28_days_paid_impressions {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Paid_Impressions ;;
   }
 
   dimension: _28_days_paid_impressions_of_your_posts {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Paid_impressions_of_your_posts ;;
   }
 
   dimension: _28_days_paid_reach {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Paid_Reach ;;
   }
 
   dimension: _28_days_paid_reach_of_page_posts {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Paid_Reach_of_Page_posts ;;
   }
 
   dimension: _28_days_positive_feedback_from_users___answer {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Positive_Feedback_From_Users___answer ;;
   }
 
-  dimension: _28_days_positive_feedback_from_users___answer_1728 {
-    type: string
-    sql: ${TABLE}._28_Days_Positive_Feedback_From_Users___answer_1728 ;;
+  dimension: _28_days_positive_feedback_from_users___answer_1964 {
+    type: number
+    sql: ${TABLE}._28_Days_Positive_Feedback_From_Users___answer_1964 ;;
   }
 
   dimension: _28_days_positive_feedback_from_users___claim {
@@ -1280,9 +1304,9 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_Positive_Feedback_From_Users___claim ;;
   }
 
-  dimension: _28_days_positive_feedback_from_users___claim_1729 {
+  dimension: _28_days_positive_feedback_from_users___claim_1965 {
     type: number
-    sql: ${TABLE}._28_Days_Positive_Feedback_From_Users___claim_1729 ;;
+    sql: ${TABLE}._28_Days_Positive_Feedback_From_Users___claim_1965 ;;
   }
 
   dimension: _28_days_positive_feedback_from_users___comment {
@@ -1290,9 +1314,9 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_Positive_Feedback_From_Users___comment ;;
   }
 
-  dimension: _28_days_positive_feedback_from_users___comment_1730 {
+  dimension: _28_days_positive_feedback_from_users___comment_1966 {
     type: number
-    sql: ${TABLE}._28_Days_Positive_Feedback_From_Users___comment_1730 ;;
+    sql: ${TABLE}._28_Days_Positive_Feedback_From_Users___comment_1966 ;;
   }
 
   dimension: _28_days_positive_feedback_from_users___like {
@@ -1300,9 +1324,9 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_Positive_Feedback_From_Users___like ;;
   }
 
-  dimension: _28_days_positive_feedback_from_users___like_1731 {
+  dimension: _28_days_positive_feedback_from_users___like_1967 {
     type: number
-    sql: ${TABLE}._28_Days_Positive_Feedback_From_Users___like_1731 ;;
+    sql: ${TABLE}._28_Days_Positive_Feedback_From_Users___like_1967 ;;
   }
 
   dimension: _28_days_positive_feedback_from_users___link {
@@ -1310,9 +1334,9 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_Positive_Feedback_From_Users___link ;;
   }
 
-  dimension: _28_days_positive_feedback_from_users___link_1732 {
+  dimension: _28_days_positive_feedback_from_users___link_1968 {
     type: number
-    sql: ${TABLE}._28_Days_Positive_Feedback_From_Users___link_1732 ;;
+    sql: ${TABLE}._28_Days_Positive_Feedback_From_Users___link_1968 ;;
   }
 
   dimension: _28_days_positive_feedback_from_users___other {
@@ -1320,18 +1344,18 @@ view: fb_page_tpt {
     sql: ${TABLE}._28_Days_Positive_Feedback_From_Users___other ;;
   }
 
-  dimension: _28_days_positive_feedback_from_users___other_1733 {
+  dimension: _28_days_positive_feedback_from_users___other_1969 {
     type: number
-    sql: ${TABLE}._28_Days_Positive_Feedback_From_Users___other_1733 ;;
+    sql: ${TABLE}._28_Days_Positive_Feedback_From_Users___other_1969 ;;
   }
 
   dimension: _28_days_reach_of_page_posts {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Reach_Of_Page_Posts ;;
   }
 
   dimension: _28_days_talking_about_this_by_story_type___checkin {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Talking_About_This_By_Story_Type___checkin ;;
   }
 
@@ -1376,17 +1400,17 @@ view: fb_page_tpt {
   }
 
   dimension: _28_days_total_30_second_repeats {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Total_30_Second_Repeats ;;
   }
 
   dimension: _28_days_total_30_second_views {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Total_30_Second_Views ;;
   }
 
   dimension: _28_days_total_auto_played_views {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Total_Auto_Played_Views ;;
   }
 
@@ -1411,22 +1435,22 @@ view: fb_page_tpt {
   }
 
   dimension: _28_days_total_clicked_30_second_views {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Total_Clicked_30_Second_Views ;;
   }
 
   dimension: _28_days_total_clicked_views {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Total_Clicked_Views ;;
   }
 
   dimension: _28_days_total_consumers {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Total_Consumers ;;
   }
 
   dimension: _28_days_total_frequency_distribution___1 {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Total_Frequency_Distribution___1 ;;
   }
 
@@ -1466,83 +1490,78 @@ view: fb_page_tpt {
   }
 
   dimension: _28_days_total_impressions {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Total_Impressions ;;
   }
 
   dimension: _28_days_total_impressions_of_your_posts {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Total_Impressions_of_your_posts ;;
   }
 
   dimension: _28_days_total_organic_30_second_views {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Total_Organic_30_Second_Views ;;
   }
 
   dimension: _28_days_total_organic_views {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Total_Organic_Views ;;
   }
 
   dimension: _28_days_total_promoted_views {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Total_Promoted_Views ;;
   }
 
   dimension: _28_days_total_reach {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Total_Reach ;;
   }
 
   dimension: _28_days_total_unique_30_second_views {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Total_Unique_30_Second_Views ;;
   }
 
   dimension: _28_days_total_unique_video_views {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Total_Unique_Video_Views ;;
   }
 
   dimension: _28_days_total_video_views {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Total_Video_Views ;;
   }
 
   dimension: _28_days_video_repeats {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Video_Repeats ;;
   }
 
   dimension: _28_days_viral_impressions {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Viral_impressions ;;
   }
 
   dimension: _28_days_viral_impressions_of_your_posts {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Viral_Impressions_Of_Your_Posts ;;
   }
 
   dimension: _28_days_viral_reach {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Viral_Reach ;;
   }
 
   dimension: _28_days_viral_reach_of_page_posts {
-    type: string
+    type: number
     sql: ${TABLE}._28_Days_Viral_Reach_Of_Page_Posts ;;
   }
 
   dimension: daily_auto_played_30_second_views {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Auto_Played_30_Second_Views ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___abidjan__lagunes__c__te_d_ivoire {
-    type: string
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Abidjan__Lagunes__C__te_d_Ivoire ;;
   }
 
   dimension: daily_city__people_talking_about_this___accra__greater_accra_region__ghana {
@@ -1550,19 +1569,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Accra__Greater_Accra_Region__Ghana ;;
   }
 
-  dimension: daily_city__people_talking_about_this___adelaide__sa__australia {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Adelaide__SA__Australia ;;
-  }
-
   dimension: daily_city__people_talking_about_this___agadir__souss_massa_dr__a__morocco {
     type: number
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Agadir__Souss_Massa_Dr__a__Morocco ;;
   }
 
-  dimension: daily_city__people_talking_about_this___albuquerque__nm {
+  dimension: daily_city__people_talking_about_this___ahmedabad__gujarat__india {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Albuquerque__NM ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Ahmedabad__Gujarat__India ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___aizawl__mizoram__india {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Aizawl__Mizoram__India ;;
   }
 
   dimension: daily_city__people_talking_about_this___alexandria__alexandria_governorate__egypt {
@@ -1575,24 +1594,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Algiers__Algiers_Province__Algeria ;;
   }
 
-  dimension: daily_city__people_talking_about_this___allegheny_acres__pa {
+  dimension: daily_city__people_talking_about_this___allahabad__uttar_pradesh__india {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Allegheny_Acres__PA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___allentown__pa {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Allentown__PA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___altoona__pa {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Altoona__PA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___amherst__ny {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Amherst__NY ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Allahabad__Uttar_Pradesh__India ;;
   }
 
   dimension: daily_city__people_talking_about_this___amman__amman_governorate__jordan {
@@ -1600,14 +1604,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Amman__Amman_Governorate__Jordan ;;
   }
 
-  dimension: daily_city__people_talking_about_this___anaheim__ca {
+  dimension: daily_city__people_talking_about_this___amritsar__punjab_region__india {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Anaheim__CA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Amritsar__Punjab_region__India ;;
   }
 
-  dimension: daily_city__people_talking_about_this___anchorage__ak {
+  dimension: daily_city__people_talking_about_this___angeles_city__central_luzon__philippines {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Anchorage__AK ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Angeles_City__Central_Luzon__Philippines ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___ann_arbor__mi {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Ann_Arbor__MI ;;
   }
 
   dimension: daily_city__people_talking_about_this___antipolo__calabarzon__philippines {
@@ -1615,49 +1624,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Antipolo__Calabarzon__Philippines ;;
   }
 
-  dimension: daily_city__people_talking_about_this___araguari__mg__brazil {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Araguari__MG__Brazil ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___arcadia__ca {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Arcadia__CA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___arlington__tx {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Arlington__TX ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___as_sulaymaniyah__sulaymaniyah_governorate__iraq {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___As_Sulaymaniyah__Sulaymaniyah_Governorate__Iraq ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___aston__pa {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Aston__PA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___athens__attica__region___greece {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Athens__Attica__region___Greece ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___athens__ga {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Athens__GA ;;
-  }
-
   dimension: daily_city__people_talking_about_this___atlanta__ga {
     type: number
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Atlanta__GA ;;
   }
 
-  dimension: daily_city__people_talking_about_this___augusta__ga {
+  dimension: daily_city__people_talking_about_this___auckland__auckland_region__new_zealand {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Augusta__GA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Auckland__Auckland_Region__New_Zealand ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___aurangabad__maharashtra__india {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Aurangabad__Maharashtra__India ;;
   }
 
   dimension: daily_city__people_talking_about_this___austin__tx {
@@ -1665,14 +1644,24 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Austin__TX ;;
   }
 
+  dimension: daily_city__people_talking_about_this___bacolod_city__western_visayas__philippines {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Bacolod_CIty__Western_Visayas__Philippines ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___bacoor__calabarzon__philippines {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Bacoor__Calabarzon__Philippines ;;
+  }
+
   dimension: daily_city__people_talking_about_this___baghdad__baghdad_governorate__iraq {
     type: number
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Baghdad__Baghdad_Governorate__Iraq ;;
   }
 
-  dimension: daily_city__people_talking_about_this___baku__azerbaijan {
+  dimension: daily_city__people_talking_about_this___baguio_city__philippines {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Baku__Azerbaijan ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Baguio_City__Philippines ;;
   }
 
   dimension: daily_city__people_talking_about_this___baltimore__md {
@@ -1695,14 +1684,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Barcelona__Catalu__a__Spain ;;
   }
 
-  dimension: daily_city__people_talking_about_this___baton_rouge__la {
+  dimension: daily_city__people_talking_about_this___batangas_city__philippines {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Baton_Rouge__LA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___beaver_falls__pa {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Beaver_Falls__PA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Batangas_City__Philippines ;;
   }
 
   dimension: daily_city__people_talking_about_this___beirut__beirut_governorate__lebanon {
@@ -1710,29 +1694,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Beirut__Beirut_Governorate__Lebanon ;;
   }
 
-  dimension: daily_city__people_talking_about_this___bensalem__pa {
+  dimension: daily_city__people_talking_about_this___berlin__germany {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Bensalem__PA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Berlin__Germany ;;
   }
 
-  dimension: daily_city__people_talking_about_this___bethel_park__pa {
+  dimension: daily_city__people_talking_about_this___bhopal__madhya_pradesh__india {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Bethel_Park__PA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Bhopal__Madhya_Pradesh__India ;;
   }
 
-  dimension: daily_city__people_talking_about_this___bethlehem__pa {
+  dimension: daily_city__people_talking_about_this___bhubaneswar__odisha__india {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Bethlehem__PA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___birmingham__al {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Birmingham__AL ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___bismarck__nd {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Bismarck__ND ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Bhubaneswar__Odisha__India ;;
   }
 
   dimension: daily_city__people_talking_about_this___bogot____distrito_especial__colombia {
@@ -1740,24 +1714,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Bogot____Distrito_Especial__Colombia ;;
   }
 
-  dimension: daily_city__people_talking_about_this___bologna__emilia_romagna__italy {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Bologna__Emilia_Romagna__Italy ;;
-  }
-
   dimension: daily_city__people_talking_about_this___boston__ma {
     type: number
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Boston__MA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___brandon__mb__canada {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Brandon__MB__Canada ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___bras__lia__df__brazil {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Bras__lia__DF__Brazil ;;
   }
 
   dimension: daily_city__people_talking_about_this___brisbane__qld__australia {
@@ -1765,14 +1724,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Brisbane__QLD__Australia ;;
   }
 
-  dimension: daily_city__people_talking_about_this___bucharest__romania {
+  dimension: daily_city__people_talking_about_this___brussels__belgium {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Bucharest__Romania ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___buenos_aires__ciudad_aut__noma_de_buenos_aires__argentina {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Buenos_Aires__Ciudad_Aut__noma_de_Buenos_Aires__Argentina ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Brussels__Belgium ;;
   }
 
   dimension: daily_city__people_talking_about_this___buffalo__ny {
@@ -1780,9 +1734,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Buffalo__NY ;;
   }
 
-  dimension: daily_city__people_talking_about_this___butler__pa {
+  dimension: daily_city__people_talking_about_this___butuan_city__caraga__philippines {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Butler__PA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Butuan_City__Caraga__Philippines ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___cagayan_de_oro__northern_mindanao__philippines {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Cagayan_de_Oro__Northern_Mindanao__Philippines ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___cainta__calabarzon__philippines {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Cainta__Calabarzon__Philippines ;;
   }
 
   dimension: daily_city__people_talking_about_this___cairo__cairo_governorate__egypt {
@@ -1790,9 +1754,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Cairo__Cairo_Governorate__Egypt ;;
   }
 
+  dimension: daily_city__people_talking_about_this___calamba__calabarzon__philippines {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Calamba__Calabarzon__Philippines ;;
+  }
+
   dimension: daily_city__people_talking_about_this___calgary__ab__canada {
     type: number
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Calgary__AB__Canada ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___calicut__kerala__india {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Calicut__Kerala__India ;;
   }
 
   dimension: daily_city__people_talking_about_this___caloocan__metro_manila__philippines {
@@ -1800,14 +1774,14 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Caloocan__Metro_Manila__Philippines ;;
   }
 
-  dimension: daily_city__people_talking_about_this___camden__nj {
+  dimension: daily_city__people_talking_about_this___cape_town__western_cape__south_africa {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Camden__NJ ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Cape_Town__Western_Cape__South_Africa ;;
   }
 
-  dimension: daily_city__people_talking_about_this___campeche__mexico {
+  dimension: daily_city__people_talking_about_this___caracas__capital_district__venezuela {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Campeche__Mexico ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Caracas__Capital_District__Venezuela ;;
   }
 
   dimension: daily_city__people_talking_about_this___casablanca__grand_casablanca__morocco {
@@ -1820,6 +1794,11 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Cebu_City__Central_Visayas__Philippines ;;
   }
 
+  dimension: daily_city__people_talking_about_this___chandigarh__india {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Chandigarh__India ;;
+  }
+
   dimension: daily_city__people_talking_about_this___charleston__sc {
     type: number
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Charleston__SC ;;
@@ -1830,14 +1809,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Charlotte__NC ;;
   }
 
-  dimension: daily_city__people_talking_about_this___chattanooga__tn {
+  dimension: daily_city__people_talking_about_this___chennai__tamil_nadu__india {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Chattanooga__TN ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___cherry_hill__nj {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Cherry_Hill__NJ ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Chennai__Tamil_Nadu__India ;;
   }
 
   dimension: daily_city__people_talking_about_this___chicago__il {
@@ -1845,9 +1819,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Chicago__IL ;;
   }
 
+  dimension: daily_city__people_talking_about_this___chittagong__chittagong_division__bangladesh {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Chittagong__Chittagong_Division__Bangladesh ;;
+  }
+
   dimension: daily_city__people_talking_about_this___cincinnati__oh {
     type: number
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Cincinnati__OH ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___clarksville__tn {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Clarksville__TN ;;
   }
 
   dimension: daily_city__people_talking_about_this___cleveland__oh {
@@ -1855,14 +1839,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Cleveland__OH ;;
   }
 
-  dimension: daily_city__people_talking_about_this___coatesville__pa {
+  dimension: daily_city__people_talking_about_this___coimbatore__tamil_nadu__india {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Coatesville__PA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___collegeville__pa {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Collegeville__PA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Coimbatore__Tamil_Nadu__India ;;
   }
 
   dimension: daily_city__people_talking_about_this___colorado_springs__co {
@@ -1875,24 +1854,14 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Columbia__SC ;;
   }
 
-  dimension: daily_city__people_talking_about_this___columbus__ga {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Columbus__GA ;;
-  }
-
   dimension: daily_city__people_talking_about_this___columbus__oh {
     type: number
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Columbus__OH ;;
   }
 
-  dimension: daily_city__people_talking_about_this___cranberry_township__butler_county__pa {
+  dimension: daily_city__people_talking_about_this___cotabato_city__soccsksargen__philippines {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Cranberry_Township__Butler_County__PA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___cullman__al {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Cullman__AL ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Cotabato_City__Soccsksargen__Philippines ;;
   }
 
   dimension: daily_city__people_talking_about_this___curitiba__pr__brazil {
@@ -1915,24 +1884,29 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Damascus__Damascus_Governorate__Syria ;;
   }
 
+  dimension: daily_city__people_talking_about_this___dar_es_salaam__tanzania {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Dar_es_Salaam__Tanzania ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___dasmari__as__calabarzon__philippines {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Dasmari__as__Calabarzon__Philippines ;;
+  }
+
   dimension: daily_city__people_talking_about_this___davao_city__davao_region__philippines {
     type: number
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Davao_City__Davao_Region__Philippines ;;
   }
 
-  dimension: daily_city__people_talking_about_this___decatur__al {
+  dimension: daily_city__people_talking_about_this___dehra_dun__uttarakhand__india {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Decatur__AL ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Dehra_Dun__Uttarakhand__India ;;
   }
 
   dimension: daily_city__people_talking_about_this___denver__co {
     type: number
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Denver__CO ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___deptford__nj {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Deptford__NJ ;;
   }
 
   dimension: daily_city__people_talking_about_this___detroit__mi {
@@ -1945,34 +1919,14 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Dhaka__Dhaka_Division__Bangladesh ;;
   }
 
-  dimension: daily_city__people_talking_about_this___dothan__al {
+  dimension: daily_city__people_talking_about_this___dublin__ireland {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Dothan__AL ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Dublin__Ireland ;;
   }
 
-  dimension: daily_city__people_talking_about_this___downingtown__pa {
+  dimension: daily_city__people_talking_about_this___dumaguete_city__philippines {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Downingtown__PA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___dubai__united_arab_emirates {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Dubai__United_Arab_Emirates ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___duluth__mn {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Duluth__MN ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___durham__nc {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Durham__NC ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___eagan__mn {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Eagan__MN ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Dumaguete_City__Philippines ;;
   }
 
   dimension: daily_city__people_talking_about_this___edmonton__ab__canada {
@@ -1985,89 +1939,34 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___El_Paso__TX ;;
   }
 
-  dimension: daily_city__people_talking_about_this___elk_grove__ca {
+  dimension: daily_city__people_talking_about_this___elgin__il {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Elk_Grove__CA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Elgin__IL ;;
   }
 
-  dimension: daily_city__people_talking_about_this___ellwood_city__pa {
+  dimension: daily_city__people_talking_about_this___fez__f__s_boulemane__morocco {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Ellwood_City__PA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Fez__F__s_Boulemane__Morocco ;;
   }
 
-  dimension: daily_city__people_talking_about_this___erie__pa {
+  dimension: daily_city__people_talking_about_this___franklin__tn {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Erie__PA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Franklin__TN ;;
   }
 
-  dimension: daily_city__people_talking_about_this___fairmont__wv {
+  dimension: daily_city__people_talking_about_this___gaborone__south_east_district__botswana {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Fairmont__WV ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Gaborone__South_East_District__Botswana ;;
   }
 
-  dimension: daily_city__people_talking_about_this___fargo__nd {
+  dimension: daily_city__people_talking_about_this___gauhati__assam__india {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Fargo__ND ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Gauhati__Assam__India ;;
   }
 
-  dimension: daily_city__people_talking_about_this___flint__mi {
+  dimension: daily_city__people_talking_about_this___general_santos_city__soccsksargen__philippines {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Flint__MI ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___fort_meade__fl {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Fort_Meade__FL ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___fort_worth__tx {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Fort_Worth__TX ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___fresno__ca {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Fresno__CA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___gig_harbor__wa {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Gig_Harbor__WA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___grand_island__ny {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Grand_Island__NY ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___grand_rapids__mi {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Grand_Rapids__MI ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___grand_rapids__mn {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Grand_Rapids__MN ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___green_bay__wi {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Green_Bay__WI ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___greensboro__nc {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Greensboro__NC ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___greensburg__pa {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Greensburg__PA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___guadalajara__jalisco__mexico {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Guadalajara__Jalisco__Mexico ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___General_Santos_City__Soccsksargen__Philippines ;;
   }
 
   dimension: daily_city__people_talking_about_this___guatemala_city__guatemala_department__guatemala {
@@ -2075,19 +1974,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Guatemala_City__Guatemala_Department__Guatemala ;;
   }
 
-  dimension: daily_city__people_talking_about_this___hamburg__ny {
+  dimension: daily_city__people_talking_about_this___hamburg__germany {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Hamburg__NY ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___hanoi__h___n___i__vietnam {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Hanoi__H___N___i__Vietnam ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___havertown__pa {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Havertown__PA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Hamburg__Germany ;;
   }
 
   dimension: daily_city__people_talking_about_this___helsinki__uusimaa__finland {
@@ -2100,19 +1989,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Ho_Chi_Minh_City__Vietnam ;;
   }
 
+  dimension: daily_city__people_talking_about_this___hoboken__nj {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Hoboken__NJ ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___homs__homs_governorate__syria {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Homs__Homs_Governorate__Syria ;;
+  }
+
   dimension: daily_city__people_talking_about_this___hong_kong__hong_kong {
     type: number
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Hong_Kong__Hong_Kong ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___honolulu__hi {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Honolulu__HI ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___hoover__al {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Hoover__AL ;;
   }
 
   dimension: daily_city__people_talking_about_this___houston__tx {
@@ -2120,19 +2009,39 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Houston__TX ;;
   }
 
-  dimension: daily_city__people_talking_about_this___huntsville__al {
+  dimension: daily_city__people_talking_about_this___hyderabad__telangana__india {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Huntsville__AL ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Hyderabad__Telangana__India ;;
   }
 
-  dimension: daily_city__people_talking_about_this___indiana__pa {
+  dimension: daily_city__people_talking_about_this___iligan_city__northern_mindanao__philippines {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Indiana__PA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Iligan_City__Northern_Mindanao__Philippines ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___iloilo_city__western_visayas__philippines {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Iloilo_City__Western_Visayas__Philippines ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___imphal__manipur__india {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Imphal__Manipur__India ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___imus__calabarzon__philippines {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Imus__Calabarzon__Philippines ;;
   }
 
   dimension: daily_city__people_talking_about_this___indianapolis__in {
     type: number
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Indianapolis__IN ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___indore__madhya_pradesh__india {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Indore__Madhya_Pradesh__India ;;
   }
 
   dimension: daily_city__people_talking_about_this___irbil__erbil_governorate__iraq {
@@ -2145,34 +2054,44 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Jacksonville__FL ;;
   }
 
-  dimension: daily_city__people_talking_about_this___jamestown__ny {
+  dimension: daily_city__people_talking_about_this___jaipur__rajasthan__india {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Jamestown__NY ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Jaipur__Rajasthan__India ;;
   }
 
-  dimension: daily_city__people_talking_about_this___janesville__pa {
+  dimension: daily_city__people_talking_about_this___jalandhar__punjab_region__india {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Janesville__PA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Jalandhar__Punjab_region__India ;;
   }
 
-  dimension: daily_city__people_talking_about_this___johnstown__pa {
+  dimension: daily_city__people_talking_about_this___jammu__jammu_and_kashmir__india {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Johnstown__PA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Jammu__Jammu_and_Kashmir__India ;;
   }
 
-  dimension: daily_city__people_talking_about_this___kabul__kabul_province__afghanistan {
+  dimension: daily_city__people_talking_about_this___jodhpur__rajasthan__india {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Kabul__Kabul_Province__Afghanistan ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Jodhpur__Rajasthan__India ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___johannesburg__gauteng__south_africa {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Johannesburg__Gauteng__South_Africa ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___johor_bahru__johor__malaysia {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Johor_Bahru__Johor__Malaysia ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___kanpur__uttar_pradesh__india {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Kanpur__Uttar_Pradesh__India ;;
   }
 
   dimension: daily_city__people_talking_about_this___kansas_city__mo {
     type: number
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Kansas_City__MO ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___kaohsiung__taiwan {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Kaohsiung__Taiwan ;;
   }
 
   dimension: daily_city__people_talking_about_this___karachi__sindh__pakistan {
@@ -2185,24 +2104,14 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Kathmandu__Bagmati_Zone__Nepal ;;
   }
 
-  dimension: daily_city__people_talking_about_this___kent__wa {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Kent__WA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___killeen__tx {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Killeen__TX ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___kittanning__pa {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Kittanning__PA ;;
-  }
-
   dimension: daily_city__people_talking_about_this___knoxville__tn {
     type: number
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Knoxville__TN ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___kochi__kerala__india {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Kochi__Kerala__India ;;
   }
 
   dimension: daily_city__people_talking_about_this___kolkata__west_bengal__india {
@@ -2210,29 +2119,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Kolkata__West_Bengal__India ;;
   }
 
-  dimension: daily_city__people_talking_about_this___lakeland__fl {
+  dimension: daily_city__people_talking_about_this___kota_kinabalu__sabah__malaysia {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Lakeland__FL ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Kota_Kinabalu__Sabah__Malaysia ;;
   }
 
-  dimension: daily_city__people_talking_about_this___lakeville__mn {
+  dimension: daily_city__people_talking_about_this___kuala_lumpur__malaysia {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Lakeville__MN ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Kuala_Lumpur__Malaysia ;;
   }
 
-  dimension: daily_city__people_talking_about_this___lancaster__pa {
+  dimension: daily_city__people_talking_about_this___kuching__sarawak__malaysia {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Lancaster__PA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___langhorne__pa {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Langhorne__PA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___lansdale__pa {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Lansdale__PA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Kuching__Sarawak__Malaysia ;;
   }
 
   dimension: daily_city__people_talking_about_this___las_pi__as__calabarzon__philippines {
@@ -2245,19 +2144,14 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Las_Vegas__NV ;;
   }
 
-  dimension: daily_city__people_talking_about_this___latrobe__pa {
+  dimension: daily_city__people_talking_about_this___lattakia__latakia_governorate__syria {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Latrobe__PA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Lattakia__Latakia_Governorate__Syria ;;
   }
 
-  dimension: daily_city__people_talking_about_this___laval__qc__canada {
+  dimension: daily_city__people_talking_about_this___legazpi__bicol_region__philippines {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Laval__QC__Canada ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___levittown__pa {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Levittown__PA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Legazpi__Bicol_Region__Philippines ;;
   }
 
   dimension: daily_city__people_talking_about_this___lexington__ky {
@@ -2270,9 +2164,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Lima__Lima_Region__Peru ;;
   }
 
-  dimension: daily_city__people_talking_about_this___lisbon__lisbon_district__portugal {
+  dimension: daily_city__people_talking_about_this___logan__ut {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Lisbon__Lisbon_District__Portugal ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Logan__UT ;;
   }
 
   dimension: daily_city__people_talking_about_this___london__england__united_kingdom {
@@ -2290,34 +2184,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Louisville__KY ;;
   }
 
-  dimension: daily_city__people_talking_about_this___luanda__luanda_province__angola {
+  dimension: daily_city__people_talking_about_this___lucknow__uttar_pradesh__india {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Luanda__Luanda_Province__Angola ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Lucknow__Uttar_Pradesh__India ;;
   }
 
-  dimension: daily_city__people_talking_about_this___lynchburg__va {
+  dimension: daily_city__people_talking_about_this___ludhiana__punjab_region__india {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Lynchburg__VA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Ludhiana__Punjab_region__India ;;
   }
 
-  dimension: daily_city__people_talking_about_this___m__rida__yucat__n__mexico {
+  dimension: daily_city__people_talking_about_this___m__nchengladbach__nordrhein_westfalen__germany {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___M__rida__Yucat__n__Mexico ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___macon__ga {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Macon__GA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___madison__wi {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Madison__WI ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___madrid__comunidad_de_madrid__spain {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Madrid__Comunidad_de_Madrid__Spain ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___M__nchengladbach__Nordrhein_Westfalen__Germany ;;
   }
 
   dimension: daily_city__people_talking_about_this___makati__metro_manila__philippines {
@@ -2325,9 +2204,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Makati__Metro_Manila__Philippines ;;
   }
 
+  dimension: daily_city__people_talking_about_this___malabon__metro_manila__philippines {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Malabon__Metro_Manila__Philippines ;;
+  }
+
   dimension: daily_city__people_talking_about_this___managua__managua_department__nicaragua {
     type: number
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Managua__Managua_Department__Nicaragua ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___mandaluyong__metro_manila__philippines {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Mandaluyong__Metro_Manila__Philippines ;;
   }
 
   dimension: daily_city__people_talking_about_this___manila__metro_manila__philippines {
@@ -2335,44 +2224,14 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Manila__Metro_Manila__Philippines ;;
   }
 
-  dimension: daily_city__people_talking_about_this___mankato__mn {
+  dimension: daily_city__people_talking_about_this___marikina_city__philippines {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Mankato__MN ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___maple_grove__mn {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Maple_Grove__MN ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___maputo__maputo_province__mozambique {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Maputo__Maputo_Province__Mozambique ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___marietta__ga {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Marietta__GA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___marlton__nj {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Marlton__NJ ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Marikina_City__Philippines ;;
   }
 
   dimension: daily_city__people_talking_about_this___marrakesh__marrakesh_tensift_el_haouz__morocco {
     type: number
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Marrakesh__Marrakesh_Tensift_El_Haouz__Morocco ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___marysville__wa {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Marysville__WA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___media__pa {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Media__PA ;;
   }
 
   dimension: daily_city__people_talking_about_this___melbourne__vic__australia {
@@ -2395,11 +2254,6 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Miami__FL ;;
   }
 
-  dimension: daily_city__people_talking_about_this___milan__lombardia__italy {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Milan__Lombardia__Italy ;;
-  }
-
   dimension: daily_city__people_talking_about_this___milwaukee__wi {
     type: number
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Milwaukee__WI ;;
@@ -2410,39 +2264,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Minneapolis__MN ;;
   }
 
-  dimension: daily_city__people_talking_about_this___minnetonka__mn {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Minnetonka__MN ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___mobile__al {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Mobile__AL ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___modesto__ca {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Modesto__CA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___monroeville__pa {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Monroeville__PA ;;
-  }
-
   dimension: daily_city__people_talking_about_this___monterrey__nuevo_le__n__mexico {
     type: number
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Monterrey__Nuevo_Le__n__Mexico ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___montevideo__montevideo_department__uruguay {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Montevideo__Montevideo_Department__Uruguay ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___montgomery__al {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Montgomery__AL ;;
   }
 
   dimension: daily_city__people_talking_about_this___montreal__qc__canada {
@@ -2450,14 +2274,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Montreal__QC__Canada ;;
   }
 
-  dimension: daily_city__people_talking_about_this___morgantown__wv {
+  dimension: daily_city__people_talking_about_this___mount_juliet__tn {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Morgantown__WV ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___mount_laurel__nj {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Mount_Laurel__NJ ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Mount_Juliet__TN ;;
   }
 
   dimension: daily_city__people_talking_about_this___mumbai__maharashtra__india {
@@ -2465,14 +2284,24 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Mumbai__Maharashtra__India ;;
   }
 
-  dimension: daily_city__people_talking_about_this___muskegon__mi {
+  dimension: daily_city__people_talking_about_this___muntinlupa_city__metro_manila__philippines {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Muskegon__MI ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Muntinlupa_City__Metro_Manila__Philippines ;;
   }
 
-  dimension: daily_city__people_talking_about_this___naples__campania__italy {
+  dimension: daily_city__people_talking_about_this___murfreesboro__tn {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Naples__Campania__Italy ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Murfreesboro__TN ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___naga_city__bicol_region__philippines {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Naga_City__Bicol_Region__Philippines ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___nagpur__maharashtra__india {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Nagpur__Maharashtra__India ;;
   }
 
   dimension: daily_city__people_talking_about_this___nashville__tn {
@@ -2485,19 +2314,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Nassau_County__NY ;;
   }
 
-  dimension: daily_city__people_talking_about_this___naucalpan__state_of_mexico__mexico {
+  dimension: daily_city__people_talking_about_this___new_delhi__delhi__india {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Naucalpan__State_of_Mexico__Mexico ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___new_castle__de {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___New_Castle__DE ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___new_castle__pa {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___New_Castle__PA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___New_Delhi__Delhi__India ;;
   }
 
   dimension: daily_city__people_talking_about_this___new_orleans__la {
@@ -2515,29 +2334,14 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Newark__DE ;;
   }
 
-  dimension: daily_city__people_talking_about_this___niagara_falls__ny {
+  dimension: daily_city__people_talking_about_this___niagara_falls__on__canada {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Niagara_Falls__NY ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Niagara_Falls__ON__Canada ;;
   }
 
-  dimension: daily_city__people_talking_about_this___norman__ok {
+  dimension: daily_city__people_talking_about_this___o_fallon__mo {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Norman__OK ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___norristown__pa {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Norristown__PA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___north_tonawanda__ny {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___North_Tonawanda__NY ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___oakland__ca {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Oakland__CA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___O_Fallon__MO ;;
   }
 
   dimension: daily_city__people_talking_about_this___oklahoma_city__ok {
@@ -2550,6 +2354,11 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Omaha__NE ;;
   }
 
+  dimension: daily_city__people_talking_about_this___orland_park__il {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Orland_Park__IL ;;
+  }
+
   dimension: daily_city__people_talking_about_this___orlando__fl {
     type: number
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Orlando__FL ;;
@@ -2560,9 +2369,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Ottawa__ON__Canada ;;
   }
 
-  dimension: daily_city__people_talking_about_this___owatonna__mn {
+  dimension: daily_city__people_talking_about_this___pangasinan__ilocos_region__philippines {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Owatonna__MN ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Pangasinan__Ilocos_Region__Philippines ;;
   }
 
   dimension: daily_city__people_talking_about_this___para__aque__metro_manila__philippines {
@@ -2585,9 +2394,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Pasig__Metro_Manila__Philippines ;;
   }
 
-  dimension: daily_city__people_talking_about_this___pensacola__fl {
+  dimension: daily_city__people_talking_about_this___patna__bihar__india {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Pensacola__FL ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Patna__Bihar__India ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___penang__malaysia {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Penang__Malaysia ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___peoria__il {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Peoria__IL ;;
   }
 
   dimension: daily_city__people_talking_about_this___perth__wa__australia {
@@ -2595,14 +2414,14 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Perth__WA__Australia ;;
   }
 
-  dimension: daily_city__people_talking_about_this___peshawar__khyber_pakhtunkhwa__pakistan {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Peshawar__Khyber_Pakhtunkhwa__Pakistan ;;
-  }
-
   dimension: daily_city__people_talking_about_this___philadelphia__pa {
     type: number
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Philadelphia__PA ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___phnom_penh__cambodia {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Phnom_Penh__Cambodia ;;
   }
 
   dimension: daily_city__people_talking_about_this___phoenix__az {
@@ -2610,49 +2429,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Phoenix__AZ ;;
   }
 
-  dimension: daily_city__people_talking_about_this___phoenixville__pa {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Phoenixville__PA ;;
-  }
-
   dimension: daily_city__people_talking_about_this___pittsburgh__pa {
     type: number
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Pittsburgh__PA ;;
   }
 
-  dimension: daily_city__people_talking_about_this___plano__tx {
+  dimension: daily_city__people_talking_about_this___pune__maharashtra__india {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Plano__TX ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Pune__Maharashtra__India ;;
   }
 
-  dimension: daily_city__people_talking_about_this___plymouth__mn {
+  dimension: daily_city__people_talking_about_this___quebec__qc__canada {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Plymouth__MN ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___portland__or {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Portland__OR ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___porto_alegre__rs__brazil {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Porto_Alegre__RS__Brazil ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___pottstown__pa {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Pottstown__PA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___puebla__mexico {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Puebla__Mexico ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___quer__taro__quer__taro_arteaga__mexico {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Quer__taro__Quer__taro_Arteaga__Mexico ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Quebec__QC__Canada ;;
   }
 
   dimension: daily_city__people_talking_about_this___quezon_city__metro_manila__philippines {
@@ -2660,9 +2449,14 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Quezon_City__Metro_Manila__Philippines ;;
   }
 
-  dimension: daily_city__people_talking_about_this___quito__pichincha_province__ecuador {
+  dimension: daily_city__people_talking_about_this___rabat__rabat_sal___zemmour_zaer__morocco {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Quito__Pichincha_Province__Ecuador ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Rabat__Rabat_Sal___Zemmour_Zaer__Morocco ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___rajkot__gujarat__india {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Rajkot__Gujarat__India ;;
   }
 
   dimension: daily_city__people_talking_about_this___raleigh__nc {
@@ -2670,39 +2464,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Raleigh__NC ;;
   }
 
-  dimension: daily_city__people_talking_about_this___reading__pa {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Reading__PA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___redwood_city__ca {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Redwood_City__CA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___reno__nv {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Reno__NV ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___renton__wa {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Renton__WA ;;
-  }
-
   dimension: daily_city__people_talking_about_this___richmond__va {
     type: number
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Richmond__VA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___ridley__pa {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Ridley__PA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___riga__kurzeme_region__latvia {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Riga__Kurzeme_Region__Latvia ;;
   }
 
   dimension: daily_city__people_talking_about_this___rio_de_janeiro__rj__brazil {
@@ -2710,9 +2474,14 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Rio_de_Janeiro__RJ__Brazil ;;
   }
 
-  dimension: daily_city__people_talking_about_this___rochester__mn {
+  dimension: daily_city__people_talking_about_this___riverside__ca {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Rochester__MN ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Riverside__CA ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___riyadh__riyadh_region__saudi_arabia {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Riyadh__Riyadh_Region__Saudi_Arabia ;;
   }
 
   dimension: daily_city__people_talking_about_this___rochester__ny {
@@ -2720,39 +2489,14 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Rochester__NY ;;
   }
 
-  dimension: daily_city__people_talking_about_this___rome__lazio__italy {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Rome__Lazio__Italy ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___roseville__ca {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Roseville__CA ;;
-  }
-
   dimension: daily_city__people_talking_about_this___s__o_paulo__sp__brazil {
     type: number
     sql: ${TABLE}.Daily_City__People_Talking_About_This___S__o_Paulo__SP__Brazil ;;
   }
 
-  dimension: daily_city__people_talking_about_this___sacramento__ca {
+  dimension: daily_city__people_talking_about_this___saint_petersburg__fl {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Sacramento__CA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___saint_cloud__mn {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Saint_Cloud__MN ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___saint_paul__mn {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Saint_Paul__MN ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___salinas__ca {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Salinas__CA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Saint_Petersburg__FL ;;
   }
 
   dimension: daily_city__people_talking_about_this___salt_lake_city__ut {
@@ -2780,14 +2524,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___San_Jose__CA ;;
   }
 
-  dimension: daily_city__people_talking_about_this___san_luis_potos____san_luis_potosi__mexico {
+  dimension: daily_city__people_talking_about_this___san_jose_del_monte__central_luzon__philippines {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___San_Luis_Potos____San_Luis_Potosi__Mexico ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___san_mateo__ca {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___San_Mateo__CA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___San_Jose_del_Monte__Central_Luzon__Philippines ;;
   }
 
   dimension: daily_city__people_talking_about_this___san_salvador__san_salvador_department__el_salvador {
@@ -2795,9 +2534,14 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___San_Salvador__San_Salvador_Department__El_Salvador ;;
   }
 
-  dimension: daily_city__people_talking_about_this___santa_rosa__ca {
+  dimension: daily_city__people_talking_about_this___santiago__santiago_province__dominican_republic {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Santa_Rosa__CA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Santiago__Santiago_Province__Dominican_Republic ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___santo_domingo__santo_domingo_province__dominican_republic {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Santo_Domingo__Santo_Domingo_Province__Dominican_Republic ;;
   }
 
   dimension: daily_city__people_talking_about_this___saskatoon__sk__canada {
@@ -2805,9 +2549,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Saskatoon__SK__Canada ;;
   }
 
-  dimension: daily_city__people_talking_about_this___savannah__ga {
+  dimension: daily_city__people_talking_about_this___scottsdale__az {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Savannah__GA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Scottsdale__AZ ;;
   }
 
   dimension: daily_city__people_talking_about_this___seattle__wa {
@@ -2815,19 +2559,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Seattle__WA ;;
   }
 
-  dimension: daily_city__people_talking_about_this___seymour__wi {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Seymour__WI ;;
-  }
-
   dimension: daily_city__people_talking_about_this___singapore__central_region__singapore {
     type: number
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Singapore__Central_Region__Singapore ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___sioux_falls__sd {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Sioux_Falls__SD ;;
   }
 
   dimension: daily_city__people_talking_about_this___spokane__wa {
@@ -2835,9 +2569,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Spokane__WA ;;
   }
 
-  dimension: daily_city__people_talking_about_this___springfield_township__delaware_county__pa {
+  dimension: daily_city__people_talking_about_this___srinagar__jammu_and_kashmir__india {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Springfield_Township__Delaware_County__PA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Srinagar__Jammu_and_Kashmir__India ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___st__charles__mo {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___St__Charles__MO ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___st__john_s__newfoundland_and_labrador__nl__canada {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___St__John_s__Newfoundland_and_Labrador__NL__Canada ;;
   }
 
   dimension: daily_city__people_talking_about_this___st__louis__mo {
@@ -2845,24 +2589,14 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___St__Louis__MO ;;
   }
 
-  dimension: daily_city__people_talking_about_this___state_college__pa {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___State_College__PA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___steubenville__oh {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Steubenville__OH ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___stockton__ca {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Stockton__CA ;;
-  }
-
   dimension: daily_city__people_talking_about_this___suffolk_county__ny {
     type: number
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Suffolk_County__NY ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___surat__gujarat__india {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Surat__Gujarat__India ;;
   }
 
   dimension: daily_city__people_talking_about_this___sydney__nsw__australia {
@@ -2870,14 +2604,24 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Sydney__NSW__Australia ;;
   }
 
-  dimension: daily_city__people_talking_about_this___syracuse__ny {
+  dimension: daily_city__people_talking_about_this___sylhet__sylhet_division__bangladesh {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Syracuse__NY ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Sylhet__Sylhet_Division__Bangladesh ;;
   }
 
-  dimension: daily_city__people_talking_about_this___tacoma__wa {
+  dimension: daily_city__people_talking_about_this___tacloban_city__philippines {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Tacoma__WA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Tacloban_City__Philippines ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___tagbilaran_city__central_visayas__philippines {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Tagbilaran_City__Central_Visayas__Philippines ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___taguig__metro_manila__philippines {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Taguig__Metro_Manila__Philippines ;;
   }
 
   dimension: daily_city__people_talking_about_this___taipei__taiwan {
@@ -2885,19 +2629,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Taipei__Taiwan ;;
   }
 
-  dimension: daily_city__people_talking_about_this___tallahassee__fl {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Tallahassee__FL ;;
-  }
-
   dimension: daily_city__people_talking_about_this___tampa__fl {
     type: number
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Tampa__FL ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___tampere__pirkanmaa__finland {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Tampere__Pirkanmaa__Finland ;;
   }
 
   dimension: daily_city__people_talking_about_this___tangier__tangier_tetouan__morocco {
@@ -2905,29 +2639,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Tangier__Tangier_Tetouan__Morocco ;;
   }
 
-  dimension: daily_city__people_talking_about_this___tel_aviv__israel {
+  dimension: daily_city__people_talking_about_this___tarlac__central_luzon__philippines {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Tel_Aviv__Israel ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Tarlac__Central_Luzon__Philippines ;;
   }
 
-  dimension: daily_city__people_talking_about_this___tijuana__baja_california__mexico {
+  dimension: daily_city__people_talking_about_this___tbilisi__georgia {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Tijuana__Baja_California__Mexico ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Tbilisi__Georgia ;;
   }
 
-  dimension: daily_city__people_talking_about_this___toluca__state_of_mexico__mexico {
+  dimension: daily_city__people_talking_about_this___thrissur__kerala__india {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Toluca__State_of_Mexico__Mexico ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___tonawanda__ny {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Tonawanda__NY ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___toronto__oh {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Toronto__OH ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Thrissur__Kerala__India ;;
   }
 
   dimension: daily_city__people_talking_about_this___toronto__on__canada {
@@ -2935,14 +2659,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Toronto__ON__Canada ;;
   }
 
-  dimension: daily_city__people_talking_about_this___tucson__az {
+  dimension: daily_city__people_talking_about_this___trivandrum__kerala__india {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Tucson__AZ ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Trivandrum__Kerala__India ;;
   }
 
-  dimension: daily_city__people_talking_about_this___turin__piedmont__italy {
+  dimension: daily_city__people_talking_about_this___tunis__tunis_governorate__tunisia {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Turin__Piedmont__Italy ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Tunis__Tunis_Governorate__Tunisia ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___turku__southwest_finland__finland {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Turku__Southwest_Finland__Finland ;;
   }
 
   dimension: daily_city__people_talking_about_this___tuscaloosa__al {
@@ -2950,14 +2679,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Tuscaloosa__AL ;;
   }
 
-  dimension: daily_city__people_talking_about_this___uniontown__pa {
+  dimension: daily_city__people_talking_about_this___ulaanbaatar__ulan_bator__mongolia {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Uniontown__PA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Ulaanbaatar__Ulan_Bator__Mongolia ;;
   }
 
-  dimension: daily_city__people_talking_about_this___upper_darby__pa {
+  dimension: daily_city__people_talking_about_this___vadodara__gujarat__india {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Upper_Darby__PA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Vadodara__Gujarat__India ;;
+  }
+
+  dimension: daily_city__people_talking_about_this___valenzuela__metro_manila__philippines {
+    type: number
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Valenzuela__Metro_Manila__Philippines ;;
   }
 
   dimension: daily_city__people_talking_about_this___vancouver__bc__canada {
@@ -2965,24 +2699,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Vancouver__BC__Canada ;;
   }
 
-  dimension: daily_city__people_talking_about_this___vancouver__wa {
+  dimension: daily_city__people_talking_about_this___varanasi__uttar_pradesh__india {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Vancouver__WA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Varanasi__Uttar_Pradesh__India ;;
   }
 
-  dimension: daily_city__people_talking_about_this___virginia_beach__va {
+  dimension: daily_city__people_talking_about_this___victoria__bc__canada {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Virginia_Beach__VA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Victoria__BC__Canada ;;
   }
 
-  dimension: daily_city__people_talking_about_this___warminster__pa {
+  dimension: daily_city__people_talking_about_this___villanova__pa {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Warminster__PA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___warner_robins__ga {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Warner_Robins__GA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Villanova__PA ;;
   }
 
   dimension: daily_city__people_talking_about_this___washington__dc {
@@ -2990,49 +2719,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Washington__DC ;;
   }
 
-  dimension: daily_city__people_talking_about_this___washington__pa {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Washington__PA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___washington_township__gloucester_county__nj {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Washington_Township__Gloucester_County__NJ ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___waycross__ga {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Waycross__GA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___weirton__wv {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Weirton__WV ;;
-  }
-
   dimension: daily_city__people_talking_about_this___west_chester__pa {
     type: number
     sql: ${TABLE}.Daily_City__People_Talking_About_This___West_Chester__PA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___west_deptford__nj {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___West_Deptford__NJ ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___wexford__pa {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Wexford__PA ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___wheeling__wv {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Wheeling__WV ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___williamstown__nj {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Williamstown__NJ ;;
   }
 
   dimension: daily_city__people_talking_about_this___wilmington__de {
@@ -3040,9 +2729,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Wilmington__DE ;;
   }
 
-  dimension: daily_city__people_talking_about_this___winder__ga {
+  dimension: daily_city__people_talking_about_this___windsor__on__canada {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Winder__GA ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Windsor__ON__Canada ;;
   }
 
   dimension: daily_city__people_talking_about_this___winnipeg__mb__canada {
@@ -3050,34 +2739,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_City__People_Talking_About_This___Winnipeg__MB__Canada ;;
   }
 
-  dimension: daily_city__people_talking_about_this___woodbury__mn {
+  dimension: daily_city__people_talking_about_this___zamboanga_city__zamboanga_peninsula__philippines {
     type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Woodbury__MN ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___yerevan__armenia {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Yerevan__Armenia ;;
-  }
-
-  dimension: daily_city__people_talking_about_this___zagreb__croatia {
-    type: number
-    sql: ${TABLE}.Daily_City__People_Talking_About_This___Zagreb__Croatia ;;
+    sql: ${TABLE}.Daily_City__People_Talking_About_This___Zamboanga_City__Zamboanga_Peninsula__Philippines ;;
   }
 
   dimension: daily_country__people_talking_about_this___ae {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___AE ;;
   }
 
   dimension: daily_country__people_talking_about_this___af {
     type: number
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___AF ;;
-  }
-
-  dimension: daily_country__people_talking_about_this___al {
-    type: number
-    sql: ${TABLE}.Daily_Country__People_Talking_About_This___AL ;;
   }
 
   dimension: daily_country__people_talking_about_this___ao {
@@ -3115,19 +2789,34 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___BG ;;
   }
 
+  dimension: daily_country__people_talking_about_this___bi {
+    type: number
+    sql: ${TABLE}.Daily_Country__People_Talking_About_This___BI ;;
+  }
+
+  dimension: daily_country__people_talking_about_this___bo {
+    type: number
+    sql: ${TABLE}.Daily_Country__People_Talking_About_This___BO ;;
+  }
+
   dimension: daily_country__people_talking_about_this___br {
     type: number
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___BR ;;
   }
 
+  dimension: daily_country__people_talking_about_this___bs {
+    type: number
+    sql: ${TABLE}.Daily_Country__People_Talking_About_This___BS ;;
+  }
+
+  dimension: daily_country__people_talking_about_this___bw {
+    type: number
+    sql: ${TABLE}.Daily_Country__People_Talking_About_This___BW ;;
+  }
+
   dimension: daily_country__people_talking_about_this___ca {
     type: number
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___CA ;;
-  }
-
-  dimension: daily_country__people_talking_about_this___cd {
-    type: number
-    sql: ${TABLE}.Daily_Country__People_Talking_About_This___CD ;;
   }
 
   dimension: daily_country__people_talking_about_this___ch {
@@ -3145,11 +2834,6 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___CL ;;
   }
 
-  dimension: daily_country__people_talking_about_this___cm {
-    type: number
-    sql: ${TABLE}.Daily_Country__People_Talking_About_This___CM ;;
-  }
-
   dimension: daily_country__people_talking_about_this___cn {
     type: number
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___CN ;;
@@ -3163,11 +2847,6 @@ view: fb_page_tpt {
   dimension: daily_country__people_talking_about_this___cr {
     type: number
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___CR ;;
-  }
-
-  dimension: daily_country__people_talking_about_this___cy {
-    type: number
-    sql: ${TABLE}.Daily_Country__People_Talking_About_This___CY ;;
   }
 
   dimension: daily_country__people_talking_about_this___cz {
@@ -3200,11 +2879,6 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___EC ;;
   }
 
-  dimension: daily_country__people_talking_about_this___ee {
-    type: number
-    sql: ${TABLE}.Daily_Country__People_Talking_About_This___EE ;;
-  }
-
   dimension: daily_country__people_talking_about_this___eg {
     type: number
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___EG ;;
@@ -3213,6 +2887,11 @@ view: fb_page_tpt {
   dimension: daily_country__people_talking_about_this___es {
     type: number
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___ES ;;
+  }
+
+  dimension: daily_country__people_talking_about_this___et {
+    type: number
+    sql: ${TABLE}.Daily_Country__People_Talking_About_This___ET ;;
   }
 
   dimension: daily_country__people_talking_about_this___fi {
@@ -3240,11 +2919,6 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___GH ;;
   }
 
-  dimension: daily_country__people_talking_about_this___gn {
-    type: number
-    sql: ${TABLE}.Daily_Country__People_Talking_About_This___GN ;;
-  }
-
   dimension: daily_country__people_talking_about_this___gr {
     type: number
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___GR ;;
@@ -3253,6 +2927,11 @@ view: fb_page_tpt {
   dimension: daily_country__people_talking_about_this___gt {
     type: number
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___GT ;;
+  }
+
+  dimension: daily_country__people_talking_about_this___gu {
+    type: number
+    sql: ${TABLE}.Daily_Country__People_Talking_About_This___GU ;;
   }
 
   dimension: daily_country__people_talking_about_this___hk {
@@ -3268,11 +2947,6 @@ view: fb_page_tpt {
   dimension: daily_country__people_talking_about_this___hr {
     type: number
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___HR ;;
-  }
-
-  dimension: daily_country__people_talking_about_this___ht {
-    type: number
-    sql: ${TABLE}.Daily_Country__People_Talking_About_This___HT ;;
   }
 
   dimension: daily_country__people_talking_about_this___hu {
@@ -3305,19 +2979,14 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___IQ ;;
   }
 
-  dimension: daily_country__people_talking_about_this___is {
-    type: number
-    sql: ${TABLE}.Daily_Country__People_Talking_About_This___IS ;;
-  }
-
   dimension: daily_country__people_talking_about_this___it {
     type: number
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___IT ;;
   }
 
-  dimension: daily_country__people_talking_about_this___jm {
+  dimension: daily_country__people_talking_about_this___je {
     type: number
-    sql: ${TABLE}.Daily_Country__People_Talking_About_This___JM ;;
+    sql: ${TABLE}.Daily_Country__People_Talking_About_This___JE ;;
   }
 
   dimension: daily_country__people_talking_about_this___jo {
@@ -3330,9 +2999,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___JP ;;
   }
 
-  dimension: daily_country__people_talking_about_this___kh {
+  dimension: daily_country__people_talking_about_this___ke {
     type: number
-    sql: ${TABLE}.Daily_Country__People_Talking_About_This___KH ;;
+    sql: ${TABLE}.Daily_Country__People_Talking_About_This___KE ;;
   }
 
   dimension: daily_country__people_talking_about_this___kr {
@@ -3350,9 +3019,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___LB ;;
   }
 
-  dimension: daily_country__people_talking_about_this___lk {
+  dimension: daily_country__people_talking_about_this___lr {
     type: number
-    sql: ${TABLE}.Daily_Country__People_Talking_About_This___LK ;;
+    sql: ${TABLE}.Daily_Country__People_Talking_About_This___LR ;;
   }
 
   dimension: daily_country__people_talking_about_this___lt {
@@ -3360,19 +3029,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___LT ;;
   }
 
-  dimension: daily_country__people_talking_about_this___lu {
-    type: number
-    sql: ${TABLE}.Daily_Country__People_Talking_About_This___LU ;;
-  }
-
   dimension: daily_country__people_talking_about_this___lv {
     type: number
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___LV ;;
-  }
-
-  dimension: daily_country__people_talking_about_this___ly {
-    type: number
-    sql: ${TABLE}.Daily_Country__People_Talking_About_This___LY ;;
   }
 
   dimension: daily_country__people_talking_about_this___ma {
@@ -3390,19 +3049,14 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___MK ;;
   }
 
-  dimension: daily_country__people_talking_about_this___mm {
-    type: number
-    sql: ${TABLE}.Daily_Country__People_Talking_About_This___MM ;;
-  }
-
   dimension: daily_country__people_talking_about_this___mn {
     type: number
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___MN ;;
   }
 
-  dimension: daily_country__people_talking_about_this___mr {
+  dimension: daily_country__people_talking_about_this___mo {
     type: number
-    sql: ${TABLE}.Daily_Country__People_Talking_About_This___MR ;;
+    sql: ${TABLE}.Daily_Country__People_Talking_About_This___MO ;;
   }
 
   dimension: daily_country__people_talking_about_this___mx {
@@ -3418,6 +3072,11 @@ view: fb_page_tpt {
   dimension: daily_country__people_talking_about_this___mz {
     type: number
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___MZ ;;
+  }
+
+  dimension: daily_country__people_talking_about_this___na {
+    type: number
+    sql: ${TABLE}.Daily_Country__People_Talking_About_This___NA ;;
   }
 
   dimension: daily_country__people_talking_about_this___ng {
@@ -3490,6 +3149,11 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___PY ;;
   }
 
+  dimension: daily_country__people_talking_about_this___qa {
+    type: number
+    sql: ${TABLE}.Daily_Country__People_Talking_About_This___QA ;;
+  }
+
   dimension: daily_country__people_talking_about_this___ro {
     type: number
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___RO ;;
@@ -3503,6 +3167,11 @@ view: fb_page_tpt {
   dimension: daily_country__people_talking_about_this___ru {
     type: number
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___RU ;;
+  }
+
+  dimension: daily_country__people_talking_about_this___rw {
+    type: number
+    sql: ${TABLE}.Daily_Country__People_Talking_About_This___RW ;;
   }
 
   dimension: daily_country__people_talking_about_this___sa {
@@ -3530,9 +3199,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___SI ;;
   }
 
-  dimension: daily_country__people_talking_about_this___sl {
+  dimension: daily_country__people_talking_about_this___sk {
     type: number
-    sql: ${TABLE}.Daily_Country__People_Talking_About_This___SL ;;
+    sql: ${TABLE}.Daily_Country__People_Talking_About_This___SK ;;
   }
 
   dimension: daily_country__people_talking_about_this___sn {
@@ -3540,9 +3209,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___SN ;;
   }
 
-  dimension: daily_country__people_talking_about_this___so {
+  dimension: daily_country__people_talking_about_this___sr {
     type: number
-    sql: ${TABLE}.Daily_Country__People_Talking_About_This___SO ;;
+    sql: ${TABLE}.Daily_Country__People_Talking_About_This___SR ;;
   }
 
   dimension: daily_country__people_talking_about_this___sv {
@@ -3585,14 +3254,14 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___UA ;;
   }
 
+  dimension: daily_country__people_talking_about_this___ug {
+    type: number
+    sql: ${TABLE}.Daily_Country__People_Talking_About_This___UG ;;
+  }
+
   dimension: daily_country__people_talking_about_this___us {
     type: number
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___US ;;
-  }
-
-  dimension: daily_country__people_talking_about_this___uy {
-    type: number
-    sql: ${TABLE}.Daily_Country__People_Talking_About_This___UY ;;
   }
 
   dimension: daily_country__people_talking_about_this___ve {
@@ -3615,8 +3284,13 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Country__People_Talking_About_This___ZA ;;
   }
 
+  dimension: daily_country__people_talking_about_this___zw {
+    type: number
+    sql: ${TABLE}.Daily_Country__People_Talking_About_This___ZW ;;
+  }
+
   dimension: daily_demographics__people_talking_about_this___f_13_17 {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Demographics__People_Talking_About_This___F_13_17 ;;
   }
 
@@ -3720,14 +3394,1211 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Demographics__People_Talking_About_This___U_65_ ;;
   }
 
+  dimension: daily_external_referrers___http___search_pch_com_search_q_players_tribune_amp_cat_amp_x_11_amp_y_7 {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___http___search_pch_com_search_q_players_tribune_amp_cat_amp_x_11_amp_y_7 ;;
+  }
+
+  dimension: daily_external_referrers___http___start_att_net_search_index_php_q_https_3_a_2_f_2_fwww_theplayerstribu {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___http___start_att_net_search_index_php_q_https_3A_2F_2Fwww_theplayerstribu ;;
+  }
+
+  dimension: daily_external_referrers___http___www_bing_com_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___http___www_bing_com_ ;;
+  }
+
+  dimension: daily_external_referrers___http___www_bing_com_search_q_theplayerstribune_com_amp_form_apmcs1 {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___http___www_bing_com_search_q_theplayerstribune_com_amp_form_APMCS1 ;;
+  }
+
+  dimension: daily_external_referrers___http___www_cardiffdevils_com_news_watch_highlights_playoff_winning_game_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___http___www_cardiffdevils_com_news_watch_highlights_playoff_winning_game_ ;;
+  }
+
+  dimension: daily_external_referrers___http___www_google_com_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___http___www_google_com_ ;;
+  }
+
+  dimension: daily_external_referrers___http___www_magazine_org_industry_news_press_releases_member_press_release {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___http___www_magazine_org_industry_news_press_releases_member_press_release ;;
+  }
+
+  dimension: daily_external_referrers___https___apps_crowdtangle_com_facebooksports_lists_pages {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___apps_crowdtangle_com_facebooksports_lists_pages ;;
+  }
+
+  dimension: daily_external_referrers___https___apps_crowdtangle_com_gqdashboard_lists_241974 {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___apps_crowdtangle_com_gqdashboard_lists_241974 ;;
+  }
+
+  dimension: daily_external_referrers___https___bit_ly_2_gv8c_mp_cc_9b1d280877b924c94f1eaa33c348b683 {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___bit_ly_2GV8cMp_cc_9b1d280877b924c94f1eaa33c348b683 ;;
+  }
+
+  dimension: daily_external_referrers___https___duckduckgo_com_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___duckduckgo_com_ ;;
+  }
+
+  dimension: daily_external_referrers___https___fb_quip_com_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___fb_quip_com_ ;;
+  }
+
+  dimension: daily_external_referrers___https___getpocket_com_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___getpocket_com_ ;;
+  }
+
+  dimension: daily_external_referrers___https___legacy_theplayerstribune_com_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___legacy_theplayerstribune_com_ ;;
+  }
+
+  dimension: daily_external_referrers___https___legacy_theplayerstribune_com_2016_6_1_ken_griffey_jr_mariners_bes {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___legacy_theplayerstribune_com_2016_6_1_ken_griffey_jr_mariners_bes ;;
+  }
+
+  dimension: daily_external_referrers___https___legacy_theplayerstribune_com_cal_ripken_jr_streak_orioles_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___legacy_theplayerstribune_com_cal_ripken_jr_streak_orioles_ ;;
+  }
+
+  dimension: daily_external_referrers___https___legacy_theplayerstribune_com_carlos_carrasco_baseball_citizenship {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___legacy_theplayerstribune_com_carlos_carrasco_baseball_citizenship ;;
+  }
+
+  dimension: daily_external_referrers___https___legacy_theplayerstribune_com_category_out_of_context_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___legacy_theplayerstribune_com_category_out_of_context_ ;;
+  }
+
+  dimension: daily_external_referrers___https___legacy_theplayerstribune_com_david_vobora_nfl_veterans_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___legacy_theplayerstribune_com_david_vobora_nfl_veterans_ ;;
+  }
+
+  dimension: daily_external_referrers___https___legacy_theplayerstribune_com_gary_sheffield_commissioner_for_a_da {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___legacy_theplayerstribune_com_gary_sheffield_commissioner_for_a_da ;;
+  }
+
+  dimension: daily_external_referrers___https___legacy_theplayerstribune_com_gordon_hayward_jazz_video_games_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___legacy_theplayerstribune_com_gordon_hayward_jazz_video_games_ ;;
+  }
+
+  dimension: daily_external_referrers___https___legacy_theplayerstribune_com_harold_varner_iii_pga_tour_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___legacy_theplayerstribune_com_harold_varner_iii_pga_tour_ ;;
+  }
+
+  dimension: daily_external_referrers___https___legacy_theplayerstribune_com_jeremy_affeldt_giants_what_are_you_p {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___legacy_theplayerstribune_com_jeremy_affeldt_giants_what_are_you_p ;;
+  }
+
+  dimension: daily_external_referrers___https___legacy_theplayerstribune_com_johnny_bench_reds_best_play_i_ever_m {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___legacy_theplayerstribune_com_johnny_bench_reds_best_play_i_ever_m ;;
+  }
+
+  dimension: daily_external_referrers___https___legacy_theplayerstribune_com_jonathan_quick_kings_snipers_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___legacy_theplayerstribune_com_jonathan_quick_kings_snipers_ ;;
+  }
+
+  dimension: daily_external_referrers___https___legacy_theplayerstribune_com_keeper_of_stanley_cup_stories_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___legacy_theplayerstribune_com_keeper_of_stanley_cup_stories_ ;;
+  }
+
+  dimension: daily_external_referrers___https___legacy_theplayerstribune_com_left_out_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___legacy_theplayerstribune_com_left_out_ ;;
+  }
+
+  dimension: daily_external_referrers___https___legacy_theplayerstribune_com_max_domi_coyotes_playing_with_diabet {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___legacy_theplayerstribune_com_max_domi_coyotes_playing_with_diabet ;;
+  }
+
+  dimension: daily_external_referrers___https___legacy_theplayerstribune_com_mike_fisher_nashville_predators_one_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___legacy_theplayerstribune_com_mike_fisher_nashville_predators_one_ ;;
+  }
+
+  dimension: daily_external_referrers___https___legacy_theplayerstribune_com_oliver_ekman_larsson_nhl_arizona_coy {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___legacy_theplayerstribune_com_oliver_ekman_larsson_nhl_arizona_coy ;;
+  }
+
+  dimension: daily_external_referrers___https___legacy_theplayerstribune_com_scott_gomez_ken_daneyko_story_time_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___legacy_theplayerstribune_com_scott_gomez_ken_daneyko_story_time_ ;;
+  }
+
+  dimension: daily_external_referrers___https___legacy_theplayerstribune_com_sports_baseball_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___legacy_theplayerstribune_com_sports_baseball_ ;;
+  }
+
+  dimension: daily_external_referrers___https___legacy_theplayerstribune_com_yao_ming_my_rookie_year_rockets_chin {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___legacy_theplayerstribune_com_yao_ming_my_rookie_year_rockets_chin ;;
+  }
+
+  dimension: daily_external_referrers___https___mail_google_com_mail_u_0__ui_2_amp_ik_7bfa291fe6_amp_view_lg_amp_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___mail_google_com_mail_u_0__ui_2_amp_ik_7bfa291fe6_amp_view_lg_amp_ ;;
+  }
+
+  dimension: daily_external_referrers___https___myactivity_google_com_myactivity_product_6 {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___myactivity_google_com_myactivity_product_6 ;;
+  }
+
+  dimension: daily_external_referrers___https___nbabanasi_blogspot_jp_p_nba_link_html {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___nbabanasi_blogspot_jp_p_nba_link_html ;;
+  }
+
+  dimension: daily_external_referrers___https___nowapoczta_wp_pl_d_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___nowapoczta_wp_pl_d_ ;;
+  }
+
+  dimension: daily_external_referrers___https___search_tb_ask_com_search_ggmain_jhtml_searchfor_p_layers_tribune_a {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___search_tb_ask_com_search_GGmain_jhtml_searchfor_pLAYERS_TRIBUNE_a ;;
+  }
+
+  dimension: daily_external_referrers___https___search_yahoo_com_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___search_yahoo_com_ ;;
+  }
+
+  dimension: daily_external_referrers___https___signal_fb_com_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___signal_fb_com_ ;;
+  }
+
+  dimension: daily_external_referrers___https___t_co_5s_qjq_ynmd_r {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___t_co_5sQjqYNMdR ;;
+  }
+
+  dimension: daily_external_referrers___https___webmail_telus_net_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___webmail_telus_net_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_beta_theplayerstribune_com_en_us_articles_ken_dryden_its_time {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_beta_theplayerstribune_com_en_us_articles_ken_dryden_its_time ;;
+  }
+
+  dimension: daily_external_referrers___https___www_beta_theplayerstribune_com_en_us_articles_kevin_love_channing {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_beta_theplayerstribune_com_en_us_articles_kevin_love_channing ;;
+  }
+
+  dimension: daily_external_referrers___https___www_beta_theplayerstribune_com_en_us_contributors_clint_malarchuk {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_beta_theplayerstribune_com_en_us_contributors_clint_malarchuk ;;
+  }
+
+  dimension: daily_external_referrers___https___www_bing_com_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_bing_com_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_bing_com_search_q_players_tribune_website_amp_input_5_amp_for {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_bing_com_search_q_players_tribune_website_amp_input_5_amp_for ;;
+  }
+
+  dimension: daily_external_referrers___https___www_bing_com_search_q_players_tribune_website_amp_pivot_web_amp_m {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_bing_com_search_q_players_tribune_website_amp_pivot_web_amp_m ;;
+  }
+
+  dimension: daily_external_referrers___https___www_bing_com_search_q_www_playerstribuners_com_amp_input_5_amp_fo {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_bing_com_search_q_www_playerstribuners_com_amp_input_5_amp_fo ;;
+  }
+
+  dimension: daily_external_referrers___https___www_danicapatrick_com_partners {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_danicapatrick_com_partners ;;
+  }
+
+  dimension: daily_external_referrers___https___www_google_ca_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_google_ca_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_google_ch_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_google_ch_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_google_co_in_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_google_co_in_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_google_co_jp_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_google_co_jp_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_google_co_uk_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_google_co_uk_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_google_com_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_google_com_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_google_com_ar_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_google_com_ar_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_google_com_au_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_google_com_au_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_google_com_br_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_google_com_br_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_google_com_co_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_google_com_co_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_google_com_hk_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_google_com_hk_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_google_com_ph_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_google_com_ph_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_google_com_tw_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_google_com_tw_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_google_de_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_google_de_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_google_es_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_google_es_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_google_fr_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_google_fr_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_google_it_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_google_it_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_google_nl_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_google_nl_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_google_pl_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_google_pl_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_google_pt_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_google_pt_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_google_sk_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_google_sk_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_rollbamaroll_com_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_rollbamaroll_com_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_about {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_about ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_adam_estoclet_hockey_con {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_adam_estoclet_hockey_con ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_aja_wilson_south_carolin {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_aja_wilson_south_carolin ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_alex_pietrangelo_blues_t {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_alex_pietrangelo_blues_t ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_alex_pietrangelo_blues_t_1745 {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_alex_pietrangelo_blues_t_1745 ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_anders_lee_hockey_player {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_anders_lee_hockey_player ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_asia_durr_louisville {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_asia_durr_louisville ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_book_of_isaiah_chapter_6 {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_book_of_isaiah_chapter_6 ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_book_of_isaiah_chapter_7 {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_book_of_isaiah_chapter_7 ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_book_of_isaiah_ii_epilog {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_book_of_isaiah_ii_epilog ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_breanna_stewart_me_too {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_breanna_stewart_me_too ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_brendon_hartley_formula_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_brendon_hartley_formula_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_buddy_hield_pelicans_kob {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_buddy_hield_pelicans_kob ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_carl_edwards_jr_cubs_fly {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_carl_edwards_jr_cubs_fly ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_carlos_correa_astros_hou {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_carlos_correa_astros_hou ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_cheryl_reeve_gender_equa {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_cheryl_reeve_gender_equa ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_cheryl_reeve_gender_equa_1757 {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_cheryl_reeve_gender_equa_1757 ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_chris_paul_the_station {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_chris_paul_the_station ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_christina_mchale_tennis_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_christina_mchale_tennis_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_clint_capela_its_all_abo {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_clint_capela_its_all_abo ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_clint_capela_its_all_abo_1761 {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_clint_capela_its_all_abo_1761 ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_clint_malarchuk_bleeding {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_clint_malarchuk_bleeding ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_corey_hirsch_dark_dark_d {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_corey_hirsch_dark_dark_d ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_corey_hirsch_you_are_not {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_corey_hirsch_you_are_not ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_cristiano_ronaldo_madrid {
+    type: number
+    value_format_name: id
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_cristiano_ronaldo_madrid ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_dan_carter_new_zealand_a {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_dan_carter_new_zealand_a ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_dardoch_what_ive_learned {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_dardoch_what_ive_learned ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_darius_bazley_why_im_jum {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_darius_bazley_why_im_jum ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_darius_bazley_why_im_jum_1769 {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_darius_bazley_why_im_jum_1769 ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_david_perron_vegas_golde {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_david_perron_vegas_golde ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_deontay_wilder_boxing_40 {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_deontay_wilder_boxing_40 ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_diamond_dallas_page_lett {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_diamond_dallas_page_lett ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_donta_foreman_armanti_nf {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_donta_foreman_armanti_nf ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_doug_gilmour_nhl_letter_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_doug_gilmour_nhl_letter_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_dwight_freeney_nfl_5_tou {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_dwight_freeney_nfl_5_tou ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_eddie_jackson_alabama_fo {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_eddie_jackson_alabama_fo ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_faker_players_tribune_ko {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_faker_players_tribune_ko ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_frances_tiafoe_us_open {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_frances_tiafoe_us_open ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_gabriel_jesus_call_your_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_gabriel_jesus_call_your_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_gabriel_jesus_liga_pra_m {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_gabriel_jesus_liga_pra_m ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_geoff_cameron_what_must_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_geoff_cameron_what_must_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_gerard_pique_a_long_stor {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_gerard_pique_a_long_stor ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_gerard_pique_una_larga_h {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_gerard_pique_una_larga_h ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_grayson_allen_duke_baske {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_grayson_allen_duke_baske ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_hal_gill_nhl_stories {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_hal_gill_nhl_stories ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_ivan_rakitic_barcelona_s {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_ivan_rakitic_barcelona_s ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_jahlil_okafor_on_your_ra {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_jahlil_okafor_on_your_ra ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_jalen_moore_mental_healt {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_jalen_moore_mental_healt ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_jamal_murray_kentucky_nb {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_jamal_murray_kentucky_nb ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_jason_day_pga_golf_lette {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_jason_day_pga_golf_lette ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_jason_zucker_give16_minn {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_jason_zucker_give16_minn ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_javi_martinez_bayern_mun {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_javi_martinez_bayern_mun ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_jeff_capel_duke_the_tree {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_jeff_capel_duke_the_tree ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_jeremy_lin_brooklyn_nets {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_jeremy_lin_brooklyn_nets ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_jermichael_finley_packer {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_jermichael_finley_packer ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_jocelyne_lamoureux_david {
+    type: number
+    value_format_name: id
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_jocelyne_lamoureux_david ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_joe_barksdale_depression {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_joe_barksdale_depression ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_john_john_florence_surfi {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_john_john_florence_surfi ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_juan_mata_manchester_uni {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_juan_mata_manchester_uni ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_justin_meram_why_i_play_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_justin_meram_why_i_play_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_justin_thomas_pga_master {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_justin_thomas_pga_master ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_keeper_of_stanley_cup_st {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_keeper_of_stanley_cup_st ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_ken_dryden_its_time_for_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_ken_dryden_its_time_for_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_kevin_love_channing_frye {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_kevin_love_channing_frye ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_kevin_love_everyone_is_g {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_kevin_love_everyone_is_g ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_kevin_love_everyone_is_g_1806 {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_kevin_love_everyone_is_g_1806 ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_kevin_love_everyone_is_g_1807 {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_kevin_love_everyone_is_g_1807 ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_khris_davis_oakland_the_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_khris_davis_oakland_the_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_kobe_bryant_lakers_final {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_kobe_bryant_lakers_final ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_kris_draper_red_wings_av {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_kris_draper_red_wings_av ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_kyle_lowry_villanova_fin {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_kyle_lowry_villanova_fin ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_letter_to_my_younger_sel {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_letter_to_my_younger_sel ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_letter_to_my_younger_sel_1813 {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_letter_to_my_younger_sel_1813 ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_lieke_martens_be_like_ro {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_lieke_martens_be_like_ro ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_love_mom_gus_kenworthy {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_love_mom_gus_kenworthy ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_malcolm_subban_vegas_gol {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_malcolm_subban_vegas_gol ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_marc_andre_fleury_thank_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_marc_andre_fleury_thank_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_marc_ter_stegen_barcelon {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_marc_ter_stegen_barcelon ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_marc_ter_stegen_barcelon_1819 {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_marc_ter_stegen_barcelon_1819 ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_marcus_rashford_england_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_marcus_rashford_england_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_markelle_fultz_sixers_nb {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_markelle_fultz_sixers_nb ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_marta_brazil_letter_to_m {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_marta_brazil_letter_to_m ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_melbourne_weekend_debrie {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_melbourne_weekend_debrie ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_miguel_almiron_atlanta_u {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_miguel_almiron_atlanta_u ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_moe_wagner_thank_you_mic {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_moe_wagner_thank_you_mic ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_morgan_reid_duke_soccer_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_morgan_reid_duke_soccer_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_moritz_wagner_michigan_b {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_moritz_wagner_michigan_b ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_natasha_hastings_stag {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_natasha_hastings_stag ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_nate_solder_patriots_gia {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_nate_solder_patriots_gia ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_ncaa_tournament_march_ma {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_ncaa_tournament_march_ma ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_nick_swisher_retirement_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_nick_swisher_retirement_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_noah_syndergaard_mets_20 {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_noah_syndergaard_mets_20 ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_noah_syndergaard_mets_20_1833 {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_noah_syndergaard_mets_20_1833 ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_noah_syndergaard_mets_20_1834 {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_noah_syndergaard_mets_20_1834 ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_opening_day_mailbag {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_opening_day_mailbag ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_patrice_bergeron_boston_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_patrice_bergeron_boston_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_patrik_elias_forever_a_d {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_patrik_elias_forever_a_d ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_patrik_laine_winnipeg_je {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_patrik_laine_winnipeg_je ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_pique_neymar_interview_e {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_pique_neymar_interview_e ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_ray_allen_why_i_went_to_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_ray_allen_why_i_went_to_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_richard_sherman_49ers_se {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_richard_sherman_49ers_se ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_rick_ankiel_letter_to_my {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_rick_ankiel_letter_to_my ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_ron_baker_wichita_state_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_ron_baker_wichita_state_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_ronaldo_brazil_the_life_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_ronaldo_brazil_the_life_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_ryan_ellis_pekka_rinne_f {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_ryan_ellis_pekka_rinne_f ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_ryan_shazier_steelers_al {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_ryan_shazier_steelers_al ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_shaquem_griffin_ucf_nfl_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_shaquem_griffin_ucf_nfl_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_shaun_livingston_warrior {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_shaun_livingston_warrior ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_steve_francis_i_got_a_st {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_steve_francis_i_got_a_st ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_the_legend {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_the_legend ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_the_making_of_big_papi {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_the_making_of_big_papi ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_the_rookie_training_with {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_the_rookie_training_with ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_tommie_harris_bears_wife {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_tommie_harris_bears_wife ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_tyler_johnson_tampa_bay_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_tyler_johnson_tampa_bay_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_tyrann_mathieu_honey_bad {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_tyrann_mathieu_honey_bad ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_victor_oladipo_pacers_pl {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_victor_oladipo_pacers_pl ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_victor_oladipo_pacers_pl_1857 {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_victor_oladipo_pacers_pl_1857 ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_victoria_vivians_mississ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_victoria_vivians_mississ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_wayne_simmonds_the_astro {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_wayne_simmonds_the_astro ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_william_gay_domestic_vio {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_william_gay_domestic_vio ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_articles_yonder_alonso_athletics_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_articles_yonder_alonso_athletics_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_athlete_contact_form {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_athlete_contact_form ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_collections_book_of_isaiah {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_collections_book_of_isaiah ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_collections_global_sport {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_collections_global_sport ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_collections_out_of_context {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_collections_out_of_context ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_collections_out_of_context_count_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_collections_out_of_context_count_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_collections_players_series {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_collections_players_series ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_collections_the_big_papi_story {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_collections_the_big_papi_story ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_collections_the_rookie {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_collections_the_rookie ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_collections_tpt_assist {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_collections_tpt_assist ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_collections_tpt_assist_count_50 {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_collections_tpt_assist_count_50 ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_connect {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_connect ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_contributors_aja_wilson {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_contributors_aja_wilson ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_contributors_alex_pietrangelo {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_contributors_alex_pietrangelo ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_contributors_clint_malarchuk {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_contributors_clint_malarchuk ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_contributors_isaiah_thomas {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_contributors_isaiah_thomas ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_contributors_jzucker {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_contributors_jzucker ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_contributors_marc_andre_ter_stege {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_contributors_marc_andre_ter_stege ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_contributors_nsyndergaard {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_contributors_nsyndergaard ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_contributors_tduncan {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_contributors_tduncan ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_contributors_victor_oladipo {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_contributors_victor_oladipo ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_contributors_wayne_simmonds {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_contributors_wayne_simmonds ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_search_q_hi {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_search_q_Hi ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_search_q_jesus {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_search_q_jesus ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_search_q_messi_amp_count_50 {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_search_q_Messi_amp_count_50 ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_search_q_ronaldo {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_search_q_ronaldo ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_sports_baseball {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_sports_baseball ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_sports_basketball {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_sports_basketball ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_sports_hockey {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_sports_hockey ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_sports_hockey_count_102 {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_sports_hockey_count_102 ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_sports_more {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_sports_more ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_sports_soccer {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_sports_soccer ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_sports_soccer_count_102 {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_sports_soccer_count_102 ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_terms {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_terms ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_en_us_videos {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_en_us_videos ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_kevin_love_everyone_is_going_through_so {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_kevin_love_everyone_is_going_through_so ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_newsletter {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_newsletter ;;
+  }
+
+  dimension: daily_external_referrers___https___www_theplayerstribune_com_sports_basketball_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_theplayerstribune_com_sports_basketball_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_triatlonnoticias_com_cdn_ampproject_org_v_s_www_triatlonnotic {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_triatlonnoticias_com_cdn_ampproject_org_v_s_www_triatlonnotic ;;
+  }
+
+  dimension: daily_external_referrers___https___www_triatlonnoticias_com_noticia_triatlon_video_camino_tim_don_ir {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_triatlonnoticias_com_noticia_triatlon_video_camino_tim_don_ir ;;
+  }
+
+  dimension: daily_external_referrers___https___www_triatlonnoticias_com_noticia_triatlon_video_camino_tim_don_ir_1900 {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_triatlonnoticias_com_noticia_triatlon_video_camino_tim_don_ir_1900 ;;
+  }
+
+  dimension: daily_external_referrers___https___www_wrike_com_workspace_htm_acc_1450323 {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_wrike_com_workspace_htm_acc_1450323 ;;
+  }
+
+  dimension: daily_external_referrers___https___www_youtube_com_ {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_youtube_com_ ;;
+  }
+
+  dimension: daily_external_referrers___https___www_youtube_com_user_playerstribune_about {
+    type: number
+    sql: ${TABLE}.Daily_External_Referrers___https___www_youtube_com_user_playerstribune_about ;;
+  }
+
   dimension: daily_language__people_talking_about_this___af_za {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Language__People_Talking_About_This___af_ZA ;;
   }
 
   dimension: daily_language__people_talking_about_this___ar_ar {
     type: number
     sql: ${TABLE}.Daily_Language__People_Talking_About_This___ar_AR ;;
+  }
+
+  dimension: daily_language__people_talking_about_this___as_in {
+    type: number
+    sql: ${TABLE}.Daily_Language__People_Talking_About_This___as_IN ;;
   }
 
   dimension: daily_language__people_talking_about_this___az_az {
@@ -3755,14 +4626,14 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Language__People_Talking_About_This___ca_ES ;;
   }
 
-  dimension: daily_language__people_talking_about_this___cb_iq {
-    type: number
-    sql: ${TABLE}.Daily_Language__People_Talking_About_This___cb_IQ ;;
-  }
-
   dimension: daily_language__people_talking_about_this___cs_cz {
     type: number
     sql: ${TABLE}.Daily_Language__People_Talking_About_This___cs_CZ ;;
+  }
+
+  dimension: daily_language__people_talking_about_this___cx_ph {
+    type: number
+    sql: ${TABLE}.Daily_Language__People_Talking_About_This___cx_PH ;;
   }
 
   dimension: daily_language__people_talking_about_this___da_dk {
@@ -3795,19 +4666,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Language__People_Talking_About_This___en_PI ;;
   }
 
-  dimension: daily_language__people_talking_about_this___en_ud {
-    type: number
-    sql: ${TABLE}.Daily_Language__People_Talking_About_This___en_UD ;;
-  }
-
   dimension: daily_language__people_talking_about_this___en_us {
     type: number
     sql: ${TABLE}.Daily_Language__People_Talking_About_This___en_US ;;
-  }
-
-  dimension: daily_language__people_talking_about_this___es_co {
-    type: number
-    sql: ${TABLE}.Daily_Language__People_Talking_About_This___es_CO ;;
   }
 
   dimension: daily_language__people_talking_about_this___es_es {
@@ -3855,9 +4716,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Language__People_Talking_About_This___fr_FR ;;
   }
 
-  dimension: daily_language__people_talking_about_this___ga_ie {
+  dimension: daily_language__people_talking_about_this___gl_es {
     type: number
-    sql: ${TABLE}.Daily_Language__People_Talking_About_This___ga_IE ;;
+    sql: ${TABLE}.Daily_Language__People_Talking_About_This___gl_ES ;;
   }
 
   dimension: daily_language__people_talking_about_this___gu_in {
@@ -3865,24 +4726,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Language__People_Talking_About_This___gu_IN ;;
   }
 
-  dimension: daily_language__people_talking_about_this___ha_ng {
-    type: number
-    sql: ${TABLE}.Daily_Language__People_Talking_About_This___ha_NG ;;
-  }
-
   dimension: daily_language__people_talking_about_this___he_il {
     type: number
     sql: ${TABLE}.Daily_Language__People_Talking_About_This___he_IL ;;
   }
 
+  dimension: daily_language__people_talking_about_this___hi_in {
+    type: number
+    sql: ${TABLE}.Daily_Language__People_Talking_About_This___hi_IN ;;
+  }
+
   dimension: daily_language__people_talking_about_this___hr_hr {
     type: number
     sql: ${TABLE}.Daily_Language__People_Talking_About_This___hr_HR ;;
-  }
-
-  dimension: daily_language__people_talking_about_this___ht_ht {
-    type: number
-    sql: ${TABLE}.Daily_Language__People_Talking_About_This___ht_HT ;;
   }
 
   dimension: daily_language__people_talking_about_this___hu_hu {
@@ -3925,6 +4781,11 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Language__People_Talking_About_This___ka_GE ;;
   }
 
+  dimension: daily_language__people_talking_about_this___kn_in {
+    type: number
+    sql: ${TABLE}.Daily_Language__People_Talking_About_This___kn_IN ;;
+  }
+
   dimension: daily_language__people_talking_about_this___ko_kr {
     type: number
     sql: ${TABLE}.Daily_Language__People_Talking_About_This___ko_KR ;;
@@ -3940,19 +4801,24 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Language__People_Talking_About_This___lt_LT ;;
   }
 
-  dimension: daily_language__people_talking_about_this___lv_lv {
-    type: number
-    sql: ${TABLE}.Daily_Language__People_Talking_About_This___lv_LV ;;
-  }
-
   dimension: daily_language__people_talking_about_this___mk_mk {
     type: number
     sql: ${TABLE}.Daily_Language__People_Talking_About_This___mk_MK ;;
   }
 
+  dimension: daily_language__people_talking_about_this___ml_in {
+    type: number
+    sql: ${TABLE}.Daily_Language__People_Talking_About_This___ml_IN ;;
+  }
+
   dimension: daily_language__people_talking_about_this___mn_mn {
     type: number
     sql: ${TABLE}.Daily_Language__People_Talking_About_This___mn_MN ;;
+  }
+
+  dimension: daily_language__people_talking_about_this___mr_in {
+    type: number
+    sql: ${TABLE}.Daily_Language__People_Talking_About_This___mr_IN ;;
   }
 
   dimension: daily_language__people_talking_about_this___ms_my {
@@ -3983,6 +4849,16 @@ view: fb_page_tpt {
   dimension: daily_language__people_talking_about_this___nl_nl {
     type: number
     sql: ${TABLE}.Daily_Language__People_Talking_About_This___nl_NL ;;
+  }
+
+  dimension: daily_language__people_talking_about_this___or_in {
+    type: number
+    sql: ${TABLE}.Daily_Language__People_Talking_About_This___or_IN ;;
+  }
+
+  dimension: daily_language__people_talking_about_this___pa_in {
+    type: number
+    sql: ${TABLE}.Daily_Language__People_Talking_About_This___pa_IN ;;
   }
 
   dimension: daily_language__people_talking_about_this___pl_pl {
@@ -4050,6 +4926,16 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Language__People_Talking_About_This___sw_KE ;;
   }
 
+  dimension: daily_language__people_talking_about_this___ta_in {
+    type: number
+    sql: ${TABLE}.Daily_Language__People_Talking_About_This___ta_IN ;;
+  }
+
+  dimension: daily_language__people_talking_about_this___te_in {
+    type: number
+    sql: ${TABLE}.Daily_Language__People_Talking_About_This___te_IN ;;
+  }
+
   dimension: daily_language__people_talking_about_this___th_th {
     type: number
     sql: ${TABLE}.Daily_Language__People_Talking_About_This___th_TH ;;
@@ -4075,11 +4961,6 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Language__People_Talking_About_This___ur_PK ;;
   }
 
-  dimension: daily_language__people_talking_about_this___uz_uz {
-    type: number
-    sql: ${TABLE}.Daily_Language__People_Talking_About_This___uz_UZ ;;
-  }
-
   dimension: daily_language__people_talking_about_this___vi_vn {
     type: number
     sql: ${TABLE}.Daily_Language__People_Talking_About_This___vi_VN ;;
@@ -4101,7 +4982,7 @@ view: fb_page_tpt {
   }
 
   dimension: daily_like_sources___ads {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Like_Sources___ads ;;
   }
 
@@ -4113,11 +4994,6 @@ view: fb_page_tpt {
   dimension: daily_like_sources___events {
     type: number
     sql: ${TABLE}.Daily_Like_Sources___events ;;
-  }
-
-  dimension: daily_like_sources___external_connect {
-    type: number
-    sql: ${TABLE}.Daily_Like_Sources___external_connect ;;
   }
 
   dimension: daily_like_sources___feed_chaining {
@@ -4145,14 +5021,14 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Like_Sources___hovercard ;;
   }
 
+  dimension: daily_like_sources___instant_articles {
+    type: number
+    sql: ${TABLE}.Daily_Like_Sources___instant_articles ;;
+  }
+
   dimension: daily_like_sources___launch_point_discover_pyml {
     type: number
     sql: ${TABLE}.Daily_Like_Sources___launch_point_discover_pyml ;;
-  }
-
-  dimension: daily_like_sources___launch_point_friend_invites {
-    type: number
-    sql: ${TABLE}.Daily_Like_Sources___launch_point_friend_invites ;;
   }
 
   dimension: daily_like_sources___launch_point_liked_pages {
@@ -4165,14 +5041,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Like_Sources___mobile ;;
   }
 
+  dimension: daily_like_sources___mobile_page_suggestions_on_liking {
+    type: number
+    sql: ${TABLE}.Daily_Like_Sources___mobile_page_suggestions_on_liking ;;
+  }
+
+  dimension: daily_like_sources___page_finch_related_pages {
+    type: number
+    sql: ${TABLE}.Daily_Like_Sources___page_finch_related_pages ;;
+  }
+
   dimension: daily_like_sources___page_invite {
     type: number
     sql: ${TABLE}.Daily_Like_Sources___page_invite ;;
-  }
-
-  dimension: daily_like_sources___page_invite_escape_hatch {
-    type: number
-    sql: ${TABLE}.Daily_Like_Sources___page_invite_escape_hatch ;;
   }
 
   dimension: daily_like_sources___page_profile {
@@ -4190,14 +5071,24 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Like_Sources___pagelike_adder_for_reactivated_users ;;
   }
 
-  dimension: daily_like_sources___pages_liked_feed {
+  dimension: daily_like_sources___photo_snowlift {
     type: number
-    sql: ${TABLE}.Daily_Like_Sources___pages_liked_feed ;;
+    sql: ${TABLE}.Daily_Like_Sources___photo_snowlift ;;
   }
 
   dimension: daily_like_sources___profile_edit {
     type: number
     sql: ${TABLE}.Daily_Like_Sources___profile_edit ;;
+  }
+
+  dimension: daily_like_sources___profile_view {
+    type: number
+    sql: ${TABLE}.Daily_Like_Sources___profile_view ;;
+  }
+
+  dimension: daily_like_sources___reactivated_fan_add {
+    type: number
+    sql: ${TABLE}.Daily_Like_Sources___reactivated_fan_add ;;
   }
 
   dimension: daily_like_sources___search {
@@ -4221,7 +5112,7 @@ view: fb_page_tpt {
   }
 
   dimension: daily_liked_and_online___0 {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Liked_and_Online___0 ;;
   }
 
@@ -4341,33 +5232,23 @@ view: fb_page_tpt {
   }
 
   dimension: daily_logged_in_page_views {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Logged_in_Page_Views ;;
   }
 
   dimension: daily_logged_in_page_views_33 {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Logged_in_Page_Views_33 ;;
   }
 
   dimension: daily_logged_in_tab_views___about {
-    type: string
-    sql: ${TABLE}.Daily_Logged_in_Tab_Views___about ;;
-  }
-
-  dimension: daily_logged_in_tab_views___ads {
     type: number
-    sql: ${TABLE}.Daily_Logged_in_Tab_Views___ads ;;
+    sql: ${TABLE}.Daily_Logged_in_Tab_Views___about ;;
   }
 
   dimension: daily_logged_in_tab_views___album {
     type: number
     sql: ${TABLE}.Daily_Logged_in_Tab_Views___album ;;
-  }
-
-  dimension: daily_logged_in_tab_views___albums {
-    type: number
-    sql: ${TABLE}.Daily_Logged_in_Tab_Views___albums ;;
   }
 
   dimension: daily_logged_in_tab_views___community {
@@ -4393,11 +5274,6 @@ view: fb_page_tpt {
   dimension: daily_logged_in_tab_views___home {
     type: number
     sql: ${TABLE}.Daily_Logged_in_Tab_Views___home ;;
-  }
-
-  dimension: daily_logged_in_tab_views___jobs {
-    type: number
-    sql: ${TABLE}.Daily_Logged_in_Tab_Views___jobs ;;
   }
 
   dimension: daily_logged_in_tab_views___notes {
@@ -4440,6 +5316,11 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Logged_in_Tab_Views___profile_home ;;
   }
 
+  dimension: daily_logged_in_tab_views___profile_info {
+    type: number
+    sql: ${TABLE}.Daily_Logged_in_Tab_Views___profile_info ;;
+  }
+
   dimension: daily_logged_in_tab_views___profile_notes {
     type: number
     sql: ${TABLE}.Daily_Logged_in_Tab_Views___profile_notes ;;
@@ -4460,9 +5341,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Logged_in_Tab_Views___profile_videos ;;
   }
 
-  dimension: daily_logged_in_tab_views___services {
+  dimension: daily_logged_in_tab_views___shop {
     type: number
-    sql: ${TABLE}.Daily_Logged_in_Tab_Views___services ;;
+    sql: ${TABLE}.Daily_Logged_in_Tab_Views___shop ;;
   }
 
   dimension: daily_logged_in_tab_views___timeline {
@@ -4476,12 +5357,12 @@ view: fb_page_tpt {
   }
 
   dimension: daily_negative_feedback {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Negative_Feedback ;;
   }
 
   dimension: daily_negative_feedback_by_type___hide_all_clicks {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Negative_feedback_by_type___hide_all_clicks ;;
   }
 
@@ -4506,12 +5387,12 @@ view: fb_page_tpt {
   }
 
   dimension: daily_negative_feedback_from_users {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Negative_Feedback_From_Users ;;
   }
 
   dimension: daily_negative_feedback_from_users___hide_all_clicks {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Negative_Feedback_From_Users___hide_all_clicks ;;
   }
 
@@ -4536,37 +5417,37 @@ view: fb_page_tpt {
   }
 
   dimension: daily_new_likes {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_New_Likes ;;
   }
 
   dimension: daily_organic_impressions {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Organic_impressions ;;
   }
 
   dimension: daily_organic_impressions_of_your_posts {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Organic_impressions_of_your_posts ;;
   }
 
   dimension: daily_organic_reach {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Organic_Reach ;;
   }
 
   dimension: daily_organic_reach_of_page_posts {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Organic_Reach_of_Page_posts ;;
   }
 
   dimension: daily_page_consumptions {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Page_Consumptions ;;
   }
 
   dimension: daily_page_consumptions_by_type___button_clicks {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Page_Consumptions_By_Type___button_clicks ;;
   }
 
@@ -4591,12 +5472,12 @@ view: fb_page_tpt {
   }
 
   dimension: daily_page_engaged_users {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Page_Engaged_Users ;;
   }
 
   dimension: daily_page_posts_frequency_distribution___1 {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Page_Posts_Frequency_Distribution___1 ;;
   }
 
@@ -4636,7 +5517,7 @@ view: fb_page_tpt {
   }
 
   dimension: daily_page_stories_by_story_type___checkin {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Page_Stories_By_Story_Type___checkin ;;
   }
 
@@ -4681,38 +5562,38 @@ view: fb_page_tpt {
   }
 
   dimension: daily_paid_30_second_views {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Paid_30_Second_Views ;;
   }
 
   dimension: daily_paid_impressions {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Paid_Impressions ;;
   }
 
   dimension: daily_paid_impressions_of_your_posts {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Paid_impressions_of_your_posts ;;
   }
 
   dimension: daily_paid_reach {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Paid_Reach ;;
   }
 
   dimension: daily_paid_reach_of_page_posts {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Paid_Reach_of_Page_posts ;;
   }
 
   dimension: daily_positive_feedback_from_users___answer {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Positive_Feedback_From_Users___answer ;;
   }
 
-  dimension: daily_positive_feedback_from_users___answer_1716 {
-    type: string
-    sql: ${TABLE}.Daily_Positive_Feedback_From_Users___answer_1716 ;;
+  dimension: daily_positive_feedback_from_users___answer_1952 {
+    type: number
+    sql: ${TABLE}.Daily_Positive_Feedback_From_Users___answer_1952 ;;
   }
 
   dimension: daily_positive_feedback_from_users___claim {
@@ -4720,9 +5601,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Positive_Feedback_From_Users___claim ;;
   }
 
-  dimension: daily_positive_feedback_from_users___claim_1717 {
+  dimension: daily_positive_feedback_from_users___claim_1953 {
     type: number
-    sql: ${TABLE}.Daily_Positive_Feedback_From_Users___claim_1717 ;;
+    sql: ${TABLE}.Daily_Positive_Feedback_From_Users___claim_1953 ;;
   }
 
   dimension: daily_positive_feedback_from_users___comment {
@@ -4730,9 +5611,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Positive_Feedback_From_Users___comment ;;
   }
 
-  dimension: daily_positive_feedback_from_users___comment_1718 {
+  dimension: daily_positive_feedback_from_users___comment_1954 {
     type: number
-    sql: ${TABLE}.Daily_Positive_Feedback_From_Users___comment_1718 ;;
+    sql: ${TABLE}.Daily_Positive_Feedback_From_Users___comment_1954 ;;
   }
 
   dimension: daily_positive_feedback_from_users___like {
@@ -4740,9 +5621,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Positive_Feedback_From_Users___like ;;
   }
 
-  dimension: daily_positive_feedback_from_users___like_1719 {
+  dimension: daily_positive_feedback_from_users___like_1955 {
     type: number
-    sql: ${TABLE}.Daily_Positive_Feedback_From_Users___like_1719 ;;
+    sql: ${TABLE}.Daily_Positive_Feedback_From_Users___like_1955 ;;
   }
 
   dimension: daily_positive_feedback_from_users___link {
@@ -4750,9 +5631,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Positive_Feedback_From_Users___link ;;
   }
 
-  dimension: daily_positive_feedback_from_users___link_1720 {
+  dimension: daily_positive_feedback_from_users___link_1956 {
     type: number
-    sql: ${TABLE}.Daily_Positive_Feedback_From_Users___link_1720 ;;
+    sql: ${TABLE}.Daily_Positive_Feedback_From_Users___link_1956 ;;
   }
 
   dimension: daily_positive_feedback_from_users___other {
@@ -4760,18 +5641,18 @@ view: fb_page_tpt {
     sql: ${TABLE}.Daily_Positive_Feedback_From_Users___other ;;
   }
 
-  dimension: daily_positive_feedback_from_users___other_1721 {
+  dimension: daily_positive_feedback_from_users___other_1957 {
     type: number
-    sql: ${TABLE}.Daily_Positive_Feedback_From_Users___other_1721 ;;
+    sql: ${TABLE}.Daily_Positive_Feedback_From_Users___other_1957 ;;
   }
 
   dimension: daily_reach_of_page_posts {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Reach_Of_Page_Posts ;;
   }
 
   dimension: daily_talking_about_this_by_story_type___checkin {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Talking_About_This_By_Story_Type___checkin ;;
   }
 
@@ -4816,22 +5697,22 @@ view: fb_page_tpt {
   }
 
   dimension: daily_total_30_second_repeats {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Total_30_Second_Repeats ;;
   }
 
   dimension: daily_total_30_second_views {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Total_30_Second_Views ;;
   }
 
   dimension: daily_total__total_action_count_per_page {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Total__total_action_count_per_Page ;;
   }
 
   dimension: daily_total_auto_played_views {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Total_Auto_Played_Views ;;
   }
 
@@ -4856,22 +5737,22 @@ view: fb_page_tpt {
   }
 
   dimension: daily_total_clicked_30_second_views {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Total_Clicked_30_Second_Views ;;
   }
 
   dimension: daily_total_clicked_views {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Total_Clicked_Views ;;
   }
 
   dimension: daily_total_consumers {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Total_Consumers ;;
   }
 
   dimension: daily_total_frequency_distribution___1 {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Total_Frequency_Distribution___1 ;;
   }
 
@@ -4921,7 +5802,7 @@ view: fb_page_tpt {
   }
 
   dimension: daily_total_get_direction_click_count_per_page_by_age_and_gender___13_17_f {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Total_get_direction_click_count_per_Page_by_age_and_gender___13_17_F ;;
   }
 
@@ -5056,7 +5937,7 @@ view: fb_page_tpt {
   }
 
   dimension: daily_total_get_direction_click_count_per_page_by_site___api {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Total_get_direction_click_count_per_Page_by_site___API ;;
   }
 
@@ -5076,22 +5957,22 @@ view: fb_page_tpt {
   }
 
   dimension: daily_total_impressions {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Total_Impressions ;;
   }
 
   dimension: daily_total_impressions_of_your_posts {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Total_Impressions_of_your_posts ;;
   }
 
   dimension: daily_total_organic_30_second_views {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Total_Organic_30_Second_Views ;;
   }
 
   dimension: daily_total_organic_views {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Total_Organic_Views ;;
   }
 
@@ -5106,7 +5987,7 @@ view: fb_page_tpt {
   }
 
   dimension: daily_total_phone_calls_click_count_per_page_by_age_and_gender___13_17_f {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Total_phone_calls_click_count_per_Page_by_age_and_gender___13_17_F ;;
   }
 
@@ -5241,7 +6122,7 @@ view: fb_page_tpt {
   }
 
   dimension: daily_total_phone_calls_click_count_per_page_by_site___api {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Total_phone_calls_click_count_per_Page_by_site___API ;;
   }
 
@@ -5261,32 +6142,32 @@ view: fb_page_tpt {
   }
 
   dimension: daily_total_promoted_views {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Total_Promoted_Views ;;
   }
 
   dimension: daily_total_reach {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Total_Reach ;;
   }
 
   dimension: daily_total_unique_30_second_views {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Total_Unique_30_Second_Views ;;
   }
 
   dimension: daily_total_unique_video_views {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Total_Unique_Video_Views ;;
   }
 
   dimension: daily_total_video_views {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Total_Video_Views ;;
   }
 
   dimension: daily_total_web_site_click_count_per_page_by_age_and_gender___13_17_f {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Total_web_site_click_count_per_Page_by_age_and_gender___13_17_F ;;
   }
 
@@ -5421,17 +6302,17 @@ view: fb_page_tpt {
   }
 
   dimension: daily_total_website_click_count_per_page {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Total_website_click_count_per_Page ;;
   }
 
   dimension: daily_total_website_click_count_per_page_137 {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Total_website_click_count_per_Page_137 ;;
   }
 
   dimension: daily_total_website_click_count_per_page_by_site___api {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Total_website_click_count_per_Page_by_site___API ;;
   }
 
@@ -5451,32 +6332,32 @@ view: fb_page_tpt {
   }
 
   dimension: daily_unlikes {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Unlikes ;;
   }
 
   dimension: daily_video_repeats {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Video_Repeats ;;
   }
 
   dimension: daily_viral_impressions {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Viral_impressions ;;
   }
 
   dimension: daily_viral_impressions_of_your_posts {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Viral_Impressions_Of_Your_Posts ;;
   }
 
   dimension: daily_viral_reach {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Viral_Reach ;;
   }
 
   dimension: daily_viral_reach_of_page_posts {
-    type: string
+    type: number
     sql: ${TABLE}.Daily_Viral_Reach_Of_Page_Posts ;;
   }
 
@@ -5496,7 +6377,7 @@ view: fb_page_tpt {
   }
 
   dimension: lifetime_likes_by_city___atlanta__ga {
-    type: string
+    type: number
     sql: ${TABLE}.Lifetime_Likes_by_City___Atlanta__GA ;;
   }
 
@@ -5520,9 +6401,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Lifetime_Likes_by_City___Buffalo__NY ;;
   }
 
-  dimension: lifetime_likes_by_city___calgary__ab__canada {
+  dimension: lifetime_likes_by_city___cebu_city__central_visayas__philippines {
     type: number
-    sql: ${TABLE}.Lifetime_Likes_by_City___Calgary__AB__Canada ;;
+    sql: ${TABLE}.Lifetime_Likes_by_City___Cebu_City__Central_Visayas__Philippines ;;
   }
 
   dimension: lifetime_likes_by_city___charlotte__nc {
@@ -5533,6 +6414,11 @@ view: fb_page_tpt {
   dimension: lifetime_likes_by_city___chicago__il {
     type: number
     sql: ${TABLE}.Lifetime_Likes_by_City___Chicago__IL ;;
+  }
+
+  dimension: lifetime_likes_by_city___cincinnati__oh {
+    type: number
+    sql: ${TABLE}.Lifetime_Likes_by_City___Cincinnati__OH ;;
   }
 
   dimension: lifetime_likes_by_city___cleveland__oh {
@@ -5570,19 +6456,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Lifetime_Likes_by_City___Indianapolis__IN ;;
   }
 
-  dimension: lifetime_likes_by_city___jacksonville__fl {
-    type: number
-    sql: ${TABLE}.Lifetime_Likes_by_City___Jacksonville__FL ;;
-  }
-
   dimension: lifetime_likes_by_city___las_vegas__nv {
     type: number
     sql: ${TABLE}.Lifetime_Likes_by_City___Las_Vegas__NV ;;
-  }
-
-  dimension: lifetime_likes_by_city___london__england__united_kingdom {
-    type: number
-    sql: ${TABLE}.Lifetime_Likes_by_City___London__England__United_Kingdom ;;
   }
 
   dimension: lifetime_likes_by_city___los_angeles__ca {
@@ -5623,16 +6499,6 @@ view: fb_page_tpt {
   dimension: lifetime_likes_by_city___montreal__qc__canada {
     type: number
     sql: ${TABLE}.Lifetime_Likes_by_City___Montreal__QC__Canada ;;
-  }
-
-  dimension: lifetime_likes_by_city___nashville__tn {
-    type: number
-    sql: ${TABLE}.Lifetime_Likes_by_City___Nashville__TN ;;
-  }
-
-  dimension: lifetime_likes_by_city___nassau_county__ny {
-    type: number
-    sql: ${TABLE}.Lifetime_Likes_by_City___Nassau_County__NY ;;
   }
 
   dimension: lifetime_likes_by_city___new_york__ny {
@@ -5735,18 +6601,13 @@ view: fb_page_tpt {
     sql: ${TABLE}.Lifetime_Likes_by_City___Toronto__ON__Canada ;;
   }
 
-  dimension: lifetime_likes_by_city___vancouver__bc__canada {
-    type: number
-    sql: ${TABLE}.Lifetime_Likes_by_City___Vancouver__BC__Canada ;;
-  }
-
   dimension: lifetime_likes_by_city___washington__dc {
     type: number
     sql: ${TABLE}.Lifetime_Likes_by_City___Washington__DC ;;
   }
 
   dimension: lifetime_likes_by_country___ae {
-    type: string
+    type: number
     sql: ${TABLE}.Lifetime_Likes_by_Country___AE ;;
   }
 
@@ -5981,7 +6842,7 @@ view: fb_page_tpt {
   }
 
   dimension: lifetime_likes_by_gender_and_age___f_13_17 {
-    type: string
+    type: number
     sql: ${TABLE}.Lifetime_Likes_by_Gender_and_Age___F_13_17 ;;
   }
 
@@ -6086,7 +6947,7 @@ view: fb_page_tpt {
   }
 
   dimension: lifetime_likes_by_language___ar_ar {
-    type: string
+    type: number
     sql: ${TABLE}.Lifetime_Likes_by_Language___ar_AR ;;
   }
 
@@ -6215,6 +7076,11 @@ view: fb_page_tpt {
     sql: ${TABLE}.Lifetime_Likes_by_Language___mn_MN ;;
   }
 
+  dimension: lifetime_likes_by_language___ms_my {
+    type: number
+    sql: ${TABLE}.Lifetime_Likes_by_Language___ms_MY ;;
+  }
+
   dimension: lifetime_likes_by_language___nb_no {
     type: number
     sql: ${TABLE}.Lifetime_Likes_by_Language___nb_NO ;;
@@ -6311,43 +7177,28 @@ view: fb_page_tpt {
   }
 
   dimension: lifetime_total_likes {
-    type: string
+    type: number
     sql: ${TABLE}.Lifetime_Total_Likes ;;
   }
 
   dimension: weekly_auto_played_30_second_views {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Auto_Played_30_Second_Views ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___accra__greater_accra_region__ghana {
-    type: string
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Accra__Greater_Accra_Region__Ghana ;;
+  dimension: weekly_city__people_talking_about_this___ahmedabad__gujarat__india {
+    type: number
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Ahmedabad__Gujarat__India ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___allegheny_acres__pa {
+  dimension: weekly_city__people_talking_about_this___amritsar__punjab_region__india {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Allegheny_Acres__PA ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Amritsar__Punjab_region__India ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___altoona__pa {
+  dimension: weekly_city__people_talking_about_this___antipolo__calabarzon__philippines {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Altoona__PA ;;
-  }
-
-  dimension: weekly_city__people_talking_about_this___amman__amman_governorate__jordan {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Amman__Amman_Governorate__Jordan ;;
-  }
-
-  dimension: weekly_city__people_talking_about_this___athens__attica__region___greece {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Athens__Attica__region___Greece ;;
-  }
-
-  dimension: weekly_city__people_talking_about_this___athens__ga {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Athens__GA ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Antipolo__Calabarzon__Philippines ;;
   }
 
   dimension: weekly_city__people_talking_about_this___atlanta__ga {
@@ -6355,9 +7206,14 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Atlanta__GA ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___austin__tx {
+  dimension: weekly_city__people_talking_about_this___bacolod_city__western_visayas__philippines {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Austin__TX ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Bacolod_CIty__Western_Visayas__Philippines ;;
+  }
+
+  dimension: weekly_city__people_talking_about_this___bacoor__calabarzon__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Bacoor__Calabarzon__Philippines ;;
   }
 
   dimension: weekly_city__people_talking_about_this___baghdad__baghdad_governorate__iraq {
@@ -6365,9 +7221,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Baghdad__Baghdad_Governorate__Iraq ;;
   }
 
+  dimension: weekly_city__people_talking_about_this___baguio_city__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Baguio_City__Philippines ;;
+  }
+
   dimension: weekly_city__people_talking_about_this___baltimore__md {
     type: number
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Baltimore__MD ;;
+  }
+
+  dimension: weekly_city__people_talking_about_this___bangalore__karnataka__india {
+    type: number
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Bangalore__Karnataka__India ;;
   }
 
   dimension: weekly_city__people_talking_about_this___bangkok__thailand {
@@ -6380,24 +7246,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Barcelona__Catalu__a__Spain ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___baton_rouge__la {
+  dimension: weekly_city__people_talking_about_this___batangas_city__philippines {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Baton_Rouge__LA ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Batangas_City__Philippines ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___bensalem__pa {
+  dimension: weekly_city__people_talking_about_this___bhopal__madhya_pradesh__india {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Bensalem__PA ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Bhopal__Madhya_Pradesh__India ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___birmingham__al {
+  dimension: weekly_city__people_talking_about_this___bhubaneswar__odisha__india {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Birmingham__AL ;;
-  }
-
-  dimension: weekly_city__people_talking_about_this___bogot____distrito_especial__colombia {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Bogot____Distrito_Especial__Colombia ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Bhubaneswar__Odisha__India ;;
   }
 
   dimension: weekly_city__people_talking_about_this___boston__ma {
@@ -6410,14 +7271,24 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Buffalo__NY ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___butler__pa {
+  dimension: weekly_city__people_talking_about_this___cagayan_de_oro__northern_mindanao__philippines {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Butler__PA ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Cagayan_de_Oro__Northern_Mindanao__Philippines ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___cairo__cairo_governorate__egypt {
+  dimension: weekly_city__people_talking_about_this___calgary__ab__canada {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Cairo__Cairo_Governorate__Egypt ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Calgary__AB__Canada ;;
+  }
+
+  dimension: weekly_city__people_talking_about_this___caloocan__metro_manila__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Caloocan__Metro_Manila__Philippines ;;
+  }
+
+  dimension: weekly_city__people_talking_about_this___caracas__capital_district__venezuela {
+    type: number
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Caracas__Capital_District__Venezuela ;;
   }
 
   dimension: weekly_city__people_talking_about_this___casablanca__grand_casablanca__morocco {
@@ -6430,14 +7301,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Cebu_City__Central_Visayas__Philippines ;;
   }
 
+  dimension: weekly_city__people_talking_about_this___chandigarh__india {
+    type: number
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Chandigarh__India ;;
+  }
+
   dimension: weekly_city__people_talking_about_this___charlotte__nc {
     type: number
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Charlotte__NC ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___cherry_hill__nj {
+  dimension: weekly_city__people_talking_about_this___chennai__tamil_nadu__india {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Cherry_Hill__NJ ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Chennai__Tamil_Nadu__India ;;
   }
 
   dimension: weekly_city__people_talking_about_this___chicago__il {
@@ -6445,14 +7321,14 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Chicago__IL ;;
   }
 
+  dimension: weekly_city__people_talking_about_this___chittagong__chittagong_division__bangladesh {
+    type: number
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Chittagong__Chittagong_Division__Bangladesh ;;
+  }
+
   dimension: weekly_city__people_talking_about_this___cleveland__oh {
     type: number
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Cleveland__OH ;;
-  }
-
-  dimension: weekly_city__people_talking_about_this___colorado_springs__co {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Colorado_Springs__CO ;;
   }
 
   dimension: weekly_city__people_talking_about_this___columbus__oh {
@@ -6460,19 +7336,24 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Columbus__OH ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___dakar__dakar_region__senegal {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Dakar__Dakar_Region__Senegal ;;
-  }
-
   dimension: weekly_city__people_talking_about_this___dallas__tx {
     type: number
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Dallas__TX ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___damascus__damascus_governorate__syria {
+  dimension: weekly_city__people_talking_about_this___dar_es_salaam__tanzania {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Damascus__Damascus_Governorate__Syria ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Dar_es_Salaam__Tanzania ;;
+  }
+
+  dimension: weekly_city__people_talking_about_this___dasmari__as__calabarzon__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Dasmari__as__Calabarzon__Philippines ;;
+  }
+
+  dimension: weekly_city__people_talking_about_this___davao_city__davao_region__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Davao_City__Davao_Region__Philippines ;;
   }
 
   dimension: weekly_city__people_talking_about_this___denver__co {
@@ -6490,34 +7371,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Dhaka__Dhaka_Division__Bangladesh ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___erie__pa {
+  dimension: weekly_city__people_talking_about_this___edmonton__ab__canada {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Erie__PA ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Edmonton__AB__Canada ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___fort_worth__tx {
+  dimension: weekly_city__people_talking_about_this___gauhati__assam__india {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Fort_Worth__TX ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Gauhati__Assam__India ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___greensburg__pa {
+  dimension: weekly_city__people_talking_about_this___general_santos_city__soccsksargen__philippines {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Greensburg__PA ;;
-  }
-
-  dimension: weekly_city__people_talking_about_this___guatemala_city__guatemala_department__guatemala {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Guatemala_City__Guatemala_Department__Guatemala ;;
-  }
-
-  dimension: weekly_city__people_talking_about_this___hanoi__h___n___i__vietnam {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Hanoi__H___N___i__Vietnam ;;
-  }
-
-  dimension: weekly_city__people_talking_about_this___ho_chi_minh_city__vietnam {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Ho_Chi_Minh_City__Vietnam ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___General_Santos_City__Soccsksargen__Philippines ;;
   }
 
   dimension: weekly_city__people_talking_about_this___hong_kong__hong_kong {
@@ -6530,9 +7396,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Houston__TX ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___huntsville__al {
+  dimension: weekly_city__people_talking_about_this___hyderabad__telangana__india {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Huntsville__AL ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Hyderabad__Telangana__India ;;
+  }
+
+  dimension: weekly_city__people_talking_about_this___iloilo_city__western_visayas__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Iloilo_City__Western_Visayas__Philippines ;;
+  }
+
+  dimension: weekly_city__people_talking_about_this___imphal__manipur__india {
+    type: number
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Imphal__Manipur__India ;;
   }
 
   dimension: weekly_city__people_talking_about_this___indianapolis__in {
@@ -6540,9 +7416,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Indianapolis__IN ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___irbil__erbil_governorate__iraq {
+  dimension: weekly_city__people_talking_about_this___indore__madhya_pradesh__india {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Irbil__Erbil_Governorate__Iraq ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Indore__Madhya_Pradesh__India ;;
   }
 
   dimension: weekly_city__people_talking_about_this___jacksonville__fl {
@@ -6550,29 +7426,34 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Jacksonville__FL ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___johnstown__pa {
+  dimension: weekly_city__people_talking_about_this___jaipur__rajasthan__india {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Johnstown__PA ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Jaipur__Rajasthan__India ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___kansas_city__mo {
+  dimension: weekly_city__people_talking_about_this___kanpur__uttar_pradesh__india {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Kansas_City__MO ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Kanpur__Uttar_Pradesh__India ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___kathmandu__bagmati_zone__nepal {
+  dimension: weekly_city__people_talking_about_this___knoxville__tn {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Kathmandu__Bagmati_Zone__Nepal ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Knoxville__TN ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___lancaster__pa {
+  dimension: weekly_city__people_talking_about_this___kolkata__west_bengal__india {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Lancaster__PA ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Kolkata__West_Bengal__India ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___lansdale__pa {
+  dimension: weekly_city__people_talking_about_this___kuala_lumpur__malaysia {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Lansdale__PA ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Kuala_Lumpur__Malaysia ;;
+  }
+
+  dimension: weekly_city__people_talking_about_this___las_pi__as__calabarzon__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Las_Pi__as__Calabarzon__Philippines ;;
   }
 
   dimension: weekly_city__people_talking_about_this___las_vegas__nv {
@@ -6580,14 +7461,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Las_Vegas__NV ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___levittown__pa {
+  dimension: weekly_city__people_talking_about_this___lexington__ky {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Levittown__PA ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Lexington__KY ;;
   }
 
   dimension: weekly_city__people_talking_about_this___lima__lima_region__peru {
     type: number
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Lima__Lima_Region__Peru ;;
+  }
+
+  dimension: weekly_city__people_talking_about_this___logan__ut {
+    type: number
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Logan__UT ;;
   }
 
   dimension: weekly_city__people_talking_about_this___london__england__united_kingdom {
@@ -6600,14 +7486,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Los_Angeles__CA ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___louisville__ky {
+  dimension: weekly_city__people_talking_about_this___lucknow__uttar_pradesh__india {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Louisville__KY ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Lucknow__Uttar_Pradesh__India ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___madrid__comunidad_de_madrid__spain {
+  dimension: weekly_city__people_talking_about_this___ludhiana__punjab_region__india {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Madrid__Comunidad_de_Madrid__Spain ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Ludhiana__Punjab_region__India ;;
+  }
+
+  dimension: weekly_city__people_talking_about_this___makati__metro_manila__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Makati__Metro_Manila__Philippines ;;
   }
 
   dimension: weekly_city__people_talking_about_this___manila__metro_manila__philippines {
@@ -6615,14 +7506,14 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Manila__Metro_Manila__Philippines ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___marietta__ga {
+  dimension: weekly_city__people_talking_about_this___marikina_city__philippines {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Marietta__GA ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Marikina_City__Philippines ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___marlton__nj {
+  dimension: weekly_city__people_talking_about_this___melbourne__vic__australia {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Marlton__NJ ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Melbourne__VIC__Australia ;;
   }
 
   dimension: weekly_city__people_talking_about_this___memphis__tn {
@@ -6635,16 +7526,6 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Mexico_City__Distrito_Federal__Mexico ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___miami__fl {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Miami__FL ;;
-  }
-
-  dimension: weekly_city__people_talking_about_this___milan__lombardia__italy {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Milan__Lombardia__Italy ;;
-  }
-
   dimension: weekly_city__people_talking_about_this___milwaukee__wi {
     type: number
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Milwaukee__WI ;;
@@ -6655,29 +7536,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Minneapolis__MN ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___mobile__al {
+  dimension: weekly_city__people_talking_about_this___montreal__qc__canada {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Mobile__AL ;;
-  }
-
-  dimension: weekly_city__people_talking_about_this___monterrey__nuevo_le__n__mexico {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Monterrey__Nuevo_Le__n__Mexico ;;
-  }
-
-  dimension: weekly_city__people_talking_about_this___montevideo__montevideo_department__uruguay {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Montevideo__Montevideo_Department__Uruguay ;;
-  }
-
-  dimension: weekly_city__people_talking_about_this___montgomery__al {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Montgomery__AL ;;
-  }
-
-  dimension: weekly_city__people_talking_about_this___morgantown__wv {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Morgantown__WV ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Montreal__QC__Canada ;;
   }
 
   dimension: weekly_city__people_talking_about_this___mumbai__maharashtra__india {
@@ -6685,19 +7546,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Mumbai__Maharashtra__India ;;
   }
 
+  dimension: weekly_city__people_talking_about_this___nagpur__maharashtra__india {
+    type: number
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Nagpur__Maharashtra__India ;;
+  }
+
   dimension: weekly_city__people_talking_about_this___nashville__tn {
     type: number
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Nashville__TN ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___new_castle__pa {
+  dimension: weekly_city__people_talking_about_this___new_delhi__delhi__india {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___New_Castle__PA ;;
-  }
-
-  dimension: weekly_city__people_talking_about_this___new_orleans__la {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___New_Orleans__LA ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___New_Delhi__Delhi__India ;;
   }
 
   dimension: weekly_city__people_talking_about_this___new_york__ny {
@@ -6705,29 +7566,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___New_York__NY ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___newark__de {
+  dimension: weekly_city__people_talking_about_this___orland_park__il {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Newark__DE ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Orland_Park__IL ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___norman__ok {
+  dimension: weekly_city__people_talking_about_this___ottawa__on__canada {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Norman__OK ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Ottawa__ON__Canada ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___norristown__pa {
+  dimension: weekly_city__people_talking_about_this___pangasinan__ilocos_region__philippines {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Norristown__PA ;;
-  }
-
-  dimension: weekly_city__people_talking_about_this___oklahoma_city__ok {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Oklahoma_City__OK ;;
-  }
-
-  dimension: weekly_city__people_talking_about_this___orlando__fl {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Orlando__FL ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Pangasinan__Ilocos_Region__Philippines ;;
   }
 
   dimension: weekly_city__people_talking_about_this___para__aque__metro_manila__philippines {
@@ -6735,9 +7586,29 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Para__aque__Metro_Manila__Philippines ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___pensacola__fl {
+  dimension: weekly_city__people_talking_about_this___pasay_city__metro_manila__philippines {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Pensacola__FL ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Pasay_City__Metro_Manila__Philippines ;;
+  }
+
+  dimension: weekly_city__people_talking_about_this___pasig__metro_manila__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Pasig__Metro_Manila__Philippines ;;
+  }
+
+  dimension: weekly_city__people_talking_about_this___patna__bihar__india {
+    type: number
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Patna__Bihar__India ;;
+  }
+
+  dimension: weekly_city__people_talking_about_this___penang__malaysia {
+    type: number
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Penang__Malaysia ;;
+  }
+
+  dimension: weekly_city__people_talking_about_this___peoria__il {
+    type: number
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Peoria__IL ;;
   }
 
   dimension: weekly_city__people_talking_about_this___philadelphia__pa {
@@ -6760,14 +7631,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Portland__OR ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___pottstown__pa {
+  dimension: weekly_city__people_talking_about_this___pune__maharashtra__india {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Pottstown__PA ;;
-  }
-
-  dimension: weekly_city__people_talking_about_this___puebla__mexico {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Puebla__Mexico ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Pune__Maharashtra__India ;;
   }
 
   dimension: weekly_city__people_talking_about_this___quezon_city__metro_manila__philippines {
@@ -6775,24 +7641,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Quezon_City__Metro_Manila__Philippines ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___raleigh__nc {
+  dimension: weekly_city__people_talking_about_this___riyadh__riyadh_region__saudi_arabia {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Raleigh__NC ;;
-  }
-
-  dimension: weekly_city__people_talking_about_this___richmond__va {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Richmond__VA ;;
-  }
-
-  dimension: weekly_city__people_talking_about_this___riga__kurzeme_region__latvia {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Riga__Kurzeme_Region__Latvia ;;
-  }
-
-  dimension: weekly_city__people_talking_about_this___rio_de_janeiro__rj__brazil {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Rio_de_Janeiro__RJ__Brazil ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Riyadh__Riyadh_Region__Saudi_Arabia ;;
   }
 
   dimension: weekly_city__people_talking_about_this___rochester__ny {
@@ -6803,16 +7654,6 @@ view: fb_page_tpt {
   dimension: weekly_city__people_talking_about_this___s__o_paulo__sp__brazil {
     type: number
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___S__o_Paulo__SP__Brazil ;;
-  }
-
-  dimension: weekly_city__people_talking_about_this___sacramento__ca {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Sacramento__CA ;;
-  }
-
-  dimension: weekly_city__people_talking_about_this___saint_paul__mn {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Saint_Paul__MN ;;
   }
 
   dimension: weekly_city__people_talking_about_this___san_antonio__tx {
@@ -6830,9 +7671,14 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___San_Francisco__CA ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___san_jose__ca {
+  dimension: weekly_city__people_talking_about_this___santiago__santiago_province__dominican_republic {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___San_Jose__CA ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Santiago__Santiago_Province__Dominican_Republic ;;
+  }
+
+  dimension: weekly_city__people_talking_about_this___santo_domingo__santo_domingo_province__dominican_republic {
+    type: number
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Santo_Domingo__Santo_Domingo_Province__Dominican_Republic ;;
   }
 
   dimension: weekly_city__people_talking_about_this___seattle__wa {
@@ -6840,14 +7686,24 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Seattle__WA ;;
   }
 
+  dimension: weekly_city__people_talking_about_this___spokane__wa {
+    type: number
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Spokane__WA ;;
+  }
+
+  dimension: weekly_city__people_talking_about_this___srinagar__jammu_and_kashmir__india {
+    type: number
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Srinagar__Jammu_and_Kashmir__India ;;
+  }
+
   dimension: weekly_city__people_talking_about_this___st__louis__mo {
     type: number
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___St__Louis__MO ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___suffolk_county__ny {
+  dimension: weekly_city__people_talking_about_this___surat__gujarat__india {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Suffolk_County__NY ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Surat__Gujarat__India ;;
   }
 
   dimension: weekly_city__people_talking_about_this___sydney__nsw__australia {
@@ -6855,9 +7711,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Sydney__NSW__Australia ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___tacoma__wa {
+  dimension: weekly_city__people_talking_about_this___sylhet__sylhet_division__bangladesh {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Tacoma__WA ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Sylhet__Sylhet_Division__Bangladesh ;;
+  }
+
+  dimension: weekly_city__people_talking_about_this___tagbilaran_city__central_visayas__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Tagbilaran_City__Central_Visayas__Philippines ;;
+  }
+
+  dimension: weekly_city__people_talking_about_this___taguig__metro_manila__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Taguig__Metro_Manila__Philippines ;;
   }
 
   dimension: weekly_city__people_talking_about_this___tampa__fl {
@@ -6870,19 +7736,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Toronto__ON__Canada ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___tuscaloosa__al {
+  dimension: weekly_city__people_talking_about_this___ulaanbaatar__ulan_bator__mongolia {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Tuscaloosa__AL ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Ulaanbaatar__Ulan_Bator__Mongolia ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___upper_darby__pa {
+  dimension: weekly_city__people_talking_about_this___valenzuela__metro_manila__philippines {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Upper_Darby__PA ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Valenzuela__Metro_Manila__Philippines ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___virginia_beach__va {
+  dimension: weekly_city__people_talking_about_this___vancouver__bc__canada {
     type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Virginia_Beach__VA ;;
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Vancouver__BC__Canada ;;
   }
 
   dimension: weekly_city__people_talking_about_this___washington__dc {
@@ -6890,59 +7756,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Washington__DC ;;
   }
 
-  dimension: weekly_city__people_talking_about_this___washington__pa {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Washington__PA ;;
-  }
-
-  dimension: weekly_city__people_talking_about_this___washington_township__gloucester_county__nj {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Washington_Township__Gloucester_County__NJ ;;
-  }
-
-  dimension: weekly_city__people_talking_about_this___west_chester__pa {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___West_Chester__PA ;;
-  }
-
-  dimension: weekly_city__people_talking_about_this___wheeling__wv {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Wheeling__WV ;;
-  }
-
-  dimension: weekly_city__people_talking_about_this___williamstown__nj {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Williamstown__NJ ;;
-  }
-
-  dimension: weekly_city__people_talking_about_this___wilmington__de {
-    type: number
-    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Wilmington__DE ;;
-  }
-
   dimension: weekly_city__people_talking_about_this___winnipeg__mb__canada {
     type: number
     sql: ${TABLE}.Weekly_City__People_Talking_About_This___Winnipeg__MB__Canada ;;
   }
 
+  dimension: weekly_city__people_talking_about_this___zamboanga_city__zamboanga_peninsula__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_City__People_Talking_About_This___Zamboanga_City__Zamboanga_Peninsula__Philippines ;;
+  }
+
   dimension: weekly_country__people_talking_about_this___ae {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Country__People_Talking_About_This___AE ;;
-  }
-
-  dimension: weekly_country__people_talking_about_this___af {
-    type: number
-    sql: ${TABLE}.Weekly_Country__People_Talking_About_This___AF ;;
-  }
-
-  dimension: weekly_country__people_talking_about_this___al {
-    type: number
-    sql: ${TABLE}.Weekly_Country__People_Talking_About_This___AL ;;
-  }
-
-  dimension: weekly_country__people_talking_about_this___ao {
-    type: number
-    sql: ${TABLE}.Weekly_Country__People_Talking_About_This___AO ;;
   }
 
   dimension: weekly_country__people_talking_about_this___ar {
@@ -6970,9 +7796,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Country__People_Talking_About_This___BE ;;
   }
 
+  dimension: weekly_country__people_talking_about_this___bg {
+    type: number
+    sql: ${TABLE}.Weekly_Country__People_Talking_About_This___BG ;;
+  }
+
   dimension: weekly_country__people_talking_about_this___br {
     type: number
     sql: ${TABLE}.Weekly_Country__People_Talking_About_This___BR ;;
+  }
+
+  dimension: weekly_country__people_talking_about_this___bw {
+    type: number
+    sql: ${TABLE}.Weekly_Country__People_Talking_About_This___BW ;;
   }
 
   dimension: weekly_country__people_talking_about_this___ca {
@@ -6990,14 +7826,14 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Country__People_Talking_About_This___CL ;;
   }
 
+  dimension: weekly_country__people_talking_about_this___cn {
+    type: number
+    sql: ${TABLE}.Weekly_Country__People_Talking_About_This___CN ;;
+  }
+
   dimension: weekly_country__people_talking_about_this___co {
     type: number
     sql: ${TABLE}.Weekly_Country__People_Talking_About_This___CO ;;
-  }
-
-  dimension: weekly_country__people_talking_about_this___cr {
-    type: number
-    sql: ${TABLE}.Weekly_Country__People_Talking_About_This___CR ;;
   }
 
   dimension: weekly_country__people_talking_about_this___cz {
@@ -7055,6 +7891,11 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Country__People_Talking_About_This___GB ;;
   }
 
+  dimension: weekly_country__people_talking_about_this___ge {
+    type: number
+    sql: ${TABLE}.Weekly_Country__People_Talking_About_This___GE ;;
+  }
+
   dimension: weekly_country__people_talking_about_this___gh {
     type: number
     sql: ${TABLE}.Weekly_Country__People_Talking_About_This___GH ;;
@@ -7073,11 +7914,6 @@ view: fb_page_tpt {
   dimension: weekly_country__people_talking_about_this___hk {
     type: number
     sql: ${TABLE}.Weekly_Country__People_Talking_About_This___HK ;;
-  }
-
-  dimension: weekly_country__people_talking_about_this___hn {
-    type: number
-    sql: ${TABLE}.Weekly_Country__People_Talking_About_This___HN ;;
   }
 
   dimension: weekly_country__people_talking_about_this___hr {
@@ -7130,6 +7966,11 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Country__People_Talking_About_This___JP ;;
   }
 
+  dimension: weekly_country__people_talking_about_this___ke {
+    type: number
+    sql: ${TABLE}.Weekly_Country__People_Talking_About_This___KE ;;
+  }
+
   dimension: weekly_country__people_talking_about_this___kr {
     type: number
     sql: ${TABLE}.Weekly_Country__People_Talking_About_This___KR ;;
@@ -7140,9 +7981,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Country__People_Talking_About_This___LB ;;
   }
 
-  dimension: weekly_country__people_talking_about_this___lv {
+  dimension: weekly_country__people_talking_about_this___lr {
     type: number
-    sql: ${TABLE}.Weekly_Country__People_Talking_About_This___LV ;;
+    sql: ${TABLE}.Weekly_Country__People_Talking_About_This___LR ;;
   }
 
   dimension: weekly_country__people_talking_about_this___ma {
@@ -7153,6 +7994,11 @@ view: fb_page_tpt {
   dimension: weekly_country__people_talking_about_this___mk {
     type: number
     sql: ${TABLE}.Weekly_Country__People_Talking_About_This___MK ;;
+  }
+
+  dimension: weekly_country__people_talking_about_this___mn {
+    type: number
+    sql: ${TABLE}.Weekly_Country__People_Talking_About_This___MN ;;
   }
 
   dimension: weekly_country__people_talking_about_this___mx {
@@ -7230,6 +8076,11 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Country__People_Talking_About_This___RO ;;
   }
 
+  dimension: weekly_country__people_talking_about_this___rs {
+    type: number
+    sql: ${TABLE}.Weekly_Country__People_Talking_About_This___RS ;;
+  }
+
   dimension: weekly_country__people_talking_about_this___ru {
     type: number
     sql: ${TABLE}.Weekly_Country__People_Talking_About_This___RU ;;
@@ -7248,6 +8099,11 @@ view: fb_page_tpt {
   dimension: weekly_country__people_talking_about_this___sg {
     type: number
     sql: ${TABLE}.Weekly_Country__People_Talking_About_This___SG ;;
+  }
+
+  dimension: weekly_country__people_talking_about_this___sk {
+    type: number
+    sql: ${TABLE}.Weekly_Country__People_Talking_About_This___SK ;;
   }
 
   dimension: weekly_country__people_talking_about_this___sn {
@@ -7275,19 +8131,14 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Country__People_Talking_About_This___TN ;;
   }
 
-  dimension: weekly_country__people_talking_about_this___tr {
-    type: number
-    sql: ${TABLE}.Weekly_Country__People_Talking_About_This___TR ;;
-  }
-
   dimension: weekly_country__people_talking_about_this___tw {
     type: number
     sql: ${TABLE}.Weekly_Country__People_Talking_About_This___TW ;;
   }
 
-  dimension: weekly_country__people_talking_about_this___ua {
+  dimension: weekly_country__people_talking_about_this___tz {
     type: number
-    sql: ${TABLE}.Weekly_Country__People_Talking_About_This___UA ;;
+    sql: ${TABLE}.Weekly_Country__People_Talking_About_This___TZ ;;
   }
 
   dimension: weekly_country__people_talking_about_this___us {
@@ -7295,19 +8146,14 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Country__People_Talking_About_This___US ;;
   }
 
-  dimension: weekly_country__people_talking_about_this___uy {
+  dimension: weekly_country__people_talking_about_this___ve {
     type: number
-    sql: ${TABLE}.Weekly_Country__People_Talking_About_This___UY ;;
+    sql: ${TABLE}.Weekly_Country__People_Talking_About_This___VE ;;
   }
 
   dimension: weekly_country__people_talking_about_this___vn {
     type: number
     sql: ${TABLE}.Weekly_Country__People_Talking_About_This___VN ;;
-  }
-
-  dimension: weekly_country__people_talking_about_this___xk {
-    type: number
-    sql: ${TABLE}.Weekly_Country__People_Talking_About_This___XK ;;
   }
 
   dimension: weekly_country__people_talking_about_this___za {
@@ -7316,7 +8162,7 @@ view: fb_page_tpt {
   }
 
   dimension: weekly_demographics__people_talking_about_this___f_13_17 {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Demographics__People_Talking_About_This___F_13_17 ;;
   }
 
@@ -7421,13 +8267,13 @@ view: fb_page_tpt {
   }
 
   dimension: weekly_language__people_talking_about_this___ar_ar {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Language__People_Talking_About_This___ar_AR ;;
   }
 
-  dimension: weekly_language__people_talking_about_this___az_az {
+  dimension: weekly_language__people_talking_about_this___as_in {
     type: number
-    sql: ${TABLE}.Weekly_Language__People_Talking_About_This___az_AZ ;;
+    sql: ${TABLE}.Weekly_Language__People_Talking_About_This___as_IN ;;
   }
 
   dimension: weekly_language__people_talking_about_this___bg_bg {
@@ -7435,9 +8281,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Language__People_Talking_About_This___bg_BG ;;
   }
 
-  dimension: weekly_language__people_talking_about_this___bs_ba {
+  dimension: weekly_language__people_talking_about_this___bn_in {
     type: number
-    sql: ${TABLE}.Weekly_Language__People_Talking_About_This___bs_BA ;;
+    sql: ${TABLE}.Weekly_Language__People_Talking_About_This___bn_IN ;;
   }
 
   dimension: weekly_language__people_talking_about_this___ca_es {
@@ -7490,19 +8336,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Language__People_Talking_About_This___es_LA ;;
   }
 
-  dimension: weekly_language__people_talking_about_this___es_mx {
+  dimension: weekly_language__people_talking_about_this___fb_lt {
     type: number
-    sql: ${TABLE}.Weekly_Language__People_Talking_About_This___es_MX ;;
-  }
-
-  dimension: weekly_language__people_talking_about_this___et_ee {
-    type: number
-    sql: ${TABLE}.Weekly_Language__People_Talking_About_This___et_EE ;;
-  }
-
-  dimension: weekly_language__people_talking_about_this___fa_ir {
-    type: number
-    sql: ${TABLE}.Weekly_Language__People_Talking_About_This___fa_IR ;;
+    sql: ${TABLE}.Weekly_Language__People_Talking_About_This___fb_LT ;;
   }
 
   dimension: weekly_language__people_talking_about_this___fi_fi {
@@ -7520,9 +8356,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Language__People_Talking_About_This___fr_FR ;;
   }
 
+  dimension: weekly_language__people_talking_about_this___gu_in {
+    type: number
+    sql: ${TABLE}.Weekly_Language__People_Talking_About_This___gu_IN ;;
+  }
+
   dimension: weekly_language__people_talking_about_this___he_il {
     type: number
     sql: ${TABLE}.Weekly_Language__People_Talking_About_This___he_IL ;;
+  }
+
+  dimension: weekly_language__people_talking_about_this___hi_in {
+    type: number
+    sql: ${TABLE}.Weekly_Language__People_Talking_About_This___hi_IN ;;
   }
 
   dimension: weekly_language__people_talking_about_this___hr_hr {
@@ -7533,11 +8379,6 @@ view: fb_page_tpt {
   dimension: weekly_language__people_talking_about_this___hu_hu {
     type: number
     sql: ${TABLE}.Weekly_Language__People_Talking_About_This___hu_HU ;;
-  }
-
-  dimension: weekly_language__people_talking_about_this___hy_am {
-    type: number
-    sql: ${TABLE}.Weekly_Language__People_Talking_About_This___hy_AM ;;
   }
 
   dimension: weekly_language__people_talking_about_this___id_id {
@@ -7560,6 +8401,11 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Language__People_Talking_About_This___ka_GE ;;
   }
 
+  dimension: weekly_language__people_talking_about_this___kn_in {
+    type: number
+    sql: ${TABLE}.Weekly_Language__People_Talking_About_This___kn_IN ;;
+  }
+
   dimension: weekly_language__people_talking_about_this___ko_kr {
     type: number
     sql: ${TABLE}.Weekly_Language__People_Talking_About_This___ko_KR ;;
@@ -7570,14 +8416,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Language__People_Talking_About_This___lt_LT ;;
   }
 
-  dimension: weekly_language__people_talking_about_this___lv_lv {
+  dimension: weekly_language__people_talking_about_this___ml_in {
     type: number
-    sql: ${TABLE}.Weekly_Language__People_Talking_About_This___lv_LV ;;
+    sql: ${TABLE}.Weekly_Language__People_Talking_About_This___ml_IN ;;
   }
 
-  dimension: weekly_language__people_talking_about_this___mk_mk {
+  dimension: weekly_language__people_talking_about_this___mn_mn {
     type: number
-    sql: ${TABLE}.Weekly_Language__People_Talking_About_This___mk_MK ;;
+    sql: ${TABLE}.Weekly_Language__People_Talking_About_This___mn_MN ;;
+  }
+
+  dimension: weekly_language__people_talking_about_this___mr_in {
+    type: number
+    sql: ${TABLE}.Weekly_Language__People_Talking_About_This___mr_IN ;;
   }
 
   dimension: weekly_language__people_talking_about_this___ms_my {
@@ -7600,6 +8451,11 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Language__People_Talking_About_This___nl_NL ;;
   }
 
+  dimension: weekly_language__people_talking_about_this___pa_in {
+    type: number
+    sql: ${TABLE}.Weekly_Language__People_Talking_About_This___pa_IN ;;
+  }
+
   dimension: weekly_language__people_talking_about_this___pl_pl {
     type: number
     sql: ${TABLE}.Weekly_Language__People_Talking_About_This___pl_PL ;;
@@ -7613,6 +8469,11 @@ view: fb_page_tpt {
   dimension: weekly_language__people_talking_about_this___pt_pt {
     type: number
     sql: ${TABLE}.Weekly_Language__People_Talking_About_This___pt_PT ;;
+  }
+
+  dimension: weekly_language__people_talking_about_this___qz_mm {
+    type: number
+    sql: ${TABLE}.Weekly_Language__People_Talking_About_This___qz_MM ;;
   }
 
   dimension: weekly_language__people_talking_about_this___ro_ro {
@@ -7650,6 +8511,21 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Language__People_Talking_About_This___sv_SE ;;
   }
 
+  dimension: weekly_language__people_talking_about_this___sw_ke {
+    type: number
+    sql: ${TABLE}.Weekly_Language__People_Talking_About_This___sw_KE ;;
+  }
+
+  dimension: weekly_language__people_talking_about_this___ta_in {
+    type: number
+    sql: ${TABLE}.Weekly_Language__People_Talking_About_This___ta_IN ;;
+  }
+
+  dimension: weekly_language__people_talking_about_this___te_in {
+    type: number
+    sql: ${TABLE}.Weekly_Language__People_Talking_About_This___te_IN ;;
+  }
+
   dimension: weekly_language__people_talking_about_this___th_th {
     type: number
     sql: ${TABLE}.Weekly_Language__People_Talking_About_This___th_TH ;;
@@ -7665,9 +8541,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Language__People_Talking_About_This___tr_TR ;;
   }
 
-  dimension: weekly_language__people_talking_about_this___uk_ua {
+  dimension: weekly_language__people_talking_about_this___ur_pk {
     type: number
-    sql: ${TABLE}.Weekly_Language__People_Talking_About_This___uk_UA ;;
+    sql: ${TABLE}.Weekly_Language__People_Talking_About_This___ur_PK ;;
   }
 
   dimension: weekly_language__people_talking_about_this___vi_vn {
@@ -7691,22 +8567,22 @@ view: fb_page_tpt {
   }
 
   dimension: weekly_logged_in_page_views {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Logged_in_Page_Views ;;
   }
 
   dimension: weekly_logged_in_page_views_34 {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Logged_in_Page_Views_34 ;;
   }
 
   dimension: weekly_negative_feedback {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Negative_Feedback ;;
   }
 
   dimension: weekly_negative_feedback_by_type___hide_all_clicks {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Negative_feedback_by_type___hide_all_clicks ;;
   }
 
@@ -7731,12 +8607,12 @@ view: fb_page_tpt {
   }
 
   dimension: weekly_negative_feedback_from_users {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Negative_Feedback_From_Users ;;
   }
 
   dimension: weekly_negative_feedback_from_users___hide_all_clicks {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Negative_Feedback_From_Users___hide_all_clicks ;;
   }
 
@@ -7761,32 +8637,32 @@ view: fb_page_tpt {
   }
 
   dimension: weekly_organic_impressions {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Organic_impressions ;;
   }
 
   dimension: weekly_organic_impressions_of_your_posts {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Organic_impressions_of_your_posts ;;
   }
 
   dimension: weekly_organic_reach {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Organic_Reach ;;
   }
 
   dimension: weekly_organic_reach_of_page_posts {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Organic_Reach_of_Page_posts ;;
   }
 
   dimension: weekly_page_consumptions {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Page_Consumptions ;;
   }
 
   dimension: weekly_page_consumptions_by_type___button_clicks {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Page_Consumptions_By_Type___button_clicks ;;
   }
 
@@ -7811,12 +8687,12 @@ view: fb_page_tpt {
   }
 
   dimension: weekly_page_engaged_users {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Page_Engaged_Users ;;
   }
 
   dimension: weekly_page_posts_frequency_distribution___1 {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Page_Posts_Frequency_Distribution___1 ;;
   }
 
@@ -7856,7 +8732,7 @@ view: fb_page_tpt {
   }
 
   dimension: weekly_page_stories_by_story_type___checkin {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Page_Stories_By_Story_Type___checkin ;;
   }
 
@@ -7901,38 +8777,38 @@ view: fb_page_tpt {
   }
 
   dimension: weekly_paid_30_second_views {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Paid_30_Second_Views ;;
   }
 
   dimension: weekly_paid_impressions {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Paid_Impressions ;;
   }
 
   dimension: weekly_paid_impressions_of_your_posts {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Paid_impressions_of_your_posts ;;
   }
 
   dimension: weekly_paid_reach {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Paid_Reach ;;
   }
 
   dimension: weekly_paid_reach_of_page_posts {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Paid_Reach_of_Page_posts ;;
   }
 
   dimension: weekly_positive_feedback_from_users___answer {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Positive_Feedback_From_Users___answer ;;
   }
 
-  dimension: weekly_positive_feedback_from_users___answer_1722 {
-    type: string
-    sql: ${TABLE}.Weekly_Positive_Feedback_From_Users___answer_1722 ;;
+  dimension: weekly_positive_feedback_from_users___answer_1958 {
+    type: number
+    sql: ${TABLE}.Weekly_Positive_Feedback_From_Users___answer_1958 ;;
   }
 
   dimension: weekly_positive_feedback_from_users___claim {
@@ -7940,9 +8816,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Positive_Feedback_From_Users___claim ;;
   }
 
-  dimension: weekly_positive_feedback_from_users___claim_1723 {
+  dimension: weekly_positive_feedback_from_users___claim_1959 {
     type: number
-    sql: ${TABLE}.Weekly_Positive_Feedback_From_Users___claim_1723 ;;
+    sql: ${TABLE}.Weekly_Positive_Feedback_From_Users___claim_1959 ;;
   }
 
   dimension: weekly_positive_feedback_from_users___comment {
@@ -7950,9 +8826,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Positive_Feedback_From_Users___comment ;;
   }
 
-  dimension: weekly_positive_feedback_from_users___comment_1724 {
+  dimension: weekly_positive_feedback_from_users___comment_1960 {
     type: number
-    sql: ${TABLE}.Weekly_Positive_Feedback_From_Users___comment_1724 ;;
+    sql: ${TABLE}.Weekly_Positive_Feedback_From_Users___comment_1960 ;;
   }
 
   dimension: weekly_positive_feedback_from_users___like {
@@ -7960,9 +8836,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Positive_Feedback_From_Users___like ;;
   }
 
-  dimension: weekly_positive_feedback_from_users___like_1725 {
+  dimension: weekly_positive_feedback_from_users___like_1961 {
     type: number
-    sql: ${TABLE}.Weekly_Positive_Feedback_From_Users___like_1725 ;;
+    sql: ${TABLE}.Weekly_Positive_Feedback_From_Users___like_1961 ;;
   }
 
   dimension: weekly_positive_feedback_from_users___link {
@@ -7970,9 +8846,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Positive_Feedback_From_Users___link ;;
   }
 
-  dimension: weekly_positive_feedback_from_users___link_1726 {
+  dimension: weekly_positive_feedback_from_users___link_1962 {
     type: number
-    sql: ${TABLE}.Weekly_Positive_Feedback_From_Users___link_1726 ;;
+    sql: ${TABLE}.Weekly_Positive_Feedback_From_Users___link_1962 ;;
   }
 
   dimension: weekly_positive_feedback_from_users___other {
@@ -7980,19 +8856,44 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Positive_Feedback_From_Users___other ;;
   }
 
-  dimension: weekly_positive_feedback_from_users___other_1727 {
+  dimension: weekly_positive_feedback_from_users___other_1963 {
     type: number
-    sql: ${TABLE}.Weekly_Positive_Feedback_From_Users___other_1727 ;;
+    sql: ${TABLE}.Weekly_Positive_Feedback_From_Users___other_1963 ;;
+  }
+
+  dimension: weekly_reach_by_city___agadir__souss_massa_dr__a__morocco {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Agadir__Souss_Massa_Dr__a__Morocco ;;
+  }
+
+  dimension: weekly_reach_by_city___ahmedabad__gujarat__india {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Ahmedabad__Gujarat__India ;;
+  }
+
+  dimension: weekly_reach_by_city___antipolo__calabarzon__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Antipolo__Calabarzon__Philippines ;;
   }
 
   dimension: weekly_reach_by_city___atlanta__ga {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Reach_by_City___Atlanta__GA ;;
   }
 
-  dimension: weekly_reach_by_city___austin__tx {
+  dimension: weekly_reach_by_city___bacolod_city__western_visayas__philippines {
     type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___Austin__TX ;;
+    sql: ${TABLE}.Weekly_Reach_by_City___Bacolod_CIty__Western_Visayas__Philippines ;;
+  }
+
+  dimension: weekly_reach_by_city___bacoor__calabarzon__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Bacoor__Calabarzon__Philippines ;;
+  }
+
+  dimension: weekly_reach_by_city___baguio_city__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Baguio_City__Philippines ;;
   }
 
   dimension: weekly_reach_by_city___baltimore__md {
@@ -8000,19 +8901,34 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_City___Baltimore__MD ;;
   }
 
-  dimension: weekly_reach_by_city___barcelona__catalu__a__spain {
+  dimension: weekly_reach_by_city___bangalore__karnataka__india {
     type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___Barcelona__Catalu__a__Spain ;;
+    sql: ${TABLE}.Weekly_Reach_by_City___Bangalore__Karnataka__India ;;
   }
 
-  dimension: weekly_reach_by_city___baton_rouge__la {
+  dimension: weekly_reach_by_city___bangkok__thailand {
     type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___Baton_Rouge__LA ;;
+    sql: ${TABLE}.Weekly_Reach_by_City___Bangkok__Thailand ;;
   }
 
-  dimension: weekly_reach_by_city___birmingham__al {
+  dimension: weekly_reach_by_city___barcelona__anzo__tegui__venezuela {
     type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___Birmingham__AL ;;
+    sql: ${TABLE}.Weekly_Reach_by_City___Barcelona__Anzo__tegui__Venezuela ;;
+  }
+
+  dimension: weekly_reach_by_city___barinas__venezuela {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Barinas__Venezuela ;;
+  }
+
+  dimension: weekly_reach_by_city___barquisimeto__lara__venezuela {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Barquisimeto__Lara__Venezuela ;;
+  }
+
+  dimension: weekly_reach_by_city___batangas_city__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Batangas_City__Philippines ;;
   }
 
   dimension: weekly_reach_by_city___bogot____distrito_especial__colombia {
@@ -8030,9 +8946,44 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_City___Buffalo__NY ;;
   }
 
+  dimension: weekly_reach_by_city___cagayan_de_oro__northern_mindanao__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Cagayan_de_Oro__Northern_Mindanao__Philippines ;;
+  }
+
+  dimension: weekly_reach_by_city___calgary__ab__canada {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Calgary__AB__Canada ;;
+  }
+
+  dimension: weekly_reach_by_city___caloocan__metro_manila__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Caloocan__Metro_Manila__Philippines ;;
+  }
+
+  dimension: weekly_reach_by_city___caracas__capital_district__venezuela {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Caracas__Capital_District__Venezuela ;;
+  }
+
+  dimension: weekly_reach_by_city___casablanca__grand_casablanca__morocco {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Casablanca__Grand_Casablanca__Morocco ;;
+  }
+
+  dimension: weekly_reach_by_city___cebu_city__central_visayas__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Cebu_City__Central_Visayas__Philippines ;;
+  }
+
   dimension: weekly_reach_by_city___charlotte__nc {
     type: number
     sql: ${TABLE}.Weekly_Reach_by_City___Charlotte__NC ;;
+  }
+
+  dimension: weekly_reach_by_city___chennai__tamil_nadu__india {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Chennai__Tamil_Nadu__India ;;
   }
 
   dimension: weekly_reach_by_city___chicago__il {
@@ -8040,14 +8991,24 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_City___Chicago__IL ;;
   }
 
+  dimension: weekly_reach_by_city___chittagong__chittagong_division__bangladesh {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Chittagong__Chittagong_Division__Bangladesh ;;
+  }
+
   dimension: weekly_reach_by_city___cincinnati__oh {
     type: number
     sql: ${TABLE}.Weekly_Reach_by_City___Cincinnati__OH ;;
   }
 
-  dimension: weekly_reach_by_city___cleveland__oh {
+  dimension: weekly_reach_by_city___ciudad_bol__var__bol__var__state___venezuela {
     type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___Cleveland__OH ;;
+    sql: ${TABLE}.Weekly_Reach_by_City___Ciudad_Bol__var__Bol__var__state___Venezuela ;;
+  }
+
+  dimension: weekly_reach_by_city___ciudad_guayana__bol__var__state___venezuela {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Ciudad_Guayana__Bol__var__state___Venezuela ;;
   }
 
   dimension: weekly_reach_by_city___columbus__oh {
@@ -8055,9 +9016,29 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_City___Columbus__OH ;;
   }
 
+  dimension: weekly_reach_by_city___cuman____sucre__venezuela {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Cuman____Sucre__Venezuela ;;
+  }
+
   dimension: weekly_reach_by_city___dallas__tx {
     type: number
     sql: ${TABLE}.Weekly_Reach_by_City___Dallas__TX ;;
+  }
+
+  dimension: weekly_reach_by_city___dar_es_salaam__tanzania {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Dar_es_Salaam__Tanzania ;;
+  }
+
+  dimension: weekly_reach_by_city___dasmari__as__calabarzon__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Dasmari__as__Calabarzon__Philippines ;;
+  }
+
+  dimension: weekly_reach_by_city___davao_city__davao_region__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Davao_City__Davao_Region__Philippines ;;
   }
 
   dimension: weekly_reach_by_city___denver__co {
@@ -8070,19 +9051,34 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_City___Detroit__MI ;;
   }
 
-  dimension: weekly_reach_by_city___fort_worth__tx {
+  dimension: weekly_reach_by_city___dhaka__dhaka_division__bangladesh {
     type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___Fort_Worth__TX ;;
+    sql: ${TABLE}.Weekly_Reach_by_City___Dhaka__Dhaka_Division__Bangladesh ;;
   }
 
-  dimension: weekly_reach_by_city___hong_kong__hong_kong {
+  dimension: weekly_reach_by_city___edmonton__ab__canada {
     type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___Hong_Kong__Hong_Kong ;;
+    sql: ${TABLE}.Weekly_Reach_by_City___Edmonton__AB__Canada ;;
+  }
+
+  dimension: weekly_reach_by_city___gauhati__assam__india {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Gauhati__Assam__India ;;
   }
 
   dimension: weekly_reach_by_city___houston__tx {
     type: number
     sql: ${TABLE}.Weekly_Reach_by_City___Houston__TX ;;
+  }
+
+  dimension: weekly_reach_by_city___hyderabad__telangana__india {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Hyderabad__Telangana__India ;;
+  }
+
+  dimension: weekly_reach_by_city___iloilo_city__western_visayas__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Iloilo_City__Western_Visayas__Philippines ;;
   }
 
   dimension: weekly_reach_by_city___indianapolis__in {
@@ -8095,14 +9091,74 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_City___Jacksonville__FL ;;
   }
 
-  dimension: weekly_reach_by_city___kansas_city__mo {
+  dimension: weekly_reach_by_city___jaipur__rajasthan__india {
     type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___Kansas_City__MO ;;
+    sql: ${TABLE}.Weekly_Reach_by_City___Jaipur__Rajasthan__India ;;
+  }
+
+  dimension: weekly_reach_by_city___jeddah__makkah_region__saudi_arabia {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Jeddah__Makkah_Region__Saudi_Arabia ;;
+  }
+
+  dimension: weekly_reach_by_city___johor_bahru__johor__malaysia {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Johor_Bahru__Johor__Malaysia ;;
+  }
+
+  dimension: weekly_reach_by_city___karachi__sindh__pakistan {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Karachi__Sindh__Pakistan ;;
+  }
+
+  dimension: weekly_reach_by_city___knoxville__tn {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Knoxville__TN ;;
+  }
+
+  dimension: weekly_reach_by_city___kolkata__west_bengal__india {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Kolkata__West_Bengal__India ;;
+  }
+
+  dimension: weekly_reach_by_city___kuala_lumpur__malaysia {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Kuala_Lumpur__Malaysia ;;
+  }
+
+  dimension: weekly_reach_by_city___kuching__sarawak__malaysia {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Kuching__Sarawak__Malaysia ;;
+  }
+
+  dimension: weekly_reach_by_city___la_romana__la_romana_province__dominican_republic {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___La_Romana__La_Romana_Province__Dominican_Republic ;;
+  }
+
+  dimension: weekly_reach_by_city___la_vega__la_vega_province__dominican_republic {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___La_Vega__La_Vega_Province__Dominican_Republic ;;
+  }
+
+  dimension: weekly_reach_by_city___lahore__punjab__pakistan {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Lahore__Punjab__Pakistan ;;
+  }
+
+  dimension: weekly_reach_by_city___las_pi__as__calabarzon__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Las_Pi__as__Calabarzon__Philippines ;;
   }
 
   dimension: weekly_reach_by_city___las_vegas__nv {
     type: number
     sql: ${TABLE}.Weekly_Reach_by_City___Las_Vegas__NV ;;
+  }
+
+  dimension: weekly_reach_by_city___lima__lima_region__peru {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Lima__Lima_Region__Peru ;;
   }
 
   dimension: weekly_reach_by_city___london__england__united_kingdom {
@@ -8120,9 +9176,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_City___Louisville__KY ;;
   }
 
-  dimension: weekly_reach_by_city___madrid__comunidad_de_madrid__spain {
+  dimension: weekly_reach_by_city___lucknow__uttar_pradesh__india {
     type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___Madrid__Comunidad_de_Madrid__Spain ;;
+    sql: ${TABLE}.Weekly_Reach_by_City___Lucknow__Uttar_Pradesh__India ;;
+  }
+
+  dimension: weekly_reach_by_city___ludhiana__punjab_region__india {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Ludhiana__Punjab_region__India ;;
+  }
+
+  dimension: weekly_reach_by_city___makati__metro_manila__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Makati__Metro_Manila__Philippines ;;
   }
 
   dimension: weekly_reach_by_city___manila__metro_manila__philippines {
@@ -8130,9 +9196,29 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_City___Manila__Metro_Manila__Philippines ;;
   }
 
-  dimension: weekly_reach_by_city___marietta__ga {
+  dimension: weekly_reach_by_city___maracaibo__zulia__venezuela {
     type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___Marietta__GA ;;
+    sql: ${TABLE}.Weekly_Reach_by_City___Maracaibo__Zulia__Venezuela ;;
+  }
+
+  dimension: weekly_reach_by_city___maracay__aragua__venezuela {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Maracay__Aragua__Venezuela ;;
+  }
+
+  dimension: weekly_reach_by_city___marrakesh__marrakesh_tensift_el_haouz__morocco {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Marrakesh__Marrakesh_Tensift_El_Haouz__Morocco ;;
+  }
+
+  dimension: weekly_reach_by_city___matur__n__monagas__venezuela {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Matur__n__Monagas__Venezuela ;;
+  }
+
+  dimension: weekly_reach_by_city___medell__n__antioquia__colombia {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Medell__n__Antioquia__Colombia ;;
   }
 
   dimension: weekly_reach_by_city___memphis__tn {
@@ -8145,11 +9231,6 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_City___Mexico_City__Distrito_Federal__Mexico ;;
   }
 
-  dimension: weekly_reach_by_city___miami__fl {
-    type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___Miami__FL ;;
-  }
-
   dimension: weekly_reach_by_city___milwaukee__wi {
     type: number
     sql: ${TABLE}.Weekly_Reach_by_City___Milwaukee__WI ;;
@@ -8160,14 +9241,24 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_City___Minneapolis__MN ;;
   }
 
-  dimension: weekly_reach_by_city___mobile__al {
+  dimension: weekly_reach_by_city___monrovia__montserrado_county__liberia {
     type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___Mobile__AL ;;
+    sql: ${TABLE}.Weekly_Reach_by_City___Monrovia__Montserrado_County__Liberia ;;
   }
 
-  dimension: weekly_reach_by_city___montgomery__al {
+  dimension: weekly_reach_by_city___monterrey__nuevo_le__n__mexico {
     type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___Montgomery__AL ;;
+    sql: ${TABLE}.Weekly_Reach_by_City___Monterrey__Nuevo_Le__n__Mexico ;;
+  }
+
+  dimension: weekly_reach_by_city___montreal__qc__canada {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Montreal__QC__Canada ;;
+  }
+
+  dimension: weekly_reach_by_city___mumbai__maharashtra__india {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Mumbai__Maharashtra__India ;;
   }
 
   dimension: weekly_reach_by_city___nashville__tn {
@@ -8175,9 +9266,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_City___Nashville__TN ;;
   }
 
-  dimension: weekly_reach_by_city___new_orleans__la {
+  dimension: weekly_reach_by_city___new_delhi__delhi__india {
     type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___New_Orleans__LA ;;
+    sql: ${TABLE}.Weekly_Reach_by_City___New_Delhi__Delhi__India ;;
   }
 
   dimension: weekly_reach_by_city___new_york__ny {
@@ -8185,24 +9276,39 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_City___New_York__NY ;;
   }
 
-  dimension: weekly_reach_by_city___oklahoma_city__ok {
-    type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___Oklahoma_City__OK ;;
-  }
-
-  dimension: weekly_reach_by_city___omaha__ne {
-    type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___Omaha__NE ;;
-  }
-
   dimension: weekly_reach_by_city___orlando__fl {
     type: number
     sql: ${TABLE}.Weekly_Reach_by_City___Orlando__FL ;;
   }
 
+  dimension: weekly_reach_by_city___pangasinan__ilocos_region__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Pangasinan__Ilocos_Region__Philippines ;;
+  }
+
+  dimension: weekly_reach_by_city___para__aque__metro_manila__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Para__aque__Metro_Manila__Philippines ;;
+  }
+
   dimension: weekly_reach_by_city___paris____le_de_france__france {
     type: number
     sql: ${TABLE}.Weekly_Reach_by_City___Paris____le_de_France__France ;;
+  }
+
+  dimension: weekly_reach_by_city___pasay_city__metro_manila__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Pasay_City__Metro_Manila__Philippines ;;
+  }
+
+  dimension: weekly_reach_by_city___pasig__metro_manila__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Pasig__Metro_Manila__Philippines ;;
+  }
+
+  dimension: weekly_reach_by_city___penang__malaysia {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Penang__Malaysia ;;
   }
 
   dimension: weekly_reach_by_city___philadelphia__pa {
@@ -8220,9 +9326,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_City___Pittsburgh__PA ;;
   }
 
-  dimension: weekly_reach_by_city___portland__or {
+  dimension: weekly_reach_by_city___pune__maharashtra__india {
     type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___Portland__OR ;;
+    sql: ${TABLE}.Weekly_Reach_by_City___Pune__Maharashtra__India ;;
   }
 
   dimension: weekly_reach_by_city___quezon_city__metro_manila__philippines {
@@ -8230,29 +9336,14 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_City___Quezon_City__Metro_Manila__Philippines ;;
   }
 
-  dimension: weekly_reach_by_city___raleigh__nc {
+  dimension: weekly_reach_by_city___rabat__rabat_sal___zemmour_zaer__morocco {
     type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___Raleigh__NC ;;
+    sql: ${TABLE}.Weekly_Reach_by_City___Rabat__Rabat_Sal___Zemmour_Zaer__Morocco ;;
   }
 
-  dimension: weekly_reach_by_city___richmond__va {
+  dimension: weekly_reach_by_city___riyadh__riyadh_region__saudi_arabia {
     type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___Richmond__VA ;;
-  }
-
-  dimension: weekly_reach_by_city___riga__kurzeme_region__latvia {
-    type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___Riga__Kurzeme_Region__Latvia ;;
-  }
-
-  dimension: weekly_reach_by_city___rochester__ny {
-    type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___Rochester__NY ;;
-  }
-
-  dimension: weekly_reach_by_city___sacramento__ca {
-    type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___Sacramento__CA ;;
+    sql: ${TABLE}.Weekly_Reach_by_City___Riyadh__Riyadh_Region__Saudi_Arabia ;;
   }
 
   dimension: weekly_reach_by_city___san_antonio__tx {
@@ -8260,19 +9351,29 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_City___San_Antonio__TX ;;
   }
 
+  dimension: weekly_reach_by_city___san_crist__bal__t__chira__venezuela {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___San_Crist__bal__T__chira__Venezuela ;;
+  }
+
   dimension: weekly_reach_by_city___san_diego__ca {
     type: number
     sql: ${TABLE}.Weekly_Reach_by_City___San_Diego__CA ;;
   }
 
-  dimension: weekly_reach_by_city___san_francisco__ca {
+  dimension: weekly_reach_by_city___san_pedro_de_macor__s__san_pedro_de_macor__s_province__dominican_republic {
     type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___San_Francisco__CA ;;
+    sql: ${TABLE}.Weekly_Reach_by_City___San_Pedro_de_Macor__s__San_Pedro_de_Macor__s_Province__Dominican_Republic ;;
   }
 
-  dimension: weekly_reach_by_city___san_jose__ca {
+  dimension: weekly_reach_by_city___santiago__santiago_province__dominican_republic {
     type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___San_Jose__CA ;;
+    sql: ${TABLE}.Weekly_Reach_by_City___Santiago__Santiago_Province__Dominican_Republic ;;
+  }
+
+  dimension: weekly_reach_by_city___santo_domingo__santo_domingo_province__dominican_republic {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Santo_Domingo__Santo_Domingo_Province__Dominican_Republic ;;
   }
 
   dimension: weekly_reach_by_city___seattle__wa {
@@ -8280,9 +9381,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_City___Seattle__WA ;;
   }
 
-  dimension: weekly_reach_by_city___singapore__central_region__singapore {
+  dimension: weekly_reach_by_city___srinagar__jammu_and_kashmir__india {
     type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___Singapore__Central_Region__Singapore ;;
+    sql: ${TABLE}.Weekly_Reach_by_City___Srinagar__Jammu_and_Kashmir__India ;;
   }
 
   dimension: weekly_reach_by_city___st__louis__mo {
@@ -8290,19 +9391,44 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_City___St__Louis__MO ;;
   }
 
-  dimension: weekly_reach_by_city___suffolk_county__ny {
+  dimension: weekly_reach_by_city___surat__gujarat__india {
     type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___Suffolk_County__NY ;;
+    sql: ${TABLE}.Weekly_Reach_by_City___Surat__Gujarat__India ;;
   }
 
-  dimension: weekly_reach_by_city___tacoma__wa {
+  dimension: weekly_reach_by_city___sydney__nsw__australia {
     type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___Tacoma__WA ;;
+    sql: ${TABLE}.Weekly_Reach_by_City___Sydney__NSW__Australia ;;
   }
 
-  dimension: weekly_reach_by_city___tampa__fl {
+  dimension: weekly_reach_by_city___sylhet__sylhet_division__bangladesh {
     type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___Tampa__FL ;;
+    sql: ${TABLE}.Weekly_Reach_by_City___Sylhet__Sylhet_Division__Bangladesh ;;
+  }
+
+  dimension: weekly_reach_by_city___taguig__metro_manila__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Taguig__Metro_Manila__Philippines ;;
+  }
+
+  dimension: weekly_reach_by_city___tangier__tangier_tetouan__morocco {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Tangier__Tangier_Tetouan__Morocco ;;
+  }
+
+  dimension: weekly_reach_by_city___toronto__on__canada {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Toronto__ON__Canada ;;
+  }
+
+  dimension: weekly_reach_by_city___valencia__carabobo__venezuela {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Valencia__Carabobo__Venezuela ;;
+  }
+
+  dimension: weekly_reach_by_city___valenzuela__metro_manila__philippines {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_City___Valenzuela__Metro_Manila__Philippines ;;
   }
 
   dimension: weekly_reach_by_city___washington__dc {
@@ -8310,18 +9436,8 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_City___Washington__DC ;;
   }
 
-  dimension: weekly_reach_by_city___wilmington__de {
-    type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___Wilmington__DE ;;
-  }
-
-  dimension: weekly_reach_by_city___winnipeg__mb__canada {
-    type: number
-    sql: ${TABLE}.Weekly_Reach_by_City___Winnipeg__MB__Canada ;;
-  }
-
   dimension: weekly_reach_by_country___ae {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Reach_by_Country___AE ;;
   }
 
@@ -8355,9 +9471,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_Country___BG ;;
   }
 
+  dimension: weekly_reach_by_country___bo {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_Country___BO ;;
+  }
+
   dimension: weekly_reach_by_country___br {
     type: number
     sql: ${TABLE}.Weekly_Reach_by_Country___BR ;;
+  }
+
+  dimension: weekly_reach_by_country___bw {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_Country___BW ;;
   }
 
   dimension: weekly_reach_by_country___ca {
@@ -8373,6 +9499,11 @@ view: fb_page_tpt {
   dimension: weekly_reach_by_country___cl {
     type: number
     sql: ${TABLE}.Weekly_Reach_by_Country___CL ;;
+  }
+
+  dimension: weekly_reach_by_country___cn {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_Country___CN ;;
   }
 
   dimension: weekly_reach_by_country___co {
@@ -8440,6 +9571,11 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_Country___GB ;;
   }
 
+  dimension: weekly_reach_by_country___ge {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_Country___GE ;;
+  }
+
   dimension: weekly_reach_by_country___gr {
     type: number
     sql: ${TABLE}.Weekly_Reach_by_Country___GR ;;
@@ -8500,14 +9636,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_Country___JP ;;
   }
 
+  dimension: weekly_reach_by_country___ke {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_Country___KE ;;
+  }
+
   dimension: weekly_reach_by_country___kr {
     type: number
     sql: ${TABLE}.Weekly_Reach_by_Country___KR ;;
   }
 
-  dimension: weekly_reach_by_country___lt {
+  dimension: weekly_reach_by_country___lr {
     type: number
-    sql: ${TABLE}.Weekly_Reach_by_Country___LT ;;
+    sql: ${TABLE}.Weekly_Reach_by_Country___LR ;;
   }
 
   dimension: weekly_reach_by_country___lv {
@@ -8560,6 +9701,11 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_Country___PH ;;
   }
 
+  dimension: weekly_reach_by_country___pk {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_Country___PK ;;
+  }
+
   dimension: weekly_reach_by_country___pl {
     type: number
     sql: ${TABLE}.Weekly_Reach_by_Country___PL ;;
@@ -8575,14 +9721,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_Country___PT ;;
   }
 
+  dimension: weekly_reach_by_country___qa {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_Country___QA ;;
+  }
+
   dimension: weekly_reach_by_country___ro {
     type: number
     sql: ${TABLE}.Weekly_Reach_by_Country___RO ;;
   }
 
-  dimension: weekly_reach_by_country___rs {
+  dimension: weekly_reach_by_country___ru {
     type: number
-    sql: ${TABLE}.Weekly_Reach_by_Country___RS ;;
+    sql: ${TABLE}.Weekly_Reach_by_Country___RU ;;
   }
 
   dimension: weekly_reach_by_country___sa {
@@ -8610,11 +9761,6 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_Country___SK ;;
   }
 
-  dimension: weekly_reach_by_country___sv {
-    type: number
-    sql: ${TABLE}.Weekly_Reach_by_Country___SV ;;
-  }
-
   dimension: weekly_reach_by_country___th {
     type: number
     sql: ${TABLE}.Weekly_Reach_by_Country___TH ;;
@@ -8630,6 +9776,11 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_Country___TW ;;
   }
 
+  dimension: weekly_reach_by_country___tz {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_Country___TZ ;;
+  }
+
   dimension: weekly_reach_by_country___us {
     type: number
     sql: ${TABLE}.Weekly_Reach_by_Country___US ;;
@@ -8640,24 +9791,24 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_Country___VE ;;
   }
 
-  dimension: weekly_reach_by_country___vn {
-    type: number
-    sql: ${TABLE}.Weekly_Reach_by_Country___VN ;;
-  }
-
-  dimension: weekly_reach_by_country___xk {
-    type: number
-    sql: ${TABLE}.Weekly_Reach_by_Country___XK ;;
-  }
-
   dimension: weekly_reach_by_country___za {
     type: number
     sql: ${TABLE}.Weekly_Reach_by_Country___ZA ;;
   }
 
+  dimension: weekly_reach_by_country___zw {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_Country___ZW ;;
+  }
+
   dimension: weekly_reach_by_language___ar_ar {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Reach_by_Language___ar_AR ;;
+  }
+
+  dimension: weekly_reach_by_language___as_in {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_Language___as_IN ;;
   }
 
   dimension: weekly_reach_by_language___bg_bg {
@@ -8665,19 +9816,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_Language___bg_BG ;;
   }
 
-  dimension: weekly_reach_by_language___bs_ba {
+  dimension: weekly_reach_by_language___bn_in {
     type: number
-    sql: ${TABLE}.Weekly_Reach_by_Language___bs_BA ;;
-  }
-
-  dimension: weekly_reach_by_language___ca_es {
-    type: number
-    sql: ${TABLE}.Weekly_Reach_by_Language___ca_ES ;;
+    sql: ${TABLE}.Weekly_Reach_by_Language___bn_IN ;;
   }
 
   dimension: weekly_reach_by_language___cs_cz {
     type: number
     sql: ${TABLE}.Weekly_Reach_by_Language___cs_CZ ;;
+  }
+
+  dimension: weekly_reach_by_language___cx_ph {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_Language___cx_PH ;;
   }
 
   dimension: weekly_reach_by_language___da_dk {
@@ -8730,11 +9881,6 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_Language___es_MX ;;
   }
 
-  dimension: weekly_reach_by_language___et_ee {
-    type: number
-    sql: ${TABLE}.Weekly_Reach_by_Language___et_EE ;;
-  }
-
   dimension: weekly_reach_by_language___fi_fi {
     type: number
     sql: ${TABLE}.Weekly_Reach_by_Language___fi_FI ;;
@@ -8750,9 +9896,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_Language___fr_FR ;;
   }
 
+  dimension: weekly_reach_by_language___gu_in {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_Language___gu_IN ;;
+  }
+
   dimension: weekly_reach_by_language___he_il {
     type: number
     sql: ${TABLE}.Weekly_Reach_by_Language___he_IL ;;
+  }
+
+  dimension: weekly_reach_by_language___hi_in {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_Language___hi_IN ;;
   }
 
   dimension: weekly_reach_by_language___hr_hr {
@@ -8770,11 +9926,6 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_Language___id_ID ;;
   }
 
-  dimension: weekly_reach_by_language___is_is {
-    type: number
-    sql: ${TABLE}.Weekly_Reach_by_Language___is_IS ;;
-  }
-
   dimension: weekly_reach_by_language___it_it {
     type: number
     sql: ${TABLE}.Weekly_Reach_by_Language___it_IT ;;
@@ -8785,9 +9936,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_Language___ja_JP ;;
   }
 
-  dimension: weekly_reach_by_language___ka_ge {
+  dimension: weekly_reach_by_language___kn_in {
     type: number
-    sql: ${TABLE}.Weekly_Reach_by_Language___ka_GE ;;
+    sql: ${TABLE}.Weekly_Reach_by_Language___kn_IN ;;
   }
 
   dimension: weekly_reach_by_language___ko_kr {
@@ -8805,9 +9956,9 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_Language___lv_LV ;;
   }
 
-  dimension: weekly_reach_by_language___mk_mk {
+  dimension: weekly_reach_by_language___ml_in {
     type: number
-    sql: ${TABLE}.Weekly_Reach_by_Language___mk_MK ;;
+    sql: ${TABLE}.Weekly_Reach_by_Language___ml_IN ;;
   }
 
   dimension: weekly_reach_by_language___mn_mn {
@@ -8815,9 +9966,19 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_Language___mn_MN ;;
   }
 
+  dimension: weekly_reach_by_language___mr_in {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_Language___mr_IN ;;
+  }
+
   dimension: weekly_reach_by_language___ms_my {
     type: number
     sql: ${TABLE}.Weekly_Reach_by_Language___ms_MY ;;
+  }
+
+  dimension: weekly_reach_by_language___my_mm {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_Language___my_MM ;;
   }
 
   dimension: weekly_reach_by_language___nb_no {
@@ -8833,6 +9994,11 @@ view: fb_page_tpt {
   dimension: weekly_reach_by_language___nl_nl {
     type: number
     sql: ${TABLE}.Weekly_Reach_by_Language___nl_NL ;;
+  }
+
+  dimension: weekly_reach_by_language___pa_in {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_Language___pa_IN ;;
   }
 
   dimension: weekly_reach_by_language___pl_pl {
@@ -8865,11 +10031,6 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_Language___sk_SK ;;
   }
 
-  dimension: weekly_reach_by_language___sl_si {
-    type: number
-    sql: ${TABLE}.Weekly_Reach_by_Language___sl_SI ;;
-  }
-
   dimension: weekly_reach_by_language___sq_al {
     type: number
     sql: ${TABLE}.Weekly_Reach_by_Language___sq_AL ;;
@@ -8885,6 +10046,21 @@ view: fb_page_tpt {
     sql: ${TABLE}.Weekly_Reach_by_Language___sv_SE ;;
   }
 
+  dimension: weekly_reach_by_language___sw_ke {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_Language___sw_KE ;;
+  }
+
+  dimension: weekly_reach_by_language___ta_in {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_Language___ta_IN ;;
+  }
+
+  dimension: weekly_reach_by_language___te_in {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_Language___te_IN ;;
+  }
+
   dimension: weekly_reach_by_language___th_th {
     type: number
     sql: ${TABLE}.Weekly_Reach_by_Language___th_TH ;;
@@ -8898,6 +10074,11 @@ view: fb_page_tpt {
   dimension: weekly_reach_by_language___tr_tr {
     type: number
     sql: ${TABLE}.Weekly_Reach_by_Language___tr_TR ;;
+  }
+
+  dimension: weekly_reach_by_language___ur_pk {
+    type: number
+    sql: ${TABLE}.Weekly_Reach_by_Language___ur_PK ;;
   }
 
   dimension: weekly_reach_by_language___vi_vn {
@@ -8921,7 +10102,7 @@ view: fb_page_tpt {
   }
 
   dimension: weekly_reach_demographics___f_13_17 {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Reach_Demographics___F_13_17 ;;
   }
 
@@ -9026,12 +10207,12 @@ view: fb_page_tpt {
   }
 
   dimension: weekly_reach_of_page_posts {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Reach_Of_Page_Posts ;;
   }
 
   dimension: weekly_talking_about_this_by_story_type___checkin {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Talking_About_This_By_Story_Type___checkin ;;
   }
 
@@ -9076,22 +10257,22 @@ view: fb_page_tpt {
   }
 
   dimension: weekly_total_30_second_repeats {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Total_30_Second_Repeats ;;
   }
 
   dimension: weekly_total_30_second_views {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Total_30_Second_Views ;;
   }
 
   dimension: weekly_total__total_action_count_per_page {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Total__total_action_count_per_Page ;;
   }
 
   dimension: weekly_total_auto_played_views {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Total_Auto_Played_Views ;;
   }
 
@@ -9116,22 +10297,22 @@ view: fb_page_tpt {
   }
 
   dimension: weekly_total_clicked_30_second_views {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Total_Clicked_30_Second_Views ;;
   }
 
   dimension: weekly_total_clicked_views {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Total_Clicked_Views ;;
   }
 
   dimension: weekly_total_consumers {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Total_Consumers ;;
   }
 
   dimension: weekly_total_frequency_distribution___1 {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Total_Frequency_Distribution___1 ;;
   }
 
@@ -9181,7 +10362,7 @@ view: fb_page_tpt {
   }
 
   dimension: weekly_total_get_direction_click_count_per_page_by_age_and_gender___13_17_f {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Total_get_direction_click_count_per_Page_by_age_and_gender___13_17_F ;;
   }
 
@@ -9316,7 +10497,7 @@ view: fb_page_tpt {
   }
 
   dimension: weekly_total_get_direction_click_count_per_page_by_site___api {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Total_get_direction_click_count_per_Page_by_site___API ;;
   }
 
@@ -9336,22 +10517,22 @@ view: fb_page_tpt {
   }
 
   dimension: weekly_total_impressions {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Total_Impressions ;;
   }
 
   dimension: weekly_total_impressions_of_your_posts {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Total_Impressions_of_your_posts ;;
   }
 
   dimension: weekly_total_organic_30_second_views {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Total_Organic_30_Second_Views ;;
   }
 
   dimension: weekly_total_organic_views {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Total_Organic_Views ;;
   }
 
@@ -9366,7 +10547,7 @@ view: fb_page_tpt {
   }
 
   dimension: weekly_total_phone_calls_click_count_per_page_by_age_and_gender___13_17_f {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Total_phone_calls_click_count_per_Page_by_age_and_gender___13_17_F ;;
   }
 
@@ -9501,7 +10682,7 @@ view: fb_page_tpt {
   }
 
   dimension: weekly_total_phone_calls_click_count_per_page_by_site___api {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Total_phone_calls_click_count_per_Page_by_site___API ;;
   }
 
@@ -9521,32 +10702,32 @@ view: fb_page_tpt {
   }
 
   dimension: weekly_total_promoted_views {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Total_Promoted_Views ;;
   }
 
   dimension: weekly_total_reach {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Total_Reach ;;
   }
 
   dimension: weekly_total_unique_30_second_views {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Total_Unique_30_Second_Views ;;
   }
 
   dimension: weekly_total_unique_video_views {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Total_Unique_Video_Views ;;
   }
 
   dimension: weekly_total_video_views {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Total_Video_Views ;;
   }
 
   dimension: weekly_total_web_site_click_count_per_page_by_age_and_gender___13_17_f {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Total_web_site_click_count_per_Page_by_age_and_gender___13_17_F ;;
   }
 
@@ -9681,17 +10862,17 @@ view: fb_page_tpt {
   }
 
   dimension: weekly_total_website_click_count_per_page {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Total_website_click_count_per_Page ;;
   }
 
   dimension: weekly_total_website_click_count_per_page_138 {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Total_website_click_count_per_Page_138 ;;
   }
 
   dimension: weekly_total_website_click_count_per_page_by_site___api {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Total_website_click_count_per_Page_by_site___API ;;
   }
 
@@ -9711,27 +10892,27 @@ view: fb_page_tpt {
   }
 
   dimension: weekly_video_repeats {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Video_Repeats ;;
   }
 
   dimension: weekly_viral_impressions {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Viral_impressions ;;
   }
 
   dimension: weekly_viral_impressions_of_your_posts {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Viral_Impressions_Of_Your_Posts ;;
   }
 
   dimension: weekly_viral_reach {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Viral_Reach ;;
   }
 
   dimension: weekly_viral_reach_of_page_posts {
-    type: string
+    type: number
     sql: ${TABLE}.Weekly_Viral_Reach_Of_Page_Posts ;;
   }
 

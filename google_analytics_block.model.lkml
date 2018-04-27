@@ -1,7 +1,12 @@
 connection: "bigquery"
 
+label: "Google Analytics & Facebook"
+
 # include all the views
 include: "*.view"
+
+# include dashboard
+include: "weekly_report.dashboard"
 
 explore: ga_sessions_base {
   persist_for: "1 hour"
@@ -135,19 +140,26 @@ explore: ga_sessions_block {
 
 explore: ga_sessions {
   extends: [ga_sessions_block]
+  group_label: "Google Analytics"
 }
 
-explore: fb_page_tpt_use {
-  label: "Facebook Data"
-  view_label: "Facebook Data"
-  join: daily_fb_post_facts {
-    view_label: "Facebook Data"
-    relationship: one_to_one
-    sql_on: ${fb_page_tpt_use.date_date} = ${daily_fb_post_facts.date_date} ;;
-  }
-}
+# explore: fb_page_tpt_use {
+#   label: "Facebook Data"
+#   view_label: "Facebook Data"
+#   join: daily_fb_post_facts {
+#     view_label: "Facebook Data"
+#     relationship: one_to_one
+#     sql_on: ${fb_page_tpt_use.date_date} = ${daily_fb_post_facts.date_date} ;;
+#   }
+# }
 
 explore: fb_post_tpt {
+  group_label: "Facebook"
   label: "Facebook Posts"
   view_label: "Facebook Post"
+}
+
+explore: daily_fb_page {
+  group_label: "Facebook"
+  label: "Facebook Pages"
 }
