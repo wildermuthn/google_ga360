@@ -153,11 +153,11 @@ explore: ga_sessions {
 #   }
 # }
 
-explore: fb_post_tpt {
-  group_label: "Facebook"
-  label: "Facebook Posts"
-  view_label: "Facebook Post"
-}
+#explore: fb_post_tpt {
+#  group_label: "Facebook"
+#  label: "Facebook Posts"
+#  view_label: "Facebook Post"
+#}
 
 explore: daily_fb_page {
   group_label: "Facebook"
