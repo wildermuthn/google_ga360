@@ -366,8 +366,6 @@
     filters:
       ga_sessions.partition_date: 1 years
       ga_sessions.is_in_time_a_or_b: 'Yes'
-      ga_sessions.date_a: 2018/02/12 to 2018/02/19
-      ga_sessions.date_b: 2018/02/05 to 2018/02/12
     limit: 500
     dynamic_fields:
     - table_calculation: percent_change
