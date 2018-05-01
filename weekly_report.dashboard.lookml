@@ -188,8 +188,8 @@
     - daily_fb_page.total_reach_a
     - daily_fb_page.total_reach_b
     filters:
-      daily_fb_page.date_a: 2018/02/12 to 2018/02/19
-      daily_fb_page.date_b: 2018/02/05 to 2018/02/12
+      daily_fb_page.date_a: null
+      daily_fb_page.date_b: null
       daily_fb_page.is_in_date_a_or_b: 'Yes'
     limit: 500
     dynamic_fields:
@@ -248,8 +248,8 @@
     - daily_fb_page.total_engagement_a
     - daily_fb_page.total_engagement_b
     filters:
-      daily_fb_page.date_a: 2018/02/12 to 2018/02/19
-      daily_fb_page.date_b: 2018/02/05 to 2018/02/12
+      daily_fb_page.date_a: null
+      daily_fb_page.date_b: null
       daily_fb_page.is_in_date_a_or_b: 'Yes'
     limit: 500
     column_limit: 50
@@ -309,8 +309,8 @@
     - daily_fb_page.total_video_views_a
     - daily_fb_page.total_video_views_b
     filters:
-      daily_fb_page.date_a: 2018/02/12 to 2018/02/19
-      daily_fb_page.date_b: 2018/02/05 to 2018/02/12
+      - daily_fb_page.date_a: null
+      - daily_fb_page.date_b: null
       daily_fb_page.is_in_date_a_or_b: 'Yes'
     limit: 500
     column_limit: 50
