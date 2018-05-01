@@ -25039,7 +25039,7 @@ view: daily_fb_page {
   measure: total_reach_a {
     view_label: "Pd-Over-Pd Metrics"
     type: sum
-    sql: ${page_impressions} ;;
+    sql: ${page_post_impressions_unique} ;;
     drill_fields: [detail*]
     filters: {
       field: group_a
@@ -25087,7 +25087,7 @@ view: daily_fb_page {
   measure: total_reach_b {
     view_label: "Pd-Over-Pd Metrics"
     type: sum
-    sql: ${page_impressions} ;;
+    sql: ${page_post_impressions_unique} ;;
     drill_fields: [detail*]
     filters: {
       field: group_b
