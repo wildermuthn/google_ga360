@@ -25025,6 +25025,26 @@ view: daily_fb_page {
     }
   }
 
+  measure: page_video_view_time_a {
+    view_label: "Pd-Over-Pd Metrics"
+    type: sum
+    sql: ${page_video_view_time} ;;
+    drill_fields: [detail*]
+    filters: {
+      field: group_a
+      value: "yes"
+    }
+
+  measure: page_video_view_time_b {
+    view_label: "Pd-Over-Pd Metrics"
+    type: sum
+    sql: ${page_video_view_time} ;;
+    drill_fields: [detail*]
+    filters: {
+      field: group_b
+      value: "yes"
+    }
+
   measure: total_engagement_a {
     view_label: "Pd-Over-Pd Metrics"
     type: sum
