@@ -239,7 +239,7 @@
     col: 0
     width: 24
     height: 2
-    title: total Reach
+    title: Total Reach
     model: google_analytics_block
     explore: daily_fb_page
     type: single_value
