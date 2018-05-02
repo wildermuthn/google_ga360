@@ -15,8 +15,8 @@
     model: google_analytics_block
     explore: daily_fb_page
     fields:
-    - daily_fb_page.page_video_view_time_a
-    - daily_fb_page.page_video_view_time_b
+      - daily_fb_page.page_video_view_mins_a
+      - daily_fb_page.page_video_view_mins_b
     filters:
       daily_fb_page.is_in_date_a_or_b: 'Yes'
     limit: 500
@@ -24,7 +24,7 @@
     dynamic_fields:
     - table_calculation: percent_change
       label: Percent Change
-      expression: "(${daily_fb_page.page_video_view_time_a} - ${daily_fb_page.page_video_view_time_b})/${daily_fb_page.page_video_view_time_b}"
+      expression: "(${daily_fb_page.page_video_view_mins_a} - ${daily_fb_page.page_video_view_time_b})/${daily_fb_page.page_video_view_mins_b}"
       value_format:
       value_format_name: percent_0
       _kind_hint: measure
