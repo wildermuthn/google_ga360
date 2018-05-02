@@ -25034,6 +25034,7 @@ view: daily_fb_page {
       field: group_a
       value: "yes"
     }
+  }
 
   measure: page_video_view_time_b {
     view_label: "Pd-Over-Pd Metrics"
@@ -25044,6 +25045,7 @@ view: daily_fb_page {
       field: group_b
       value: "yes"
     }
+  }
 
   measure: total_engagement_a {
     view_label: "Pd-Over-Pd Metrics"
