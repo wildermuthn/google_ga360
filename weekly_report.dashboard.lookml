@@ -12,6 +12,8 @@
     height: 8
   - name: Minutes Watched
     type: single_value
+    model: google_analytics_block
+    explore: daily_fb_page
     fields:
     - daily_fb_page.page_video_view_time_a
     - daily_fb_page.page_video_view_time_b
