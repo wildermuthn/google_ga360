@@ -29,6 +29,13 @@
       value_format_name: percent_0
       _kind_hint: measure
       _type_hint: number
+    - table_calculation: percent_change2
+      label: Percent Change
+      expression: "(${daily_fb_page.page_video_view_mins_a} - ${daily_fb_page.page_video_view_time_b})/${daily_fb_page.page_video_view_mins_b}"
+      value_format:
+      value_format_name: percent_0
+      _kind_hint: measure
+      _type_hint: number
     query_timezone: America/Los_Angeles
     custom_color_enabled: false
     custom_color: forestgreen
