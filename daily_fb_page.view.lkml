@@ -25028,7 +25028,7 @@ view: daily_fb_page {
   measure: page_video_view_mins_a {
     view_label: "Pd-Over-Pd Metrics"
     type: sum
-    sql: ${page_video_view_time} / 60000 ;;
+    sql: round((${page_video_view_time} / 60000), 0) ;;
     drill_fields: [detail*]
     filters: {
       field: group_a
@@ -25039,7 +25039,7 @@ view: daily_fb_page {
   measure: page_video_view_mins_b {
     view_label: "Pd-Over-Pd Metrics"
     type: sum
-    sql: ${page_video_view_time} / 60000 ;;
+    sql: round((${page_video_view_time} / 60000), 0) ;;
     drill_fields: [detail*]
     filters: {
       field: group_b
