@@ -13,6 +13,7 @@
   - name: Minutes Watched
     type: single_value
     model: google_analytics_block
+    value_format: 0.0,,"M"
     explore: daily_fb_page
     fields:
       - daily_fb_page.page_video_view_mins_a
@@ -230,8 +231,9 @@
     col: 0
     width: 15
     height: 3
-  - name: New Tile 3
+  - name: Total Reach
     type: text
+    value_format: 0.0,,"M"
     body_text: "<br/>"
     row: 14
     col: 0
@@ -626,6 +628,7 @@
     height: 4
   - title: Total Impressions
     name: Total Impressions
+    value_format: 0.0,,"M"
     model: google_analytics_block
     explore: daily_fb_page
     type: single_value
