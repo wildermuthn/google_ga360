@@ -16,7 +16,7 @@
     explore: daily_fb_page
     fields:
       - daily_fb_page.page_video_view_mins_a
-      - daily_fb_page.page_video_view_mins_b
+   #  - daily_fb_page.page_video_view_mins_b
     filters:
       daily_fb_page.is_in_date_a_or_b: 'Yes'
     limit: 500
