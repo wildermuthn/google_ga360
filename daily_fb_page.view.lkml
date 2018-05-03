@@ -25008,6 +25008,28 @@ view: daily_fb_page {
     value_format_name: decimal_0
     drill_fields: [detail*]
   }
+   
+  measure: average_views_per_video_post_a {
+    view_label: "Pd-Over-Pd Metrics"
+    type: average
+    sql: ${page_video_views / page_posts_count_video} ;;
+    drill_fields: [detail*]
+    filters: {
+      field: group_a
+      value: "yes"
+    }
+  }
+
+  measure: average_views_per_video_post_b {
+    view_label: "Pd-Over-Pd Metrics"
+    type: average
+    sql: ${page_video_views / page_posts_count_video} ;;
+    drill_fields: [detail*]
+    filters: {
+      field: group_b
+      value: "yes"
+    }
+  }
 
   measure: count {
     type: count
