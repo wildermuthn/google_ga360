@@ -24925,11 +24925,6 @@ view: daily_fb_page {
     sql: ${TABLE}.page_website_clicks_logged_in_unique ;;
   }
 
-  # measure: count {
-  #   type: count
-  #   drill_fields: [page_story_adds_by_city_unique_paramaribo_paramaribo_district_suriname, page_storytellers_by_city_paramaribo_paramaribo_district_suriname]
-  # }
-
   measure: total_paid_views {
     type: sum
     sql: ${page_video_views_paid} ;;

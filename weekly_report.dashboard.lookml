@@ -355,8 +355,8 @@
     col: 6
     width: 9
     height: 4
-  - title: Video Views
-    name: Video Views
+  - title: Video Output
+    name: Video Output
     model: google_analytics_block
     explore: daily_fb_page
     type: single_value
