@@ -25012,7 +25012,7 @@ view: daily_fb_page {
   measure: average_views_per_video_post_a {
     view_label: "Pd-Over-Pd Metrics"
     type: average
-    sql: ${page_video_views / page_posts_count_video} ;;
+    sql: ${page_video_views} / ${page_posts_count_video} ;;
     drill_fields: [detail*]
     filters: {
       field: group_a
@@ -25023,7 +25023,7 @@ view: daily_fb_page {
   measure: average_views_per_video_post_b {
     view_label: "Pd-Over-Pd Metrics"
     type: average
-    sql: ${page_video_views / page_posts_count_video} ;;
+    sql: ${page_video_views} / ${page_posts_count_video} ;;
     drill_fields: [detail*]
     filters: {
       field: group_b
