@@ -24986,6 +24986,26 @@ view: daily_fb_page {
     type: sum
     sql: ${page_posts_count_video} ;;
   }
+  measure: total_video_output_a {
+    view_label: "Pd-Over-Pd Metrics"
+    type: sum
+    sql: ${page_posts_count_video} ;;
+    drill_fields: [detail*]
+    filters: {
+      field: group_a
+      value: "yes"
+    }
+  }
+  measure: total_video_output_b {
+    view_label: "Pd-Over-Pd Metrics"
+    type: sum
+    sql: ${page_posts_count_video} ;;
+    drill_fields: [detail*]
+    filters: {
+      field: group_b
+      value: "yes"
+    }
+  }
 
   measure: average_views_per_post {
     type: number
