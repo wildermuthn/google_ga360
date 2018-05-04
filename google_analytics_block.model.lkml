@@ -163,3 +163,8 @@ explore: daily_fb_page {
   group_label: "Facebook"
   label: "Facebook Pages"
 }
+
+explore: weekly_fb_page {
+  group_label: "Facebook"
+  label: "Facebook Pages (Weekly)"
+}

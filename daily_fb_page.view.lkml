@@ -4,6 +4,7 @@ view: daily_fb_page {
   dimension: __meta_tpt_job_id {
     type: string
     sql: ${TABLE}.__meta_tpt_job_id ;;
+    primary_key: yes
   }
 
   dimension: __meta_tpt_job_time {
@@ -24949,6 +24950,7 @@ view: daily_fb_page {
     sql: ${page_impressions} ;;
     # sql: ${daily_total_reach} ;;
         # As of 4/27, unclear how to define reach vs. impressions
+    hidden: yes
     drill_fields: [detail*]
   }
 
@@ -25008,7 +25010,7 @@ view: daily_fb_page {
     value_format_name: decimal_0
     drill_fields: [detail*]
   }
-   
+
   measure: average_views_per_video_post_a {
     view_label: "Pd-Over-Pd Metrics"
     type: average
