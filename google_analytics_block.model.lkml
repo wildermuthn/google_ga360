@@ -169,6 +169,14 @@ explore: weekly_fb_page {
   label: "Facebook Pages (Weekly)"
 }
 
+explore: daily_fb_video {
+  group_label: "Facebook"
+}
+
+explore: fb_daily_video_dt {
+  group_label: "Facebook"
+}
+
 explore: daily_ig_page {
   group_label: "Instagram"
   label: "Instagram Pages"
