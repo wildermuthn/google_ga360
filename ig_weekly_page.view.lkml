@@ -13,7 +13,7 @@ view: weekly_ig_page {
     sql: ${TABLE}.__meta_tpt_job_time ;;
   }
 
-  dimension_group: date {
+  dimension_group: metric {
     type: time
     timeframes: [
       raw,

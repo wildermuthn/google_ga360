@@ -793,7 +793,7 @@ view: lifetime_ig_page {
     sql: ${TABLE}.audience_locale_zh_TW ;;
   }
 
-  dimension_group: date {
+  dimension_group: metric {
     type: time
     timeframes: [
       raw,
