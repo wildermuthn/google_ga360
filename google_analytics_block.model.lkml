@@ -196,8 +196,3 @@ explore: daily_ig_page {
     type: inner
   }
 }
-
-explore: athletes {
-  group_label: "Central"
-  label: "Athletes"
-}
