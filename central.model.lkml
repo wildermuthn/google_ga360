@@ -14,8 +14,4 @@ explore: Athletes {
     relationship: many_to_one
     sql_on: ${athletes.id} = ${engagements.athlete_id};;
   }
-  join: wp_users {
-    relationship: one_to_one
-    sql_on: ${athletes.wordpress_id} = ${wp_users.user_nicename} ;;
-  }
 }
