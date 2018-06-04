@@ -6,12 +6,12 @@ label: "TPT Central"
 include: "*.view"
 
 
-explore: Athletes {
-  group_label: "Central"
-  label: "Athletes"
-  view_name: "athletes"
-  join: engagements {
-    relationship: many_to_one
-    sql_on: ${athletes.id} = ${engagements.athlete_id};;
-  }
-}
+# explore: Athletes {
+#   group_label: "Central"
+#   label: "Athletes"
+#   view_name: "athletes"
+#   join: engagements {
+#     relationship: many_to_one
+#     sql_on: ${athletes.id} = ${engagements.athlete_id};;
+#   }
+# }
