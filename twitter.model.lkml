@@ -6,7 +6,7 @@ label: "Twitter"
 include: "*.view"
 
 explore: twitter_videos {
-  group_label: "Videos"
+  group_label: "Twitter"
   label: "Videos"
   view_name: "twitter_video"
 }
