@@ -8,7 +8,7 @@ view: twitter_video {
   }
 
   dimension: completion_rate {
-    type: string
+    type: number
     sql: ${TABLE}.completion_rate ;;
   }
 
@@ -33,12 +33,12 @@ view: twitter_video {
   }
 
   dimension: duration {
-    type: string
+    type: number
     sql: ${TABLE}.duration ;;
   }
 
   dimension: earnings {
-    type: number
+    type: string
     sql: ${TABLE}.earnings ;;
   }
 
@@ -78,7 +78,7 @@ view: twitter_video {
   }
 
   dimension: promoted_completion_rate {
-    type: string
+    type: number
     sql: ${TABLE}.promoted_completion_rate ;;
   }
 
