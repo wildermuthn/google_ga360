@@ -25020,6 +25020,7 @@ view: daily_fb_page {
       field: group_a
       value: "yes"
     }
+    value_format_name: decimal_2
   }
 
   measure: average_views_per_video_post_b {
@@ -25031,6 +25032,7 @@ view: daily_fb_page {
       field: group_b
       value: "yes"
     }
+    value_format_name: decimal_2
   }
 
   measure: count {

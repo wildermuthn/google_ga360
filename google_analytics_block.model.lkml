@@ -168,3 +168,31 @@ explore: weekly_fb_page {
   group_label: "Facebook"
   label: "Facebook Pages (Weekly)"
 }
+
+explore: daily_fb_video {
+  group_label: "Facebook"
+}
+
+explore: fb_daily_video_dt {
+  group_label: "Facebook"
+}
+
+explore: daily_ig_page {
+  group_label: "Instagram"
+  label: "Instagram Pages"
+  view_label: "Daily IG Stats"
+
+  join: weekly_ig_page {
+    view_label: "Weekly IG Stats"
+    sql_on: ${daily_ig_page.metric_date} = ${weekly_ig_page.metric_date} ;;
+    relationship: one_to_one
+    type: inner
+  }
+
+  join: lifetime_ig_page {
+    view_label: "Lifetime IG Stats"
+    sql_on: ${daily_ig_page.metric_date} = ${lifetime_ig_page.metric_date} ;;
+    relationship: one_to_one
+    type: inner
+  }
+}
