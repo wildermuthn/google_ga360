@@ -18,12 +18,4 @@ explore: athlete_Posts {
   label: "Posts by athlete"
   view_label: "athlete_posts"
   from: athlete_posts
-
-  join: athletes{
-    view_label: "central_info"
-    from: athletes
-    sql_on: ${athlete_Posts.athlete_id}.athlete_id}=${athletes.id};;
-    relationship: one_to_one
-    type: left_outer
-}
 }
