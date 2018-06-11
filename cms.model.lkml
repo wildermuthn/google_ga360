@@ -11,3 +11,10 @@ explore: Posts {
   label: "Posts"
   view_name: wp_posts
 }
+
+
+explore: athlete_Posts {
+  group_label: "CMS"
+  label: "Posts by athlete"
+  view_name: athlete_posts
+}
