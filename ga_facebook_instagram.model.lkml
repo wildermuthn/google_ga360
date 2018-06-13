@@ -210,3 +210,9 @@ explore: daily_ig_page {
     type: inner
   }
 }
+explore: pageviews {
+  group_label: "Devons test stuff"
+  label: "Pageviews"
+  view_label: "pageviews"
+  from: ga_views_by_page_by_month
+}

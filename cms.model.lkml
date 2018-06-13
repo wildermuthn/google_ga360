@@ -19,11 +19,3 @@ explore: athlete_Posts {
   view_label: "athlete_posts"
   from: athlete_posts
 }
-
-
-explore: views {
-  group_label: "Devons test stuff"
-  label: "views by page"
-  view_label: "athlete_posts"
-  from: ga_views_by_page_by_month
-}
