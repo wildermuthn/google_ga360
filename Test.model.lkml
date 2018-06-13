@@ -3,7 +3,7 @@ connection: "bigquery"
 ##include: "*.view.lkml"         # include all views in this project
 ##include: "*.dashboard.lookml"  # include all dashboards in this project
 
-explore: aaaa {
+explore:ga_sessions {
   persist_for: "1 hour"
   extension: required
   group_label: "Devons test stuff"
