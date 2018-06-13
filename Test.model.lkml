@@ -3,17 +3,16 @@ connection: "bigquery"
 ##include: "*.view.lkml"         # include all views in this project
 ##include: "*.dashboard.lookml"  # include all dashboards in this project
 
-# # Select the views that should be a part of this model,
-# # and define the joins that connect them together.
-#
-# explore: order_items {
-#   join: orders {
-#     relationship: many_to_one
-#     sql_on: ${orders.id} = ${order_items.order_id} ;;
-#   }
-#
-#   join: users {
-#     relationship: many_to_one
-#     sql_on: ${users.id} = ${orders.user_id} ;;
-#   }
-# }
+explore: aaaa {
+  persist_for: "1 hour"
+  extension: required
+  group_label: "Devons test stuff"
+  label: "tester"
+  view_name: ga_sessions
+  view_label: "Session"
+  join: totals {
+    view_label: "Session"
+    sql: LEFT JOIN UNNEST([${ga_sessions.totals}]) as totals ;;
+    relationship: one_to_one
+                          }
+  }
