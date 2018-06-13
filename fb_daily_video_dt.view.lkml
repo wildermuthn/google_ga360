@@ -9,12 +9,12 @@ view: fb_daily_video_dt {
               FROM
               (select id, title, source, description, permalink_url, total_video_views_unique, date, created_time
               from `facebook.daily_video_944203848930007`
-              where {% condition date_a %} TIMESTAMP(date) {% endcondition %}
-                and created_time between {% date_start date_a %} and {% date_end date_b %}) as front
+              where {% condition date_b %} TIMESTAMP(date) {% endcondition %}
+                and {% condition date_b %} TIMESTAMP(created_time) {% endcondition %}) as front
             FULL JOIN
             (select id, total_video_views_unique from `facebook.daily_video_944203848930007`
-                where {% condition date_b %} TIMESTAMP(date) {% endcondition %}
-                  and created_time between {% date_start date_a %} and {% date_end date_b %}) as back
+                where {% condition date_a %} TIMESTAMP(date) {% endcondition %}
+                  and {% condition date_a %} TIMESTAMP(created_time) {% endcondition %}) as back
             ON front.id = back.id
             ORDER BY video_views desc
             LIMIT 100)
@@ -36,7 +36,7 @@ view: fb_daily_video_dt {
 
   dimension: created {
     sql: ${TABLE}.created_time ;;
-    type: date_time
+    type: date
   }
 
   dimension: date {

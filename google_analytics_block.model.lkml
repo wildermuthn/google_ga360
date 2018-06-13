@@ -173,7 +173,7 @@ explore: daily_fb_video {
   group_label: "Facebook"
 }
 
-explore: fb_daily_video_dt {
+explore: fb_daily_video_pdt {
   group_label: "Facebook"
 }
 
