@@ -6,10 +6,9 @@ include: "*.view.lkml"         # include all views in this project
 explore: test{
   persist_for: "1 hour"
   extension: required
-  group_label: "Devons test stuff"
   label: "tester"
   view_name: ga_sessions
-  view_label: "Session"
+  view_label: "testSession"
   join: totals {
     view_label: "Session"
     sql: LEFT JOIN UNNEST([${ga_sessions.totals}]) as totals ;;
