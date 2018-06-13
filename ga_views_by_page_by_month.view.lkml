@@ -34,7 +34,7 @@ view: ga_views_by_page_by_month {
   }
 
   dimension: ga_sessions_partition_date {
-    type: string
+    type: date
     sql: ${TABLE}.ga_sessions_partition_date ;;
   }
 
