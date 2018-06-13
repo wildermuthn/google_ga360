@@ -161,20 +161,34 @@ explore: ga_sessions {
 
 explore: daily_fb_page {
   group_label: "Facebook"
-  label: "Facebook Pages"
-}
+  label: "Facebook Page"
+  view_label: "Daily Stats"
 
-explore: weekly_fb_page {
-  group_label: "Facebook"
-  label: "Facebook Pages (Weekly)"
+  join: weekly_fb_page {
+    view_label: "Weekly Stats"
+    sql_on: ${daily_fb_page.metric_date} = ${weekly_fb_page.metric_date} ;;
+    type: left_outer
+    relationship: many_to_one
+  }
 }
 
 explore: daily_fb_video {
   group_label: "Facebook"
+  label: "Facebook Videos"
+  view_label: "Facebook Videos"
+
+  join: fb_daily_video_pdt {
+    view_label: "Facebook Videos"
+    sql_on: ${daily_fb_video.id} = ${fb_daily_video_pdt.id} ;;
+    type: inner
+    relationship: many_to_one
+  }
 }
 
-explore: fb_daily_video_pdt {
+explore: fb_post_tpt {
   group_label: "Facebook"
+  label: "Facebook Posts"
+  view_label: "Facebook Posts"
 }
 
 explore: daily_ig_page {
