@@ -12,7 +12,7 @@
     height: 8
   - name: Minutes Watched
     type: single_value
-    model: google_analytics_block
+    model: ga_facebook_instagram
     value_format: 0.0,,"M"
     explore: daily_fb_page
     fields:
@@ -71,7 +71,7 @@
     height: 4
   - title: New Tile
     name: New Tile
-    model: google_analytics_block
+    model: ga_facebook_instagram
     explore: daily_fb_page
     type: looker_donut_multiples
     fields:
@@ -108,7 +108,7 @@
     colors: 'palette: Mixed Dark'
     series_colors: {}
     listen:
-      Date Filter: daily_fb_page.date_date
+      Date Filter: daily_fb_page.metric_date
     title_hidden: true
     row: 4
     col: 15
@@ -124,7 +124,7 @@
     height: 8
   - title: Top Articles
     name: Top Articles
-    model: google_analytics_block
+    model: ga_facebook_instagram
     explore: ga_sessions
     type: table
     fields:
@@ -178,7 +178,7 @@
     height: 3
   - title: Bottom Articles
     name: Bottom Articles
-    model: google_analytics_block
+    model: ga_facebook_instagram
     explore: ga_sessions
     type: table
     fields:
@@ -240,7 +240,7 @@
     width: 24
     height: 2
     title: Total Reach
-    model: google_analytics_block
+    model: ga_facebook_instagram
     explore: daily_fb_page
     type: single_value
     fields:
@@ -298,7 +298,7 @@
     height: 4
   - title: Total Engagement
     name: Total Engagement
-    model: google_analytics_block
+    model: ga_facebook_instagram
     explore: daily_fb_page
     type: single_value
     fields:
@@ -357,7 +357,7 @@
     height: 4
   - title: Video Output
     name: Video Output
-    model: google_analytics_block
+    model: ga_facebook_instagram
     explore: daily_fb_page
     type: single_value
     fields:
@@ -416,7 +416,7 @@
     height: 4
   - title: Video Views Per Post
     name: Video Views Per Post
-    model: google_analytics_block
+    model: ga_facebook_instagram
     explore: daily_fb_page
     type: single_value
     fields:
@@ -475,7 +475,7 @@
     height: 4
   - title: Video Views
     name: Video Views
-    model: google_analytics_block
+    model: ga_facebook_instagram
     explore: daily_fb_page
     type: single_value
     fields:
@@ -534,7 +534,7 @@
     height: 4
   - title: Unique Visitors
     name: Unique Visitors
-    model: google_analytics_block
+    model: ga_facebook_instagram
     explore: ga_sessions
     type: single_value
     fields:
@@ -593,7 +593,7 @@
     height: 4
   - title: Top Contributors by Sessions
     name: Top Contributors by Sessions
-    model: google_analytics_block
+    model: ga_facebook_instagram
     explore: ga_sessions
     type: looker_pie
     fields:
@@ -646,7 +646,7 @@
     height: 10
   - title: Bounce Rate
     name: Bounce Rate
-    model: google_analytics_block
+    model: ga_facebook_instagram
     explore: ga_sessions
     type: single_value
     fields:
@@ -695,7 +695,7 @@
     height: 4
   - title: Page Views
     name: Page Views
-    model: google_analytics_block
+    model: ga_facebook_instagram
     explore: ga_sessions
     type: single_value
     fields:
@@ -746,7 +746,7 @@
   - title: Total Impressions
     name: Total Impressions
     value_format: 0.0,,"M"
-    model: google_analytics_block
+    model: ga_facebook_instagram
     explore: daily_fb_page
     type: single_value
     fields:
@@ -783,7 +783,7 @@
     totals_color: "#808080"
     series_types: {}
     listen:
-      Date Filter: daily_fb_page.date_date
+      Date Filter: daily_fb_page.metric_date
     row: 8
     col: 15
     width: 9
@@ -903,10 +903,10 @@
     default_value: 2018/02/12 to 2018/02/19
     allow_multiple_values: true
     required: false
-    model: google_analytics_block
+    model: ga_facebook_instagram
     explore: daily_fb_page
     listens_to_filters: []
-    field: daily_fb_page.date_date
+    field: daily_fb_page.metric_date
   - name: Comparison Date Filter
     title: Comparison Date Filter
     type: date_filter

@@ -95,6 +95,13 @@ view: daily_ig_page {
     sql: ${impressions} ;;
   }
 
+  measure: total_impressions_last_week {
+    description: "Total impressions from only the last week of the selected date range"
+    type: sum
+    sql: ${impressions} ;;
+    filters: {field: metric_date value: "7 days ago for 7 days"}
+  }
+
   measure: total_profile_views {
     type: sum
     sql: ${profile_views} ;;

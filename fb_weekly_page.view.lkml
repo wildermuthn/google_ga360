@@ -12,7 +12,7 @@ view: weekly_fb_page {
     sql: ${TABLE}.__meta_tpt_job_time ;;
   }
 
-  dimension_group: date {
+  dimension_group: metric {
     type: time
     timeframes: [
       raw,
@@ -8196,7 +8196,7 @@ view: weekly_fb_page {
     view_label: "Pd-Over-Pd Metrics"
     hidden: yes
     type: yesno
-    sql: {% condition date_a %} cast(${date_raw} as timestamp) {% endcondition %}
+    sql: {% condition date_a %} cast(${metric_raw} as timestamp) {% endcondition %}
       ;;
   }
 
@@ -8222,7 +8222,7 @@ view: weekly_fb_page {
     view_label: "Pd-Over-Pd Metrics"
     hidden: yes
     type: yesno
-    sql: {% condition date_a %} cast(${date_raw} as timestamp) {% endcondition %}
+    sql: {% condition date_a %} cast(${metric_raw} as timestamp) {% endcondition %}
       ;;
   }
 
@@ -8241,13 +8241,13 @@ view: weekly_fb_page {
   dimension: is_in_date_a_or_b {
     view_label: "Pd-Over-Pd Metrics"
     type: yesno
-    sql: {% condition date_a %} cast(${date_raw} as timestamp) {% endcondition %}
-          OR {% condition date_b %} cast(${date_raw} as timestamp) {% endcondition %}
+    sql: {% condition date_a %} cast(${metric_raw} as timestamp) {% endcondition %}
+          OR {% condition date_b %} cast(${metric_raw} as timestamp) {% endcondition %}
            ;;
   }
 
   set: detail {
-    fields: [date_date
+    fields: [metric_date
       # , total_views, total_organic_views, total_paid_views, total_impressions, total_engagement,
       # total_reach, total_video_views, total_posts, total_video_output
       ]

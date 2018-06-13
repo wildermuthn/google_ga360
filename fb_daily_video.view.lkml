@@ -10,11 +10,13 @@ view: daily_fb_video {
   dimension: __meta_tpt_job_id {
     type: string
     sql: ${TABLE}.__meta_tpt_job_id ;;
+    hidden: yes
   }
 
   dimension: __meta_tpt_job_time {
     type: number
     sql: ${TABLE}.__meta_tpt_job_time ;;
+    hidden: yes
   }
 
   dimension_group: created {
@@ -74,16 +76,19 @@ view: daily_fb_video {
   dimension: total_video_10s_views {
     type: number
     sql: ${TABLE}.total_video_10s_views ;;
+    hidden: yes
   }
 
   dimension: total_video_10s_views_auto_played {
     type: number
     sql: ${TABLE}.total_video_10s_views_auto_played ;;
+    hidden: yes
   }
 
   dimension: total_video_10s_views_clicked_to_play {
     type: number
     sql: ${TABLE}.total_video_10s_views_clicked_to_play ;;
+    hidden: yes
   }
 
   dimension: total_video_10s_views_organic {
