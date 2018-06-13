@@ -23,7 +23,7 @@ explore: athlete_Posts {
 
 explore: views {
   group_label: "Devons test stuff"
-  label: "Posts by athlete"
+  label: "views by page"
   view_label: "athlete_posts"
   from: ga_views_by_page_by_month
 }
