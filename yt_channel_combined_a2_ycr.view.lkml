@@ -255,6 +255,7 @@ view: channel_combined_a2_tpt_main {
   measure: total_watch_time_minutes {
     type: sum
     sql: ${watch_time_minutes} ;;
+    value_format_name: decimal_2
     drill_fields: [video_detail*,total_watch_time_minutes,-avg_view_duration_s]
   }
 

@@ -34,6 +34,7 @@ view: daily_ig_page {
   }
 
   dimension: follower_count {
+    description: "Number of new followers per day"
     type: number
     sql: ${TABLE}.follower_count ;;
   }
@@ -86,6 +87,7 @@ view: daily_ig_page {
   }
 
   measure: total_followers {
+    label: "Total New Followers"
     type: sum
     sql: ${follower_count} ;;
   }

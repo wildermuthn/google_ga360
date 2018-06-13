@@ -202,6 +202,7 @@ view: channel_basic_a2_tpt_main {
   measure: total_watch_time_minutes {
     type: sum
     sql: ${watch_time_minutes} ;;
+    value_format_name: decimal_2
   }
 
 #   measure: count {
