@@ -541,7 +541,7 @@ view: hits_page_base {
     label: "Page Path"
     link: {
       label: "Link"
-      url: "{{ value }}"
+      url: "https://www.theplayerstribune.com/en-us/articles{{ value }}"
     }
     link: {
       label: "Page Info Dashboard"

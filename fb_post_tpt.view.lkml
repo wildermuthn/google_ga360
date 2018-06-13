@@ -7,6 +7,12 @@ view: fb_post_tpt {
     sql: ${TABLE}.Audience_Targeting ;;
   }
 
+  dimension: clicks {
+    type: number
+    sql: ${lifetime_post_consumptions_by_type___link_clicks}
+          + ${lifetime_post_consumptions_by_type___other_clicks};;
+  }
+
   dimension: countries {
     type: string
     sql: ${TABLE}.Countries ;;
@@ -76,12 +82,12 @@ view: fb_post_tpt {
 #     type: number
 #     sql: ${TABLE}.Lifetime_Negative_Feedback_from_Users_by_Type___unlike_page_clicks ;;
 #   }
-#
-#   dimension: lifetime_organic_video_views {
-#     type: number
-#     sql: ${TABLE}.Lifetime_Organic_Video_Views ;;
-#   }
-#
+
+  dimension: lifetime_organic_video_views {
+    type: number
+    sql: ${TABLE}.Lifetime_Organic_Video_Views ;;
+  }
+
 #   dimension: lifetime_organic_video_views_29 {
 #     type: number
 #     sql: ${TABLE}.Lifetime_Organic_Video_Views_29 ;;
@@ -101,12 +107,12 @@ view: fb_post_tpt {
 #     type: number
 #     sql: ${TABLE}.Lifetime_Paid_reach_of_a_post_by_people_who_like_your_Page ;;
 #   }
-#
-#   dimension: lifetime_paid_video_views {
-#     type: number
-#     sql: ${TABLE}.Lifetime_Paid_Video_Views ;;
-#   }
-#
+
+  dimension: lifetime_paid_video_views {
+    type: number
+    sql: ${TABLE}.Lifetime_Paid_Video_Views ;;
+  }
+
 #   dimension: lifetime_paid_video_views_31 {
 #     type: number
 #     sql: ${TABLE}.Lifetime_Paid_Video_Views_31 ;;
@@ -156,17 +162,19 @@ view: fb_post_tpt {
 #     type: number
 #     sql: ${TABLE}.Lifetime_Post_Consumptions ;;
 #   }
-#
-#   dimension: lifetime_post_consumptions_by_type___link_clicks {
-#     type: number
-#     sql: ${TABLE}.Lifetime_Post_Consumptions_by_type___link_clicks ;;
-#   }
-#
-#   dimension: lifetime_post_consumptions_by_type___other_clicks {
-#     type: number
-#     sql: ${TABLE}.Lifetime_Post_Consumptions_by_type___other_clicks ;;
-#   }
-#
+
+  dimension: lifetime_post_consumptions_by_type___link_clicks {
+    type: number
+    sql: ${TABLE}.Lifetime_Post_Consumptions_by_type___link_clicks ;;
+    hidden: yes
+  }
+
+  dimension: lifetime_post_consumptions_by_type___other_clicks {
+    type: number
+    sql: ${TABLE}.Lifetime_Post_Consumptions_by_type___other_clicks ;;
+    hidden: yes
+  }
+
 #   dimension: lifetime_post_consumptions_by_type___photo_view {
 #     type: number
 #     sql: ${TABLE}.Lifetime_Post_Consumptions_by_type___photo_view ;;
@@ -226,17 +234,17 @@ view: fb_post_tpt {
 #     type: number
 #     sql: ${TABLE}.Lifetime_Post_Stories_by_action_type___share ;;
 #   }
-#
-#   dimension: lifetime_post_total_impressions {
-#     type: number
-#     sql: ${TABLE}.Lifetime_Post_Total_Impressions ;;
-#   }
-#
-#   dimension: lifetime_post_total_reach {
-#     type: number
-#     sql: ${TABLE}.Lifetime_Post_Total_Reach ;;
-#   }
-#
+
+  dimension: lifetime_post_total_impressions {
+    type: number
+    sql: ${TABLE}.Lifetime_Post_Total_Impressions ;;
+  }
+
+  dimension: lifetime_post_total_reach {
+    type: number
+    sql: ${TABLE}.Lifetime_Post_Total_Reach ;;
+  }
+
 #   dimension: lifetime_talking_about_this__post__by_action_type___comment {
 #     type: number
 #     sql: ${TABLE}.Lifetime_Talking_About_This__Post__by_action_type___comment ;;
@@ -256,6 +264,11 @@ view: fb_post_tpt {
 #     type: number
 #     sql: ${TABLE}.Lifetime_Video_length ;;
 #   }
+
+    dimension: lifetime_video_views {
+      type: number
+      sql: ${lifetime_organic_video_views} + ${lifetime_paid_video_views} ;;
+    }
 
   dimension: permalink {
     type: string
@@ -291,8 +304,30 @@ view: fb_post_tpt {
     sql: ${TABLE}.Type ;;
   }
 
+# ------ Measures ------
+
   measure: count {
     type: count
     drill_fields: []
+  }
+
+  measure: total_lifetime_clicks {
+    type: sum
+    sql: ${clicks} ;;
+  }
+
+  measure: total_lifetime_impressions {
+    type: sum
+    sql: ${lifetime_post_total_impressions} ;;
+  }
+
+  measure: total_lifetime_reach {
+    type: sum
+    sql: ${lifetime_post_total_reach} ;;
+  }
+
+  measure: total_lifetime_video_views {
+    type: sum
+    sql: ${lifetime_video_views} ;;
   }
 }
