@@ -185,6 +185,10 @@ explore: daily_fb_video {
   }
 }
 
+explore: fb_daily_video_metrics_dt {
+  hidden: yes
+}
+
 explore: fb_post_tpt {
   group_label: "Facebook"
   label: "Facebook Posts"
