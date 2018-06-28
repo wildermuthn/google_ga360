@@ -195,6 +195,11 @@ explore: fb_post_tpt {
   view_label: "Facebook Posts"
 }
 
+explore: daily_ig_media {
+  group_label: "Instagram"
+  label: "Instagram Media"
+}
+
 explore: daily_ig_page {
   group_label: "Instagram"
   label: "Instagram Pages"
