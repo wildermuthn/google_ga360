@@ -32,7 +32,8 @@ explore: channel_combined_a2_tpt_main {
     view_label: "YouTube"
     relationship: many_to_one
     type: left_outer
-    sql_on: ${channel_combined_a2_tpt_main.video_id} = ${video_facts.video_id} ;;
+    sql_on: ${channel_combined_a2_tpt_main.video_id} = ${video_facts.video_id} and
+      ${channel_combined_a2_tpt_main.date} = ${video_facts.date};;
   }
 }
 
