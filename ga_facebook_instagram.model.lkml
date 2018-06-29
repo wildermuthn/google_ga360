@@ -52,7 +52,7 @@ explore: ga_sessions_base {
   join: hits_page {
     view_label: "Session: Hits: Page"
     sql: LEFT JOIN UNNEST([${hits.page}]) as hits_page ;;
-    relationship: one_to_one
+    relationship: one_to_many
   }
   join: hits_transaction {
     view_label: "Session: Hits: Transaction"

@@ -11,6 +11,8 @@ view: video_facts {
         , SUM(dislikes) as dislikes
         , SUM(shares) as shares
         , SUM(watch_time_minutes) as watch_time_minutes
+        , SUM(annotation_impressions) + SUM(card_impressions) as impressions
+        , SUM(annotation_clicks) + SUM(card_clicks) as clicks
         FROM `tpt-platform.youtube_analytics.channel_basic_a2_tpt_main`
         GROUP BY 1,2 ) x
         LEFT JOIN
@@ -72,6 +74,18 @@ view: video_facts {
     sql: ${TABLE}.shares ;;
   }
 
+  dimension: impressions {
+    description: "Annotation and Card"
+    type: number
+    sql: ${TABLE}.impressions ;;
+  }
+
+  dimension: clicks {
+    description: "Annotation and Card"
+    type: number
+    sql: ${TABLE}.clicks ;;
+  }
+
   dimension: watch_time_minutes {
     type: number
     sql: ${TABLE}.watch_time_minutes ;;
@@ -129,11 +143,22 @@ measure: total_shares {
 }
 
 measure: engagement {
-  description: "Likes + Dislikes + Comments + Shares + Views"
+  description: "Likes + Dislikes + Comments + Shares"
   type: number
-  sql:  ${total_likes} + ${total_dislikes} + ${total_comments} + ${total_shares} + ${channel_combined_a2_tpt_main.total_views};;
+  sql:  ${total_likes} + ${total_dislikes} + ${total_comments} + ${total_shares};;
 }
 
+measure: total_impressions {
+  description: "Annotation and Card"
+  type: sum
+  sql: ${impressions} ;;
+  }
+
+measure: total_clicks {
+  description: "Annotation and Card"
+  type: sum
+  sql: ${clicks} ;;
+}
 
   set: detail {
     fields: [video_id, video_length_seconds]

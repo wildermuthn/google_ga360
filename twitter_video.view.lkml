@@ -7,7 +7,7 @@ view: twitter_video {
     sql: ${TABLE}.Video_Id ;;
   }
 
-  dimension: completion_rate {
+  dimension: completion_rate_raw {
     type: number
     sql: ${TABLE}.completion_rate ;;
   }
@@ -321,11 +321,31 @@ view: twitter_video {
   measure: total_minutes_viewed {
     type: sum
     sql: ${minutes_viewed} ;;
-    value_format_name: decimal_2
+    value_format_name: decimal_0
   }
 
   measure: total_video_views {
     type: sum
     sql: ${video_views} ;;
+  }
+
+  measure: video_average_watch_time {
+    label: "Average Watch Time in Seconds"
+    type: number
+    sql: ${total_minutes_viewed} / ${total_video_views} * 60 ;;
+    value_format_name: decimal_1
+  }
+
+  measure: total_complete_views {
+    hidden: yes
+    type: sum
+    sql: ${playback_completes} ;;
+  }
+
+  measure: completion_rate {
+    type: number
+    sql: ${total_complete_views} / ${total_video_views} ;;
+    value_format_name: percent_1
+
   }
 }
