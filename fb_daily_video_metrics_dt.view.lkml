@@ -1,10 +1,11 @@
 view: fb_daily_video_metrics_dt {
   derived_table: {
     sql:
-      SELECT x.id, x.permalink_url, x.metric_type_raw, x.metric_value FROM (
+      SELECT x.id, x.permalink_url, x.title, x.metric_type_raw, x.metric_value FROM (
       SELECT
       DATE_DIFF(CURRENT_DATE, date, day) as days_ago,
         id
+      , title
       , permalink_url
       , "total_video_views" as metric_type_raw
       , total_video_views as metric_value
@@ -13,6 +14,7 @@ view: fb_daily_video_metrics_dt {
       SELECT
       DATE_DIFF(CURRENT_DATE, date, day) as days_ago,
         id
+      , title
       , permalink_url
       , "total_video_views_organic" as metric_type_raw
       , total_video_views_organic as metric_value
@@ -21,6 +23,7 @@ view: fb_daily_video_metrics_dt {
       SELECT
       DATE_DIFF(CURRENT_DATE, date, day) as days_ago,
         id
+      , title
       , permalink_url
       , "total_video_views_paid" as metric_type_raw
       , total_video_views_paid as metric_value
@@ -29,6 +32,7 @@ view: fb_daily_video_metrics_dt {
       SELECT
       DATE_DIFF(CURRENT_DATE, date, day) as days_ago,
         id
+      , title
       , permalink_url
       , "total_video_complete_views" as metric_type_raw
       , total_video_complete_views as metric_value
@@ -37,6 +41,7 @@ view: fb_daily_video_metrics_dt {
       SELECT
       DATE_DIFF(CURRENT_DATE, date, day) as days_ago,
         id
+      , title
       , permalink_url
       , "total_video_view_total_time" as metric_type_raw
       , total_video_view_total_time as metric_value
@@ -45,6 +50,7 @@ view: fb_daily_video_metrics_dt {
       SELECT
       DATE_DIFF(CURRENT_DATE, date, day) as days_ago,
         id
+      , title
       , permalink_url
       , "total_video_play_count" as metric_type_raw
       , total_video_play_count as metric_value
@@ -53,6 +59,7 @@ view: fb_daily_video_metrics_dt {
       SELECT
       DATE_DIFF(CURRENT_DATE, date, day) as days_ago,
         id
+      , title
       , permalink_url
       , "average_video_watch_time" as metric_type_raw
       , ROUND(total_video_view_total_time/NULLIF(total_video_views,0),1) as metric_value
@@ -61,6 +68,7 @@ view: fb_daily_video_metrics_dt {
       SELECT
       DATE_DIFF(CURRENT_DATE, date, day) as days_ago,
         id
+      , title
       , permalink_url
       , "completion_rate" as metric_type_raw
       , ROUND(total_video_complete_views/NULLIF(total_video_play_count,0)*100,1) as metric_value
@@ -74,7 +82,7 @@ view: fb_daily_video_metrics_dt {
         GROUP BY 1
       ) y
       ON x.days_ago = y.days_ago
-      GROUP BY 1,2,3,4
+      GROUP BY 1,2,3,4,5
 ;;
   }
 
@@ -86,6 +94,11 @@ view: fb_daily_video_metrics_dt {
   dimension: id {
     type: number
     sql: ${TABLE}.id ;;
+  }
+
+  dimension: title {
+    type: string
+    sql: ${TABLE}.title ;;
   }
 
   dimension: permalink_url {
