@@ -331,9 +331,16 @@ view: twitter_video {
 
   measure: video_average_watch_time {
     label: "Average Watch Time in Seconds"
+    hidden: yes
     type: number
     sql: ${total_minutes_viewed} / ${total_video_views} * 60 ;;
     value_format_name: decimal_1
+  }
+
+  measure: avg_view_duration_formatted {
+    label: "Average View Duration"
+    type: string
+    sql: FORMAT_TIMESTAMP("%T", TIMESTAMP_SECONDS(CAST(ROUND(${video_average_watch_time},0) AS INT64)));;
   }
 
   measure: total_complete_views {

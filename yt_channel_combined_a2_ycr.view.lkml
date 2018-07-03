@@ -192,21 +192,19 @@ view: channel_combined_a2_tpt_main {
     type: average
     sql: ${average_view_duration_percentage} ;;
     value_format: "0.0\%"
-    drill_fields: [video_detail*,avg_view_duration_percentage,-avg_view_duration_s]
+    drill_fields: [video_detail*,avg_view_duration_percentage]
   }
 
-  dimension: average_view_duration_seconds {
+  dimension: avg_view_duration_s {
     hidden: yes
     type: number
     sql: ${TABLE}.average_view_duration_seconds ;;
   }
 
-  measure: avg_view_duration_s {
-    label: "Average View Duration (seconds)"
-    type: average
-    sql: ${average_view_duration_seconds} ;;
-    value_format_name: decimal_1
-    drill_fields: [video_detail*]
+  measure: avg_view_duration_formatted {
+    label: "Average View Duration"
+    type: string
+    sql: FORMAT_TIMESTAMP("%T", TIMESTAMP_SECONDS(CAST(ROUND(AVG(${avg_view_duration_s}),0) AS INT64)));;
   }
 
   dimension: red_views {
@@ -239,7 +237,7 @@ view: channel_combined_a2_tpt_main {
   measure: total_views {
     type: sum
     sql: ${views} ;;
-    drill_fields: [video_id, video_facts.video_length_seconds,total_views,avg_view_duration_s]
+    drill_fields: [video_id, video_facts.video_length_seconds,total_views]
   }
   measure: average_views {
     type: average
@@ -256,7 +254,7 @@ view: channel_combined_a2_tpt_main {
     type: sum
     sql: ${watch_time_minutes} ;;
     value_format_name: decimal_2
-    drill_fields: [video_detail*,total_watch_time_minutes,-avg_view_duration_s]
+    drill_fields: [video_detail*,total_watch_time_minutes]
   }
 
   measure: video_count {
@@ -271,7 +269,7 @@ view: channel_combined_a2_tpt_main {
   }
 
   set: video_detail {
-    fields: [video_id, video_facts.video_length_seconds,avg_view_duration_s,total_views]
+    fields: [video_id, video_facts.video_length_seconds,total_views]
   }
 
 }
