@@ -7,7 +7,8 @@ view: ga_sessions_base {
 
   dimension: id {
     primary_key: yes
-    sql: CONCAT(CAST(${fullVisitorId} AS STRING), '|', COALESCE(CAST(${visitId} AS STRING),'')) ;;
+    sql: CONCAT(CAST(ga_sessions.fullVisitorId AS STRING), '|', COALESCE(CAST(ga_sessions.visitId AS STRING),''),
+    CAST(FORMAT_TIMESTAMP('%F %T', TIMESTAMP(PARSE_DATE('%Y%m%d', REGEXP_EXTRACT(_TABLE_SUFFIX,r'^\d\d\d\d\d\d\d\d')))) AS STRING)) ;;
   }
 
   dimension: visitorId {label: "Visitor ID"}
