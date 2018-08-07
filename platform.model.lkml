@@ -10,23 +10,31 @@ explore: posts {
     relationship: one_to_one
   }
 
-  #   # Repeated nested Object
-  # join: posts__contributors {
-  #   view_label: "Posts: Contributors"
-  #   sql: LEFT JOIN UNNEST([${posts.contributors}]) as posts__contributors ;;
-  #   relationship: one_to_many
-  # }
+  join: posts__contributors__edges__node {
+    view_label: "Posts: Contributors"
+    sql:
+      LEFT JOIN UNNEST([${posts.contributors}]) as posts__contributors
+      LEFT JOIN UNNEST(posts__contributors.edges) as posts__contributors__edges
+      LEFT JOIN UNNEST([posts__contributors__edges.node]) as posts__contributors__edges__node;;
+    relationship: one_to_many
+  }
 
-  # # Repeated nested Object
-  # join: persons_cities_lived {
-  #   view_label: "Persons: Cities Lived:"
-  #   sql: LEFT JOIN UNNEST(persons.citiesLived) as persons_cities_lived ;;
-  #   relationship: one_to_many
-  # }
-  # # Non repeated nested object
-  # join: persons_phone_number {
-  #   view_label: "Persons: Phone:"
-  #   sql: LEFT JOIN UNNEST([${persons.phoneNumber}]) as persons_phone_number ;;
-  #   relationship: one_to_one
-  # }
+  join: posts__categories__edges__node {
+    view_label: "Posts: Categories"
+    sql:
+      LEFT JOIN UNNEST([${posts.categories}]) as posts__categories
+      LEFT JOIN UNNEST(posts__categories.edges) as posts__categories__edges
+      LEFT JOIN UNNEST([posts__categories__edges.node]) as posts__categories__edges__node;;
+    relationship: one_to_many
+  }
+
+  join: posts__sports_teams__edges__node {
+    view_label: "Posts: Sports"
+    sql:
+      LEFT JOIN UNNEST([${posts.sports_teams}]) as posts__sports_teams
+      LEFT JOIN UNNEST(posts__sports_teams.edges) as posts__sports_teams__edges
+      LEFT JOIN UNNEST([posts__sports_teams__edges.node]) as posts__sports_teams__edges__node;;
+    relationship: one_to_many
+  }
+
 }
