@@ -145,7 +145,7 @@ view: posts__contributors__edges__node__athlete {
 
 view: posts__contributors__edges__node {
   dimension: athlete {
-
+    hidden: yes
     sql: ${TABLE}.athlete ;;
   }
 
